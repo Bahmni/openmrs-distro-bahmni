@@ -30,6 +30,7 @@
 
 	<properties>
 		<openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
+        <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <logicModuleVersion>0.5.2</logicModuleVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
@@ -37,12 +38,20 @@
         <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
-        <addressHierarchy>2.2.10-SNAPSHOT</addressHierarchy>
-        <webServicesRest>1.2-SNAPSHOT</webServicesRest>
-        <webServicesRest19ext>1.0</webServicesRest19ext>
+        <addressHierarchyVersion>2.2.10-SNAPSHOT</addressHierarchyVersion>
+        <webServicesRestVersion>1.2-SNAPSHOT</webServicesRestVersion>
+        <webServicesRest19extVersion>1.0</webServicesRest19extVersion>
+        <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
+        <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>bahmnicore-omod</artifactId>
+            <version>${bahmniCoreVersion}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.openmrs.module</groupId>
@@ -80,17 +89,27 @@
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>addresshierarchy-omod</artifactId>
-            <version>${addressHierarchy}</version>
+            <version>${addressHierarchyVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>webservices.rest-omod</artifactId>
-            <version>${webServicesRest}</version>
+            <version>${webServicesRestVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>webservices.rest19ext-omod</artifactId>
-            <version>${webServicesRest19ext}</version>
+            <version>${webServicesRest19extVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>bhamni.registration-omod</artifactId>
+            <version>${bahmniRegistrationVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>bhamni.opd-omod</artifactId>
+            <version>${bahmniOpdVersion}</version>
         </dependency>
 
         <dependency>
