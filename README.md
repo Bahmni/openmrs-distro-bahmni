@@ -1,2 +1,2 @@
-openmrs-distro-jss
+openmrs-distro-bahmni
 ==================

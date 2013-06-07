@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--##putting in some invalid xml to break build-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.openmrs.distro</groupId>
+	<artifactId>bahmni</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Bahmni distribution</name>
+	<description>Scripts for building the Bahmni distribution</description>
+	
+	<developers>
+		<developer>
+			<name>mario-areias</name>
+		</developer>
+	</developers>
+	
+	<organization>
+		<name>OpenMRS</name>
+		<url>http://openmrs.org</url>
+	</organization>
+
+	<scm>
+		<connection>scm:git:git@github.com:Bhamni/openmrs-distro-bahmni.git</connection>
+		<developerConnection>scm:git:git@github.com:Bhamni/openmrs-distro-bahmni.git</developerConnection>
+		<url>scm:git:git@github.com:Bhamni/openmrs-distro-bahmni.git</url>
+	</scm>
+
+	<properties>
+		<openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <logicModuleVersion>0.5.2</logicModuleVersion>
+        <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
+        <uiframeworkModuleVersion>2.5.2</uiframeworkModuleVersion>
+        <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
+        <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
+        <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
+        <addressHierarchy>2.2.10-SNAPSHOT</addressHierarchy>
+        <webServicesRest>1.2-SNAPSHOT</webServicesRest>
+        <webServicesRest19ext>1.0</webServicesRest19ext>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appframework-omod</artifactId>
+            <version>${appframeworkModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>uiframework-omod</artifactId>
+            <version>${uiframeworkModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <!-- note the non-standard type  -->
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>logic-omod</artifactId>
+            <version>${logicModuleVersion}</version>
+            <type>omod</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>idgen-omod</artifactId>
+            <version>${idgenModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>uilibrary-omod</artifactId>
+            <version>${uilibraryModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>uicommons-omod</artifactId>
+            <version>${uicommonsModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>addresshierarchy-omod</artifactId>
+            <version>${addressHierarchy}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>webservices.rest-omod</artifactId>
+            <version>${webServicesRest}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>webservices.rest19ext-omod</artifactId>
+            <version>${webServicesRest19ext}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.web</groupId>
+            <artifactId>openmrs-webapp</artifactId>
+            <version>${openMRSVersion}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<target>1.6</target>
+						<source>1.6</source>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+        <plugins>
+            <!--
+            Copy all of the modules we depend on (this also gets extra jars we don't need).
+            We'll end up with things like "reporting-omod-0.7.2.1.jar".
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
+                            <!-- the event module has the non-standard groupId org.openmrs -->
+                            <includeGroupIds>org.openmrs.module,org.openmrs,org.bahmni.module,org.bahmni.module</includeGroupIds>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+
+            <!--
+            Rename things like "reporting-omod-0.7.2.1.jar" to "reporting-0.7.2.1.omod".
+            This also drops everything that doesn't match "*-omod-*.jar"
+            -->
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>rename-jars-to-omod</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <move todir="${project.build.directory}/distro">
+                                    <fileset dir="${project.build.directory}/dependencies" />
+                                    <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
+                                </move>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <id>move-war-to-dist</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <move todir="${project.build.directory}/distro">
+                                    <fileset dir="${project.build.directory}/dependencies">
+                                        <include name="*.war"/>
+                                    </fileset>
+                                </move>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+
+                    <!-- For some reason the serialization.xstream-omod artifact is .omod, not .jar -->
+                    <execution>
+                        <id>rename-omods-to-omod</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <move todir="${project.build.directory}/distro">
+                                    <fileset dir="${project.build.directory}/dependencies" />
+                                    <mapper type="regexp" from="^(.+)-omod-(.+)\.omod" to="\1-\2.omod" />
+                                </move>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--
+            Assemble all of these omods into a zip file
+            -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    
+    <repositories>
+		<repository>
+			<id>openmrs-repo</id>
+			<name>OpenMRS Nexus Repository</name>
+			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>openmrs-repo</id>
+			<name>OpenMRS Nexus Repository</name>
+			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>openmrs-repo-modules</id>
+			<name>Modules</name>
+			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/modules/</url>
+		</repository>
+        <snapshotRepository>
+            <id>openmrs-repo-snapshots</id>
+            <name>OpenMRS Snapshots</name>
+            <url>http://mavenrepo.openmrs.org/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+	</distributionManagement>
+	
+
+</project>
