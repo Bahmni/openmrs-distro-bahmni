@@ -35,7 +35,7 @@
         <logicModuleVersion>0.5.2</logicModuleVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>2.5.2</uiframeworkModuleVersion>
-        <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
+        <idgenModuleVersion>2.5</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
         <addressHierarchyVersion>2.2.10-SNAPSHOT</addressHierarchyVersion>
