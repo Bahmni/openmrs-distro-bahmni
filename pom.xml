@@ -43,6 +43,7 @@
         <webServicesRest19extVersion>1.0</webServicesRest19extVersion>
         <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
+        <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
     </properties>
 
     <dependencies>
@@ -111,6 +112,12 @@
             <artifactId>bhamni.opd-omod</artifactId>
             <version>${bahmniOpdVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>bahmni.apps-omod</artifactId>
+            <version>${bahmniAppsVersion}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.openmrs.web</groupId>
