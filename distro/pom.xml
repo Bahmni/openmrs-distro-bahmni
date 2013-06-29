@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bahmni</artifactId>
+        <groupId>org.openmrs.distro</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>distro</artifactId>
+    <name>Bahmni Distribution</name>
+    <description>Scripts for building the Bahmni distribution</description>
+
+    <properties>
+        <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
+        <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <logicModuleVersion>0.5.2</logicModuleVersion>
+        <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
+        <uiframeworkModuleVersion>2.5.2</uiframeworkModuleVersion>
+        <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
+        <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
+        <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
+        <addressHierarchyVersion>2.2.10-SNAPSHOT</addressHierarchyVersion>
+        <webServicesRestVersion>2.1.1-SNAPSHOT</webServicesRestVersion>
+        <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
+        <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
+        <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
+    </properties>
+
+    <dependencies>
+
+        <!-- Main OpenMRS web app -->
+        <dependency>
+            <groupId>org.openmrs.web</groupId>
+            <artifactId>bahmni-openmrs-webapp</artifactId>
+            <version>${openMRSVersion}</version>
+            <type>war</type>
+        </dependency>
+
+        <!-- Modules actively developed in Bahmni -->
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>bahmnicore-omod</artifactId>
+            <version>${bahmniCoreVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.distro</groupId>
+            <artifactId>bahmni-configuration-omod</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- end -->
+
+        <!-- Modules developed and maintained in OpenMRS -->
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appframework-omod</artifactId>
+            <version>${appframeworkModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>uiframework-omod</artifactId>
+            <version>${uiframeworkModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <!-- note the non-standard type  -->
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>logic-omod</artifactId>
+            <version>${logicModuleVersion}</version>
+            <type>omod</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>uilibrary-omod</artifactId>
+            <version>${uilibraryModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>uicommons-omod</artifactId>
+            <version>${uicommonsModuleVersion}</version>
+        </dependency>
+        <!-- end -->
+
+        <!-- Modules forked from OpenMRS and maintained in Bahmni -->
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>idgen-omod</artifactId>
+            <version>${idgenModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>addresshierarchy-omod</artifactId>
+            <version>${addressHierarchyVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>bahmni-webservices.rest-omod</artifactId>
+            <version>${webServicesRestVersion}</version>
+        </dependency>
+        <!-- end -->
+
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>openmrs-release</id>
+            <!-- Bahmni Front End modules bundled as OpenMRS omods -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.openmrs.module</groupId>
+                    <artifactId>bhamni.registration-omod</artifactId>
+                    <version>${bahmniRegistrationVersion}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.openmrs.module</groupId>
+                    <artifactId>bhamni.opd-omod</artifactId>
+                    <version>${bahmniOpdVersion}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.openmrs.module</groupId>
+                    <artifactId>bahmni.apps-omod</artifactId>
+                    <version>${bahmniAppsVersion}</version>
+                </dependency>
+            </dependencies>
+            <!-- end -->
+        </profile>
+    </profiles>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <target>1.6</target>
+                        <source>1.6</source>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <!--
+            Copy all of the modules we depend on (this also gets extra jars we don't need).
+            We'll end up with things like "reporting-omod-0.7.2.1.jar".
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
+                            <!-- the event module has the non-standard groupId org.openmrs -->
+                            <includeGroupIds>org.openmrs.module,org.openmrs,org.bahmni.module,org.bhamni.module,org.bahmni,org.bhamni</includeGroupIds>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+
+            <!--
+            Rename things like "reporting-omod-0.7.2.1.jar" to "reporting-0.7.2.1.omod".
+            This also drops everything that doesn't match "*-omod-*.jar"
+            -->
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>rename-jars-to-omod</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <move todir="${project.build.directory}/distro">
+                                    <fileset dir="${project.build.directory}/dependencies" />
+                                    <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
+                                </move>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <id>move-war-to-dist</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <move todir="${project.build.directory}/distro">
+                                    <fileset dir="${project.build.directory}/dependencies">
+                                        <include name="*.war"/>
+                                    </fileset>
+                                </move>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+
+                    <!-- For some reason the serialization.xstream-omod artifact is .omod, not .jar -->
+                    <execution>
+                        <id>rename-omods-to-omod</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <move todir="${project.build.directory}/distro">
+                                    <fileset dir="${project.build.directory}/dependencies" />
+                                    <mapper type="regexp" from="^(.+)-omod-(.+)\.omod" to="\1-\2.omod" />
+                                </move>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--
+            Assemble all of these omods into a zip file
+            -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
