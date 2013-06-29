@@ -47,12 +47,23 @@
 
     <dependencies>
 
+        <!-- Main OpenMRS web app -->
+        <dependency>
+            <groupId>org.openmrs.web</groupId>
+            <artifactId>bahmni-openmrs-webapp</artifactId>
+            <version>${openMRSVersion}</version>
+            <type>war</type>
+        </dependency>
+
+        <!-- Modules actively developed in Bahmni -->
         <dependency>
             <groupId>org.bahmni.module</groupId>
             <artifactId>bahmnicore-omod</artifactId>
             <version>${bahmniCoreVersion}</version>
         </dependency>
+        <!-- end -->
 
+        <!-- Modules developed and maintained in OpenMRS -->
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>appframework-omod</artifactId>
@@ -70,12 +81,6 @@
             <version>${logicModuleVersion}</version>
             <type>omod</type>
         </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>idgen-omod</artifactId>
-            <version>${idgenModuleVersion}</version>
-        </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>uilibrary-omod</artifactId>
@@ -85,6 +90,14 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>uicommons-omod</artifactId>
             <version>${uicommonsModuleVersion}</version>
+        </dependency>
+        <!-- end -->
+
+        <!-- Modules forked from OpenMRS and maintained in Bahmni -->
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>idgen-omod</artifactId>
+            <version>${idgenModuleVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
@@ -96,30 +109,34 @@
             <artifactId>bahmni-webservices.rest-omod</artifactId>
             <version>${webServicesRestVersion}</version>
         </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>bhamni.registration-omod</artifactId>
-            <version>${bahmniRegistrationVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>bhamni.opd-omod</artifactId>
-            <version>${bahmniOpdVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>bahmni.apps-omod</artifactId>
-            <version>${bahmniAppsVersion}</version>
-        </dependency>
+        <!-- end -->
 
-
-        <dependency>
-            <groupId>org.openmrs.web</groupId>
-            <artifactId>bahmni-openmrs-webapp</artifactId>
-            <version>${openMRSVersion}</version>
-            <type>war</type>
-        </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>openmrs-release</id>
+            <!-- Bahmni Front End modules bundled as OpenMRS omods -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.openmrs.module</groupId>
+                    <artifactId>bhamni.registration-omod</artifactId>
+                    <version>${bahmniRegistrationVersion}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.openmrs.module</groupId>
+                    <artifactId>bhamni.opd-omod</artifactId>
+                    <version>${bahmniOpdVersion}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.openmrs.module</groupId>
+                    <artifactId>bahmni.apps-omod</artifactId>
+                    <version>${bahmniAppsVersion}</version>
+                </dependency>
+            </dependencies>
+            <!-- end -->
+        </profile>
+    </profiles>
 
 	<build>
 		<pluginManagement>
@@ -159,7 +176,7 @@
                         <configuration>
                             <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
                             <!-- the event module has the non-standard groupId org.openmrs -->
-                            <includeGroupIds>org.openmrs.module,org.openmrs,org.bahmni.module,org.bahmni.module</includeGroupIds>
+                            <includeGroupIds>org.openmrs.module,org.openmrs,org.bahmni.module,org.bhamni.module,org.bahmni,org.bhamni</includeGroupIds>
                         </configuration>
                     </execution>
 
