@@ -3,13 +3,13 @@
 <module configVersion="1.2">
 
     <!-- Module Properties -->
-    <id>${project.parent.artifactId}</id>
-    <name>${project.parent.name}</name>
-    <version>${project.parent.version}</version>
-    <package>${project.parent.groupId}.${project.parent.artifactId}</package>
-    <author>nutspiepully</author>
+    <id>${project.artifactId}</id>
+    <name>${project.name}</name>
+    <version>${project.version}</version>
+    <package>${project.groupId}.${project.artifactId}</package>
+    <author>nutsiepully</author>
     <description>
-        ${project.parent.description}
+        ${project.description}
     </description>
     <updateURL>https://modules.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL>
     <require_version>1.9.2</require_version>
@@ -17,7 +17,7 @@
 
 
     <!-- Module Activator -->
-    <activator>${project.parent.groupId}.${project.parent.artifactId}.RegistrationAppforBhamniActivator</activator>
+    <activator>org.openmrs.distro.BahmniConfigurationActivator</activator>
 
 
     <!-- Maps hibernate file's, if present -->
