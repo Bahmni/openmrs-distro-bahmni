@@ -30,14 +30,6 @@
 		<url>scm:git:git@github.com:Bhamni/openmrs-distro-bahmni.git</url>
 	</scm>
 
-	<distributionManagement>
-	    <snapshotRepository>
-	        <id>bahmni-artifactory</id>
-	        <name>bahmni-artifactory-snapshots</name>
-	        <url>http://172.18.2.1:8081/artifactory/libs-snapshot-local</url>
-	    </snapshotRepository>
-	</distributionManagement>
-
     <repositories>
 		<repository>
 			<id>openmrs-repo</id>
@@ -61,8 +53,8 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
-	<distributionManagement>
+
+	<!-- <distributionManagement>
 		<repository>
 			<id>openmrs-repo-modules</id>
 			<name>Modules</name>
@@ -73,6 +65,13 @@
             <name>OpenMRS Snapshots</name>
             <url>http://mavenrepo.openmrs.org/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
-	</distributionManagement>
+	</distributionManagement> -->
 
+	<distributionManagement>
+	    <snapshotRepository>
+	        <id>bahmni-artifactory</id>
+	        <name>bahmni-artifactory-snapshots</name>
+	        <url>http://172.18.2.1:8081/artifactory/libs-snapshot-local</url>
+	    </snapshotRepository>
+	</distributionManagement>
 </project>
