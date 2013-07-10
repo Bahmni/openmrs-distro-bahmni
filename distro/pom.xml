@@ -14,10 +14,9 @@
     <description>Scripts for building the Bahmni distribution</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <logicModuleVersion>0.5.2</logicModuleVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>2.5.2</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
@@ -28,6 +27,7 @@
         <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
+        <atomfeedModuleVersion>1.0-SNAPSHOT</atomfeedModuleVersion>
     </properties>
 
     <dependencies>
@@ -65,13 +65,6 @@
             <version>${uiframeworkModuleVersion}</version>
         </dependency>
         <dependency>
-            <!-- note the non-standard type  -->
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>logic-omod</artifactId>
-            <version>${logicModuleVersion}</version>
-            <type>omod</type>
-        </dependency>
-        <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>uilibrary-omod</artifactId>
             <version>${uilibraryModuleVersion}</version>
@@ -101,7 +94,30 @@
         </dependency>
         <!-- end -->
 
+        <!-- Modules from other maintainers-->
+        <dependency>
+          <groupId>org.ict4h.openmrs</groupId>
+          <artifactId>openmrs-atomfeed-omod</artifactId>
+          <version>${atomfeedModuleVersion}</version>
+        </dependency>
+        <!-- end -->
     </dependencies>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2</url>
+            <name>Repository for plugins</name>
+        </pluginRepository>
+        <pluginRepository>
+            <id>openmrs-repo</id>
+            <name>OpenMRS Nexus Repository</name>
+            <url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>    
 
     <profiles>
         <profile>
@@ -164,12 +180,10 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
+                            <excludeTransitive>true</excludeTransitive>
                             <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
-                            <!-- the event module has the non-standard groupId org.openmrs -->
-                            <includeGroupIds>org.openmrs.module,org.openmrs,org.bahmni.module,org.bhamni.module,org.bahmni,org.bhamni</includeGroupIds>
                         </configuration>
                     </execution>
-
                 </executions>
             </plugin>
 

@@ -15,13 +15,16 @@
     <name>Bahmni Configuration for distribution</name>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
+        <MODULE_ID>${project.parent.artifactId}</MODULE_ID>
+        <MODULE_NAME>${project.parent.name}</MODULE_NAME>
+        <MODULE_VERSION>${project.parent.version}</MODULE_VERSION>
+        <MODULE_PACKAGE>${project.parent.groupId}.${project.parent.artifactId}</MODULE_PACKAGE>
     </properties>
 
     <dependencies>
-
         <!-- Begin OpenMRS core -->
-
         <dependency>
             <groupId>org.openmrs.api</groupId>
             <artifactId>openmrs-api</artifactId>
@@ -63,9 +66,40 @@
         </dependency>
 
         <!-- End OpenMRS core -->
-
     </dependencies>
-
+    
+    <build>
+        <finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.openmrs.maven.plugins</groupId>
+                <artifactId>maven-openmrs-plugin</artifactId>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>init</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>initialize-module</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>pack</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package-module</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
     <profiles>
         <profile>
             <id>openmrs-release</id>
@@ -81,5 +115,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>

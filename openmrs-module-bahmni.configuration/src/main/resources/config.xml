@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//OpenMRS//DTD OpenMRS Config 1.0//EN" "http://resources.openmrs.org/doctype/config-1.2.dtd">
 
 <module configVersion="1.2">
-
     <!-- Module Properties -->
-    <id>${project.artifactId}</id>
-    <name>${project.name}</name>
-    <version>${project.version}</version>
-    <package>${project.groupId}.${project.artifactId}</package>
-    <author>nutsiepully</author>
-    <description>
-        ${project.description}
-    </description>
-    <updateURL>https://modules.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL>
+    <id>@MODULE_ID@</id>
+    <name>@MODULE_NAME@</name>
+    <version>@MODULE_VERSION@</version>
+    <package>@MODULE_PACKAGE@</package>
+    <author>Bahmni</author>
+    <description>@MODULE_NAME@</description>
+    <activator>@MODULE_PACKAGE@.BahmniConfigurationActivator</activator>
+    <updateURL>https://modules.openmrs.org/modules/download/@MODULE_ID@/update.rdf</updateURL>
     <require_version>1.9.2</require_version>
     <!-- / Module Properties -->
-
-
-    <!-- Module Activator -->
-    <activator>org.openmrs.distro.BahmniConfigurationActivator</activator>
-
 
     <!-- Maps hibernate file's, if present -->
     <mappingFiles>

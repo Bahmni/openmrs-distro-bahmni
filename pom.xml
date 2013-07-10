@@ -31,16 +31,27 @@
 	</scm>
 
     <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
 		<repository>
 			<id>openmrs-repo</id>
 			<name>OpenMRS Nexus Repository</name>
 			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
 		</repository>
-		<repository>
-	        <id>bahmni-artifactory</id>
-	        <name>bahmni-artifactory-snapshots</name>
-	        <url>http://172.18.2.1:8081/artifactory/libs-snapshot-local</url>
-	    </repository>	    
+        <repository>
+            <id>bahmni-artifactory</id>
+            <name>bahmni-artifactory-snapshots</name>
+            <url>http://172.18.2.1:8081/artifactory/libs-snapshot-local</url>
+        </repository>       
 	</repositories>
 
 	<pluginRepositories>
