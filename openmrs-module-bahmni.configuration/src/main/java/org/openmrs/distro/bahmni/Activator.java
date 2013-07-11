@@ -1,10 +1,10 @@
-package org.openmrs.distro;
+package org.openmrs.distro.bahmni;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.module.ModuleActivator;
 
-public class BahmniConfigurationActivator implements ModuleActivator {
+public class Activator implements ModuleActivator {
 
     protected Log log = LogFactory.getLog(getClass());
 

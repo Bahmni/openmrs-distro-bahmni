@@ -9,9 +9,9 @@
     <package>@MODULE_PACKAGE@</package>
     <author>Bahmni</author>
     <description>@MODULE_NAME@</description>
-    <activator>@MODULE_PACKAGE@.BahmniConfigurationActivator</activator>
+    <activator>@MODULE_PACKAGE@.Activator</activator>
     <updateURL>https://modules.openmrs.org/modules/download/@MODULE_ID@/update.rdf</updateURL>
-    <require_version>1.9.2</require_version>
+    <require_version>1.9.4</require_version>
     <!-- / Module Properties -->
 
     <!-- Maps hibernate file's, if present -->
