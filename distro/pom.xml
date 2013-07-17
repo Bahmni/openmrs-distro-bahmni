@@ -17,6 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
+        <bahmniMigratorVersion>0.2-SNAPSHOT</bahmniMigratorVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>2.5.2</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
@@ -50,6 +51,11 @@
             <groupId>org.openmrs.distro</groupId>
             <artifactId>bahmni-configuration-omod</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>bahmni-migrator</artifactId>
+            <version>${bahmniMigratorVersion}</version>
         </dependency>
         <!-- end -->
 
