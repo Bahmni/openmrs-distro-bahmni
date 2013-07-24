@@ -18,7 +18,7 @@
         <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
         <bahmniMigratorVersion>0.2-SNAPSHOT</bahmniMigratorVersion>
-        <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
+        <!-- <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion> -->
         <uiframeworkModuleVersion>2.5.2</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
@@ -60,11 +60,11 @@
         <!-- end -->
 
         <!-- Modules developed and maintained in OpenMRS -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>appframework-omod</artifactId>
             <version>${appframeworkModuleVersion}</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>uiframework-omod</artifactId>
