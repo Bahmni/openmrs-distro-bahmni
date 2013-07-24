@@ -25,9 +25,9 @@
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
         <addressHierarchyVersion>2.2.10-SNAPSHOT</addressHierarchyVersion>
         <webServicesRestVersion>2.1.1-SNAPSHOT</webServicesRestVersion>
-        <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
-        <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
-        <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
+         <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
+         <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
+         <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>1.0-SNAPSHOT</atomfeedModuleVersion>
     </properties>
 
@@ -47,11 +47,11 @@
             <artifactId>bahmnicore-omod</artifactId>
             <version>${bahmniCoreVersion}</version>
         </dependency>
-        <dependency>
-            <groupId>org.openmrs.distro</groupId>
-            <artifactId>bahmni-configuration-omod</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.openmrs.distro</groupId>-->
+            <!--<artifactId>bahmni-configuration-omod</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.bahmni.module</groupId>
             <artifactId>bahmni-migrator</artifactId>
