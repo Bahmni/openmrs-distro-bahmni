@@ -47,6 +47,11 @@
             <artifactId>bahmnicore-omod</artifactId>
             <version>${bahmniCoreVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>elisatomfeedclient-omod</artifactId>
+            <version>${bahmniCoreVersion}</version>
+        </dependency>
         <!--<dependency>-->
             <!--<groupId>org.openmrs.distro</groupId>-->
             <!--<artifactId>bahmni-configuration-omod</artifactId>-->
