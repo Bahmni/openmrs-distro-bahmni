@@ -19,7 +19,7 @@
         <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
         <bahmniMigratorVersion>0.2-SNAPSHOT</bahmniMigratorVersion>
         <!-- <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion> -->
-        <uiframeworkModuleVersion>2.5.2</uiframeworkModuleVersion>
+        <uiframeworkModuleVersion>3.0-SNAPSHOT</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
