@@ -137,12 +137,12 @@
             <dependencies>
                 <dependency>
                     <groupId>org.openmrs.module</groupId>
-                    <artifactId>bhamni.registration-omod</artifactId>
+                    <artifactId>bahmni.registration-omod</artifactId>
                     <version>${bahmniRegistrationVersion}</version>
                 </dependency>
                 <dependency>
                     <groupId>org.openmrs.module</groupId>
-                    <artifactId>bhamni.opd-omod</artifactId>
+                    <artifactId>bahmni.opd-omod</artifactId>
                     <version>${bahmniOpdVersion}</version>
                 </dependency>
                 <dependency>
