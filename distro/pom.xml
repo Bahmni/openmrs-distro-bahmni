@@ -18,11 +18,12 @@
         <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
         <bahmniMigratorVersion>0.2-SNAPSHOT</bahmniMigratorVersion>
-        <!-- <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion> -->
+        <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.0</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
+        <emrapiModuleVersion>1.0-SNAPSHOT</emrapiModuleVersion>
         <addressHierarchyVersion>2.2.9</addressHierarchyVersion>
         <webServicesRestVersion>2.1.1-SNAPSHOT</webServicesRestVersion>
          <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
@@ -65,11 +66,11 @@
         <!-- end -->
 
         <!-- Modules developed and maintained in OpenMRS -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>appframework-omod</artifactId>
             <version>${appframeworkModuleVersion}</version>
-        </dependency> -->
+        </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>uiframework-omod</artifactId>
@@ -84,6 +85,11 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>uicommons-omod</artifactId>
             <version>${uicommonsModuleVersion}</version>
+        </dependency>
+         <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>emrapi-omod</artifactId>
+            <version>${emrapiModuleVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
@@ -124,7 +130,8 @@
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>serialization.xstream-omod</artifactId>
-            version>0.2.7</version>
+            <version>0.2.8-SNAPSHOT</version>
+            <type>omod</type>
         </dependency>
         <!-- end -->
 
