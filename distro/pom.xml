@@ -18,12 +18,22 @@
         <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>0.2-SNAPSHOT</bahmniCoreVersion>
         <bahmniMigratorVersion>0.2-SNAPSHOT</bahmniMigratorVersion>
-        <!-- <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion> -->
+        <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.1-SNAPSHOT</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
-        <addressHierarchyVersion>2.2.10-SNAPSHOT</addressHierarchyVersion>
+        <emrapiModuleVersion>1.0-SNAPSHOT</emrapiModuleVersion>
+        <providerManagementVersion>1.1.3</providerManagementVersion>
+        <reportingVersion>0.7.5</reportingVersion>
+        <metadataSharingVersion>1.1.8</metadataSharingVersion>
+        <uilibraryVersion>1.5</uilibraryVersion>
+        <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
+        <calculationVersion>1.0</calculationVersion>
+        <metadataMappingVersion>1.0.1</metadataMappingVersion>    
+        <serializationVersion>0.2.8-SNAPSHOT</serializationVersion>
+        <eventModuleVersion>2.2-SNAPSHOT</eventModuleVersion>
+        <addressHierarchyVersion>2.2.9</addressHierarchyVersion>
         <webServicesRestVersion>2.1.1-SNAPSHOT</webServicesRestVersion>
          <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
          <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
@@ -65,11 +75,11 @@
         <!-- end -->
 
         <!-- Modules developed and maintained in OpenMRS -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>appframework-omod</artifactId>
             <version>${appframeworkModuleVersion}</version>
-        </dependency> -->
+        </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>uiframework-omod</artifactId>
@@ -84,6 +94,59 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>uicommons-omod</artifactId>
             <version>${uicommonsModuleVersion}</version>
+        </dependency>
+         <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>emrapi-omod</artifactId>
+            <version>${emrapiModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>providermanagement-omod</artifactId>
+            <version>${providerManagementVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>reporting-omod</artifactId>
+            <version>${reportingVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>metadatasharing-omod</artifactId>
+            <version>${metadataSharingVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>uilibrary-omod</artifactId>
+            <version>${uilibraryVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>htmlwidgets-omod</artifactId>
+            <version>${htmlwidgetsVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>calculation-omod</artifactId>
+            <version>${calculationVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>metadatamapping-omod</artifactId>
+            <version>${metadataMappingVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>serialization.xstream-omod</artifactId>
+            <version>${serializationVersion}</version>
+            <type>omod</type>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.openmrs</groupId>
+            <artifactId>event-omod</artifactId>
+            <version>${eventModuleVersion}</version>
         </dependency>
         <!-- end -->
 
@@ -137,12 +200,12 @@
             <dependencies>
                 <dependency>
                     <groupId>org.openmrs.module</groupId>
-                    <artifactId>bhamni.registration-omod</artifactId>
+                    <artifactId>bahmni.registration-omod</artifactId>
                     <version>${bahmniRegistrationVersion}</version>
                 </dependency>
                 <dependency>
                     <groupId>org.openmrs.module</groupId>
-                    <artifactId>bhamni.opd-omod</artifactId>
+                    <artifactId>bahmni.opd-omod</artifactId>
                     <version>${bahmniOpdVersion}</version>
                 </dependency>
                 <dependency>
