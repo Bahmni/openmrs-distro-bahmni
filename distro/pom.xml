@@ -33,7 +33,7 @@
         <metadataMappingVersion>1.0.1</metadataMappingVersion>    
         <serializationVersion>0.2.8-SNAPSHOT</serializationVersion>
         <eventModuleVersion>2.2-SNAPSHOT</eventModuleVersion>
-        <addressHierarchyVersion>2.2.9</addressHierarchyVersion>
+        <addressHierarchyVersion>2.2.10-SNAPSHOT</addressHierarchyVersion>
         <webServicesRestVersion>2.1.1-SNAPSHOT</webServicesRestVersion>
         <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
