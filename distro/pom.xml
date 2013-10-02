@@ -20,7 +20,7 @@
         <bahmniMigratorVersion>2.5-SNAPSHOT</bahmniMigratorVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.1-SNAPSHOT</uiframeworkModuleVersion>
-        <idgenModuleVersion>2.6-SNAPSHOT</idgenModuleVersion>
+        <idgenModuleVersion>2.6</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
         <emrapiModuleVersion>1.0-SNAPSHOT</emrapiModuleVersion>
