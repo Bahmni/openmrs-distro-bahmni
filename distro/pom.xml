@@ -34,7 +34,7 @@
         <serializationVersion>0.2.8-SNAPSHOT</serializationVersion>
         <eventModuleVersion>2.2-SNAPSHOT</eventModuleVersion>
         <addressHierarchyVersion>2.2.10-SNAPSHOT</addressHierarchyVersion>
-        <webServicesRestVersion>2.1.1-SNAPSHOT</webServicesRestVersion>
+        <webServicesRestVersion>2.2-SNAPSHOT</webServicesRestVersion>
         <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
@@ -163,7 +163,7 @@
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>bahmni-webservices.rest-omod</artifactId>
+            <artifactId>webservices.rest-omod</artifactId>
             <version>${webServicesRestVersion}</version>
         </dependency>
         <!-- end -->
