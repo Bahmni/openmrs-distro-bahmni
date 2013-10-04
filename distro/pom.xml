@@ -15,7 +15,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
+        <openMRSVersion>1.9.6-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>2.5-SNAPSHOT</bahmniCoreVersion>
         <bahmniMigratorVersion>2.5-SNAPSHOT</bahmniMigratorVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
@@ -46,7 +46,7 @@
         <!-- Main OpenMRS web app -->
         <dependency>
             <groupId>org.openmrs.web</groupId>
-            <artifactId>bahmni-openmrs-webapp</artifactId>
+            <artifactId>openmrs-webapp</artifactId>
             <version>${openMRSVersion}</version>
             <type>war</type>
         </dependency>
