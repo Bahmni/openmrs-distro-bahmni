@@ -23,7 +23,7 @@
         <idgenModuleVersion>2.6</idgenModuleVersion>
         <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
-        <emrapiModuleVersion>1.1-SNAPSHOT</emrapiModuleVersion>
+        <emrapiModuleVersion>1.1-bahmni-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.1</providerManagementVersion>
         <reportingVersion>0.7.5</reportingVersion>
         <metadataSharingVersion>1.1.8</metadataSharingVersion>
