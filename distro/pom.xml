@@ -77,7 +77,7 @@
 
         <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>bedmanagement</artifactId>
+            <artifactId>bedmanagement-omod</artifactId>
             <version>${bedManagementVersion}</version>
         </dependency>
 
