@@ -39,6 +39,7 @@
         <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>1.0-SNAPSHOT</atomfeedModuleVersion>
+        <bedManagementVersion>1.0-SNAPSHOT</bedManagementVersion>
     </properties>
 
     <dependencies>
@@ -73,6 +74,12 @@
             <version>${bahmniMigratorVersion}</version>
         </dependency>
         <!-- end -->
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>bedmanagement</artifactId>
+            <version>${bedManagementVersion}</version>
+        </dependency>
 
         <!-- Modules developed and maintained in OpenMRS -->
         <dependency>
