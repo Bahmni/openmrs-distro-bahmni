@@ -22,6 +22,7 @@
             <includes>
                 <include>*.omod</include>
                 <include>*.war</include>
+                <include>*.jar</include>
             </includes>
         </fileSet>
     </fileSets>
