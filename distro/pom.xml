@@ -17,11 +17,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.9.6-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>2.5-SNAPSHOT</bahmniCoreVersion>
-        <bahmniMigratorVersion>2.5-SNAPSHOT</bahmniMigratorVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.1-SNAPSHOT</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6</idgenModuleVersion>
-        <uilibraryModuleVersion>2.0.4-SNAPSHOT</uilibraryModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
         <emrapiModuleVersion>1.1-bahmni-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.1</providerManagementVersion>
@@ -40,6 +38,7 @@
         <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>1.0-SNAPSHOT</atomfeedModuleVersion>
         <bedManagementVersion>1.0-SNAPSHOT</bedManagementVersion>
+        <mailappenderVersion>2.5-SNAPSHOT</mailappenderVersion>
     </properties>
 
     <dependencies>
@@ -63,16 +62,6 @@
             <artifactId>elisatomfeedclient-omod</artifactId>
             <version>${bahmniCoreVersion}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.openmrs.distro</groupId>-->
-            <!--<artifactId>bahmni-configuration-omod</artifactId>-->
-            <!--<version>1.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
-        <dependency>
-            <groupId>org.bahmni.module</groupId>
-            <artifactId>bahmni-migrator</artifactId>
-            <version>${bahmniMigratorVersion}</version>
-        </dependency>
         <!-- end -->
 
         <dependency>
@@ -91,11 +80,6 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>uiframework-omod</artifactId>
             <version>${uiframeworkModuleVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>uilibrary-omod</artifactId>
-            <version>${uilibraryModuleVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
@@ -172,6 +156,11 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>webservices.rest-omod</artifactId>
             <version>${webServicesRestVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>mail-appender</artifactId>
+            <version>${mailappenderVersion}</version>
         </dependency>
         <!-- end -->
 
@@ -271,7 +260,7 @@
 
             <!--
             Rename things like "reporting-omod-0.7.2.1.jar" to "reporting-0.7.2.1.omod".
-            This also drops everything that doesn't match "*-omod-*.jar"
+            It also copies other jars that are not omods
             -->
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
@@ -285,6 +274,23 @@
                                 <move todir="${project.build.directory}/distro">
                                     <fileset dir="${project.build.directory}/dependencies" />
                                     <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
+                                </move>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+
+                     <execution>
+                        <id>copy-other-jars</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <move todir="${project.build.directory}/distro">
+                                    <fileset dir="${project.build.directory}/dependencies">
+                                        <include name="*.jar"/>
+                                    </fileset>
                                 </move>
                             </target>
                         </configuration>
