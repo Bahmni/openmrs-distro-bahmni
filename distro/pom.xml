@@ -15,7 +15,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <openMRSVersion>1.9.6-SNAPSHOT</openMRSVersion>
+        <openMRSVersion>1.9.7-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>2.5-SNAPSHOT</bahmniCoreVersion>
         <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.1-SNAPSHOT</uiframeworkModuleVersion>
@@ -32,7 +32,7 @@
         <serializationVersion>0.2.8-SNAPSHOT</serializationVersion>
         <eventModuleVersion>2.2-SNAPSHOT</eventModuleVersion>
         <addressHierarchyVersion>2.3</addressHierarchyVersion>
-        <webServicesRestVersion>2.3-SNAPSHOT</webServicesRestVersion>
+        <webServicesRestVersion>2.4-SNAPSHOT</webServicesRestVersion>
         <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
