@@ -21,7 +21,7 @@
         <uiframeworkModuleVersion>3.1-SNAPSHOT</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6</idgenModuleVersion>
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
-        <emrapiModuleVersion>1.1-bahmni-SNAPSHOT</emrapiModuleVersion>
+        <emrapiModuleVersion>1.1-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.1</providerManagementVersion>
         <reportingVersion>0.7.5</reportingVersion>
         <metadataSharingVersion>1.1.8</metadataSharingVersion>
