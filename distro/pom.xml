@@ -23,7 +23,7 @@
         <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
         <emrapiModuleVersion>1.1-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.1</providerManagementVersion>
-        <reportingVersion>0.7.5</reportingVersion>
+        <reportingVersion>0.8</reportingVersion>
         <metadataSharingVersion>1.1.8</metadataSharingVersion>
         <uilibraryVersion>1.5</uilibraryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
