@@ -17,11 +17,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.9.7-SNAPSHOT</openMRSVersion>
         <bahmniCoreVersion>2.5-SNAPSHOT</bahmniCoreVersion>
-        <appframeworkModuleVersion>2.0-SNAPSHOT</appframeworkModuleVersion>
-        <uiframeworkModuleVersion>3.1-SNAPSHOT</uiframeworkModuleVersion>
+        <appframeworkModuleVersion>2.1-SNAPSHOT</appframeworkModuleVersion>
+        <uiframeworkModuleVersion>3.2-SNAPSHOT</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.0-SNAPSHOT</idgenWebServicesModuleVersion>
-        <uicommonsModuleVersion>1.0-SNAPSHOT</uicommonsModuleVersion>
+        <uicommonsModuleVersion>1.0</uicommonsModuleVersion>
         <emrapiModuleVersion>1.1-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.1</providerManagementVersion>
         <reportingVersion>0.8</reportingVersion>
