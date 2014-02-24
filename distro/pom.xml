@@ -5,7 +5,7 @@
     <parent>
         <artifactId>bahmni</artifactId>
         <groupId>org.openmrs.distro</groupId>
-        <version>2.5-SNAPSHOT</version>
+        <version>4.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.9.8-SNAPSHOT</openMRSVersion>
-        <bahmniCoreVersion>2.5-SNAPSHOT</bahmniCoreVersion>
+        <bahmniCoreVersion>4.0-SNAPSHOT</bahmniCoreVersion>
         <appframeworkModuleVersion>2.1</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.2</uiframeworkModuleVersion>
         <idgenModuleVersion>2.6</idgenModuleVersion>
@@ -34,12 +34,12 @@
         <eventModuleVersion>2.2-SNAPSHOT</eventModuleVersion>
         <addressHierarchyVersion>2.4-SNAPSHOT</addressHierarchyVersion>
         <webServicesRestVersion>2.5-SNAPSHOT</webServicesRestVersion>
-        <bahmniRegistrationVersion>1.0-SNAPSHOT</bahmniRegistrationVersion>
-        <bahmniOpdVersion>1.0-SNAPSHOT</bahmniOpdVersion>
-        <bahmniAppsVersion>1.0-SNAPSHOT</bahmniAppsVersion>
+        <bahmniRegistrationVersion>4.0-SNAPSHOT</bahmniRegistrationVersion>
+        <bahmniOpdVersion>4.0-SNAPSHOT</bahmniOpdVersion>
+        <bahmniAppsVersion>4.0-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>1.0-SNAPSHOT</atomfeedModuleVersion>
-        <bedManagementVersion>1.0-SNAPSHOT</bedManagementVersion>
-        <mailappenderVersion>2.5-SNAPSHOT</mailappenderVersion>
+        <bedManagementVersion>4.0-SNAPSHOT</bedManagementVersion>
+        <mailappenderVersion>4.0-SNAPSHOT</mailappenderVersion>
     </properties>
 
     <dependencies>
