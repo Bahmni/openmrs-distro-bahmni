@@ -28,7 +28,7 @@
         <metadataSharingVersion>1.1.8</metadataSharingVersion>
         <uilibraryVersion>1.5</uilibraryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
-        <calculationVersion>1.0</calculationVersion>
+        <calculationVersion>1.1</calculationVersion>
         <metadataMappingVersion>1.0.1</metadataMappingVersion>    
         <serializationVersion>0.2.8-SNAPSHOT</serializationVersion>
         <eventModuleVersion>2.2-SNAPSHOT</eventModuleVersion>
