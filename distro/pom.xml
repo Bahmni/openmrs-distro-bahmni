@@ -285,9 +285,9 @@
             <id>bahmni-artifactory</id>
             <name>bahmni-artifactory-snapshots</name>
             <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
-            <releases>
+            <snapshots>
                 <updatePolicy>always</updatePolicy>
-            </releases>
+            </snapshots>
         </repository>
     </repositories>
 
