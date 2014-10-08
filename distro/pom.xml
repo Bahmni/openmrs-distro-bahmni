@@ -19,8 +19,8 @@
         <bahmniCoreVersion>5.1-SNAPSHOT</bahmniCoreVersion>
         <appframeworkModuleVersion>2.1</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.2</uiframeworkModuleVersion>
-        <idgenModuleVersion>3.0-SNAPSHOT</idgenModuleVersion>
-        <idgenWebServicesModuleVersion>1.0-SNAPSHOT</idgenWebServicesModuleVersion>
+        <idgenModuleVersion>2.9.1</idgenModuleVersion>
+        <idgenWebServicesModuleVersion>1.0</idgenWebServicesModuleVersion>
         <uicommonsModuleVersion>1.0</uicommonsModuleVersion>
         <emrapiModuleVersion>1.5-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.2</providerManagementVersion>
@@ -31,7 +31,7 @@
         <calculationVersion>1.1</calculationVersion>
         <metadataMappingVersion>1.0.1</metadataMappingVersion>    
         <serializationVersion>0.2.8-SNAPSHOT</serializationVersion>
-        <eventModuleVersion>2.2-SNAPSHOT</eventModuleVersion>
+        <eventModuleVersion>2.1</eventModuleVersion>
         <addressHierarchyVersion>2.4-SNAPSHOT</addressHierarchyVersion>
         <webServicesRestVersion>2.6</webServicesRestVersion>
         <bahmniRegistrationVersion>5.1-SNAPSHOT</bahmniRegistrationVersion>
