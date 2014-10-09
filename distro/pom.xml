@@ -30,14 +30,14 @@
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
         <calculationVersion>1.1</calculationVersion>
         <metadataMappingVersion>1.0.1</metadataMappingVersion>    
-        <serializationVersion>0.2.8-SNAPSHOT</serializationVersion>
+        <serializationVersion>0.2.7</serializationVersion>
         <eventModuleVersion>2.1</eventModuleVersion>
         <addressHierarchyVersion>2.4</addressHierarchyVersion>
         <webServicesRestVersion>2.6</webServicesRestVersion>
         <bahmniRegistrationVersion>5.1-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>5.1-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>5.1-SNAPSHOT</bahmniAppsVersion>
-        <atomfeedModuleVersion>2.0-SNAPSHOT</atomfeedModuleVersion>
+        <atomfeedModuleVersion>2.0</atomfeedModuleVersion>
         <bedManagementVersion>5.1-SNAPSHOT</bedManagementVersion>
         <mailappenderVersion>5.1-SNAPSHOT</mailappenderVersion>
     </properties>
