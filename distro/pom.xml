@@ -37,7 +37,7 @@
         <bahmniRegistrationVersion>5.1-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>5.1-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>5.1-SNAPSHOT</bahmniAppsVersion>
-        <atomfeedModuleVersion>2.0</atomfeedModuleVersion>
+        <atomfeedModuleVersion>2.1</atomfeedModuleVersion>
         <bedManagementVersion>5.1-SNAPSHOT</bedManagementVersion>
         <mailappenderVersion>5.1-SNAPSHOT</mailappenderVersion>
     </properties>
