@@ -51,7 +51,12 @@
             <id>bahmni-artifactory</id>
             <name>bahmni-artifactory-snapshots</name>
             <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
-        </repository>       
+        </repository>
+        <repository>
+            <id>bahmni-artifactory-release</id>
+            <name>bahmni-artifactory-release</name>
+            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-release-local</url>
+        </repository>
 	</repositories>
 
 	<pluginRepositories>
