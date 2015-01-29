@@ -39,6 +39,7 @@
         <bahmniAppsVersion>5.2-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>2.1</atomfeedModuleVersion>
         <bedManagementVersion>5.1-SNAPSHOT</bedManagementVersion>
+        <dhisOmodVersion>1.0-SNAPSHOT</dhisOmodVersion>
         <mailappenderVersion>5.2-SNAPSHOT</mailappenderVersion>
     </properties>
 
@@ -79,6 +80,11 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>bedmanagement-omod</artifactId>
             <version>${bedManagementVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>dhis-omod</artifactId>
+            <version>${dhisOmodVersion}</version>
         </dependency>
 
         <!-- Modules developed and maintained in OpenMRS -->
@@ -144,7 +150,7 @@
             <version>${serializationVersion}</version>
             <type>omod</type>
         </dependency>
-        
+
          <dependency>
             <groupId>org.openmrs</groupId>
             <artifactId>event-omod</artifactId>
