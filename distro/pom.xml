@@ -33,7 +33,7 @@
         <serializationVersion>0.2.7</serializationVersion>
         <eventModuleVersion>2.1</eventModuleVersion>
         <addressHierarchyVersion>2.4</addressHierarchyVersion>
-        <webServicesRestVersion>2.6</webServicesRestVersion>
+        <webServicesRestVersion>2.10-SNAPSHOT</webServicesRestVersion>
         <bahmniRegistrationVersion>5.2-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>5.2-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>5.2-SNAPSHOT</bahmniAppsVersion>
