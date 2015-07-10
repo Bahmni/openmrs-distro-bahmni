@@ -20,7 +20,6 @@
         <appframeworkModuleVersion>2.1</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.2</uiframeworkModuleVersion>
         <idgenModuleVersion>2.9.1</idgenModuleVersion>
-        <idgenWebServicesModuleVersion>1.0</idgenWebServicesModuleVersion>
         <uicommonsModuleVersion>1.0</uicommonsModuleVersion>
         <emrapiModuleVersion>1.7-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.2</providerManagementVersion>
@@ -163,11 +162,6 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>idgen-omod</artifactId>
             <version>${idgenModuleVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>idgen-webservices-omod</artifactId>
-            <version>${idgenWebServicesModuleVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
