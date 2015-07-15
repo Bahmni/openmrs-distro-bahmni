@@ -22,7 +22,7 @@
         <idgenModuleVersion>2.9.1</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.0</idgenWebServicesModuleVersion>
         <uicommonsModuleVersion>1.0</uicommonsModuleVersion>
-        <emrapiModuleVersion>1.7-SNAPSHOT</emrapiModuleVersion>
+        <emrapiModuleVersion>1.7</emrapiModuleVersion>
         <providerManagementVersion>2.2</providerManagementVersion>
         <reportingVersion>0.9.1</reportingVersion>
         <metadataSharingVersion>1.1.8</metadataSharingVersion>
