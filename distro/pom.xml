@@ -17,19 +17,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.10.2</openMRSVersion>
         <bahmniCoreVersion>0.74-SNAPSHOT</bahmniCoreVersion>
-        <appframeworkModuleVersion>2.1</appframeworkModuleVersion>
-        <uiframeworkModuleVersion>3.2</uiframeworkModuleVersion>
-        <idgenModuleVersion>2.9.1</idgenModuleVersion>
+        <appframeworkModuleVersion>2.3</appframeworkModuleVersion>
+        <uiframeworkModuleVersion>3.3.1</uiframeworkModuleVersion>
+        <idgenModuleVersion>3.0</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.0</idgenWebServicesModuleVersion>
-        <uicommonsModuleVersion>1.0</uicommonsModuleVersion>
+        <uicommonsModuleVersion>1.6</uicommonsModuleVersion>
         <emrapiModuleVersion>1.8-SNAPSHOT</emrapiModuleVersion>
         <providerManagementVersion>2.2</providerManagementVersion>
-        <reportingVersion>0.9.1</reportingVersion>
-        <metadataSharingVersion>1.1.8</metadataSharingVersion>
-        <uilibraryVersion>1.5</uilibraryVersion>
+        <reportingVersion>0.9.4</reportingVersion>
+        <metadataSharingVersion>1.1.9</metadataSharingVersion>
+        <uilibraryVersion>2.0.4</uilibraryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
         <calculationVersion>1.1</calculationVersion>
-        <metadataMappingVersion>1.0.1</metadataMappingVersion>    
+        <metadataMappingVersion>1.0.2</metadataMappingVersion>
         <serializationVersion>0.2.7</serializationVersion>
         <eventModuleVersion>2.1</eventModuleVersion>
         <addressHierarchyVersion>2.7</addressHierarchyVersion>
@@ -41,6 +41,15 @@
         <bedManagementVersion>5.2-SNAPSHOT</bedManagementVersion>
         <dhisOmodVersion>1.0-SNAPSHOT</dhisOmodVersion>
         <mailappenderVersion>0.74-SNAPSHOT</mailappenderVersion>
+        <appointmentschedulingModuleVersion>1.3</appointmentschedulingModuleVersion>
+        <appointmentSchedulinguiModuleVersion>1.0.2</appointmentSchedulinguiModuleVersion>
+        <coreappsModuleVersion>1.5</coreappsModuleVersion>
+        <htmlformentryModuleVersion>2.5</htmlformentryModuleVersion>
+        <reportingrestModuleVersion>1.4</reportingrestModuleVersion>
+        <referenceapplicationModuleVersion>2.2</referenceapplicationModuleVersion>
+        <appuiVersion>1.3</appuiVersion>
+        <htmlformentryuiVersion>1.2</htmlformentryuiVersion>
+
     </properties>
 
     <dependencies>
@@ -156,6 +165,60 @@
             <artifactId>event-omod</artifactId>
             <version>${eventModuleVersion}</version>
         </dependency>
+
+        <!-- Modules required for Appointment Scheduling -->
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appointmentscheduling-omod</artifactId>
+            <version>${appointmentschedulingModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appointmentschedulingui-omod</artifactId>
+            <version>${appointmentSchedulinguiModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>coreapps-omod</artifactId>
+            <version>${coreappsModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>htmlformentry-omod</artifactId>
+            <version>${htmlformentryModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>reportingrest-omod</artifactId>
+            <version>${reportingrestModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>referenceapplication-omod</artifactId>
+            <version>${referenceapplicationModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appui-omod</artifactId>
+            <version>${appuiVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>htmlformentryui-omod</artifactId>
+            <version>${htmlformentryuiVersion}</version>
+        </dependency>
+        <!-- end -->
+
+
+
         <!-- end -->
 
         <!-- Modules forked from OpenMRS and maintained in Bahmni -->
