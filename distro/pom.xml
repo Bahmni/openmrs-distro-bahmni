@@ -46,7 +46,6 @@
         <coreappsModuleVersion>1.5</coreappsModuleVersion>
         <htmlformentryModuleVersion>2.5</htmlformentryModuleVersion>
         <reportingrestModuleVersion>1.4</reportingrestModuleVersion>
-        <referenceapplicationModuleVersion>2.2</referenceapplicationModuleVersion>
         <appuiVersion>1.3</appuiVersion>
         <htmlformentryuiVersion>1.2</htmlformentryuiVersion>
 
@@ -197,13 +196,7 @@
             <artifactId>reportingrest-omod</artifactId>
             <version>${reportingrestModuleVersion}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>referenceapplication-omod</artifactId>
-            <version>${referenceapplicationModuleVersion}</version>
-        </dependency>
-
+        
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>appui-omod</artifactId>
