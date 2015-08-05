@@ -199,12 +199,6 @@
 
         <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>referenceapplication-omod</artifactId>
-            <version>${referenceapplicationModuleVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
             <artifactId>appui-omod</artifactId>
             <version>${appuiVersion}</version>
         </dependency>
