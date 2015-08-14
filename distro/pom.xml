@@ -19,7 +19,7 @@
         <bahmniCoreVersion>0.75-SNAPSHOT</bahmniCoreVersion>
         <appframeworkModuleVersion>2.3</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.3.1</uiframeworkModuleVersion>
-        <idgenModuleVersion>4.0-SNAPSHOT</idgenModuleVersion>
+        <idgenModuleVersion>4.0</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
         <uicommonsModuleVersion>1.6</uicommonsModuleVersion>
         <emrapiModuleVersion>1.9-SNAPSHOT</emrapiModuleVersion>
