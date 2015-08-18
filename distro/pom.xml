@@ -41,9 +41,9 @@
         <bedManagementVersion>5.2-SNAPSHOT</bedManagementVersion>
         <dhisOmodVersion>1.0-SNAPSHOT</dhisOmodVersion>
         <mailappenderVersion>0.75-SNAPSHOT</mailappenderVersion>
-        <appointmentschedulingModuleVersion>1.3</appointmentschedulingModuleVersion>
-        <appointmentSchedulinguiModuleVersion>1.0.2</appointmentSchedulinguiModuleVersion>
-        <coreappsModuleVersion>1.5</coreappsModuleVersion>
+        <appointmentschedulingModuleVersion>1.4-SNAPSHOT</appointmentschedulingModuleVersion>
+        <appointmentSchedulinguiModuleVersion>1.0.3-SNAPSHOT</appointmentSchedulinguiModuleVersion>
+        <coreappsModuleVersion>1.7-SNAPSHOT</coreappsModuleVersion>
         <htmlformentryModuleVersion>2.5</htmlformentryModuleVersion>
         <reportingrestModuleVersion>1.4</reportingrestModuleVersion>
         <appuiVersion>1.3</appuiVersion>
