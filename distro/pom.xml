@@ -21,8 +21,8 @@
         <uiframeworkModuleVersion>3.3.1</uiframeworkModuleVersion>
         <idgenModuleVersion>4.0</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
-        <uicommonsModuleVersion>1.6</uicommonsModuleVersion>
         <emrapiModuleVersion>1.9-SNAPSHOT</emrapiModuleVersion>
+        <uicommonsModuleVersion>1.7-SNAPSHOT</uicommonsModuleVersion>
         <providerManagementVersion>2.2</providerManagementVersion>
         <reportingVersion>0.9.4</reportingVersion>
         <metadataSharingVersion>1.1.9</metadataSharingVersion>
