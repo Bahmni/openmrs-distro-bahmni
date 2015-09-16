@@ -38,7 +38,7 @@
         <bahmniOpdVersion>0.74-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>0.74-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>2.4-SNAPSHOT</atomfeedModuleVersion>
-        <bedManagementVersion>5.2-SNAPSHOT</bedManagementVersion>
+        <bedManagementVersion>5.3-SNAPSHOT</bedManagementVersion>
         <dhisOmodVersion>1.0-SNAPSHOT</dhisOmodVersion>
         <mailappenderVersion>0.74-SNAPSHOT</mailappenderVersion>
         <appointmentschedulingModuleVersion>1.4-SNAPSHOT</appointmentschedulingModuleVersion>
