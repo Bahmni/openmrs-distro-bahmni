@@ -15,14 +15,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <openMRSVersion>1.11.4-SNAPSHOT</openMRSVersion>
+        <openMRSVersion>1.11.4</openMRSVersion>
         <bahmniCoreVersion>0.76-SNAPSHOT</bahmniCoreVersion>
         <appframeworkModuleVersion>2.3</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.3.1</uiframeworkModuleVersion>
         <idgenModuleVersion>4.0</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
         <emrapiModuleVersion>1.11-SNAPSHOT</emrapiModuleVersion>
-        <uicommonsModuleVersion>1.7-SNAPSHOT</uicommonsModuleVersion>
+        <uicommonsModuleVersion>1.7</uicommonsModuleVersion>
         <providerManagementVersion>2.2</providerManagementVersion>
         <reportingVersion>0.9.4</reportingVersion>
         <metadataSharingVersion>1.1.9</metadataSharingVersion>
@@ -33,7 +33,7 @@
         <serializationVersion>0.2.7</serializationVersion>
         <eventModuleVersion>2.1</eventModuleVersion>
         <addressHierarchyVersion>2.7</addressHierarchyVersion>
-        <webServicesRestVersion>2.12-SNAPSHOT</webServicesRestVersion>
+        <webServicesRestVersion>2.12</webServicesRestVersion>
         <bahmniRegistrationVersion>0.76-SNAPSHOT</bahmniRegistrationVersion>
         <bahmniOpdVersion>0.76-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>0.76-SNAPSHOT</bahmniAppsVersion>
@@ -41,7 +41,7 @@
         <bedManagementVersion>5.2-SNAPSHOT</bedManagementVersion>
         <dhisOmodVersion>1.0-SNAPSHOT</dhisOmodVersion>
         <mailappenderVersion>0.76-SNAPSHOT</mailappenderVersion>
-        <appointmentschedulingModuleVersion>1.4-SNAPSHOT</appointmentschedulingModuleVersion>
+        <appointmentschedulingModuleVersion>1.4</appointmentschedulingModuleVersion>
         <appointmentSchedulinguiModuleVersion>1.0.3-SNAPSHOT</appointmentSchedulinguiModuleVersion>
         <coreappsModuleVersion>1.7-SNAPSHOT</coreappsModuleVersion>
         <htmlformentryModuleVersion>2.5</htmlformentryModuleVersion>
