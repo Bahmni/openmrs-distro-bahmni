@@ -5,7 +5,7 @@
     <parent>
         <artifactId>bahmni</artifactId>
         <groupId>org.openmrs.distro</groupId>
-        <version>0.76-SNAPSHOT</version>
+        <version>0.77-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openMRSVersion>1.11.4</openMRSVersion>
-        <bahmniCoreVersion>0.76-SNAPSHOT</bahmniCoreVersion>
+        <bahmniCoreVersion>0.77-SNAPSHOT</bahmniCoreVersion>
         <appframeworkModuleVersion>2.3</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.4</uiframeworkModuleVersion>
         <idgenModuleVersion>4.0</idgenModuleVersion>
@@ -34,13 +34,13 @@
         <eventModuleVersion>2.2.1</eventModuleVersion>
         <addressHierarchyVersion>2.7</addressHierarchyVersion>
         <webServicesRestVersion>2.12</webServicesRestVersion>
-        <bahmniRegistrationVersion>0.76-SNAPSHOT</bahmniRegistrationVersion>
-        <bahmniOpdVersion>0.76-SNAPSHOT</bahmniOpdVersion>
-        <bahmniAppsVersion>0.76-SNAPSHOT</bahmniAppsVersion>
+        <bahmniRegistrationVersion>0.77-SNAPSHOT</bahmniRegistrationVersion>
+        <bahmniOpdVersion>0.77-SNAPSHOT</bahmniOpdVersion>
+        <bahmniAppsVersion>0.77-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>2.5.0</atomfeedModuleVersion>
         <bedManagementVersion>5.3-SNAPSHOT</bedManagementVersion>
         <dhisOmodVersion>1.0-SNAPSHOT</dhisOmodVersion>
-        <mailappenderVersion>0.76-SNAPSHOT</mailappenderVersion>
+        <mailappenderVersion>0.77-SNAPSHOT</mailappenderVersion>
         <appointmentschedulingModuleVersion>1.4</appointmentschedulingModuleVersion>
         <appointmentSchedulinguiModuleVersion>1.0.3-SNAPSHOT</appointmentSchedulinguiModuleVersion>
         <coreappsModuleVersion>1.7-SNAPSHOT</coreappsModuleVersion>
