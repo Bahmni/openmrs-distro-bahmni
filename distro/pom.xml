@@ -48,6 +48,7 @@
         <reportingrestModuleVersion>1.4</reportingrestModuleVersion>
         <appuiVersion>1.3</appuiVersion>
         <htmlformentryuiVersion>1.2</htmlformentryuiVersion>
+        <bacteriologyVersion>1.0-SNAPSHOT</bacteriologyVersion>
 
     </properties>
 
@@ -239,6 +240,11 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>mail-appender</artifactId>
             <version>${mailappenderVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>bacteriology-omod</artifactId>
+            <version>${bacteriologyVersion}</version>
         </dependency>
         <!-- end -->
 
