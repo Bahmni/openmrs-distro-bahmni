@@ -89,12 +89,6 @@
             <artifactId>bedmanagement-omod</artifactId>
             <version>${bedManagementVersion}</version>
         </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>dhis-omod</artifactId>
-            <version>${dhisOmodVersion}</version>
-        </dependency>
-
         <!-- Modules developed and maintained in OpenMRS -->
         <dependency>
             <groupId>org.openmrs.module</groupId>
