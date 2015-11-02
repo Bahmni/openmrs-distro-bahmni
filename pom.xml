@@ -5,7 +5,7 @@
 
 	<groupId>org.openmrs.distro</groupId>
 	<artifactId>bahmni</artifactId>
-	<version>0.77-SNAPSHOT</version>
+	<version>0.78-SNAPSHOT</version>
     <modules>
         <module>openmrs-module-bahmni.configuration</module>
         <module>distro</module>
