@@ -34,9 +34,6 @@
         <eventModuleVersion>2.2.1</eventModuleVersion>
         <addressHierarchyVersion>2.7</addressHierarchyVersion>
         <webServicesRestVersion>2.12</webServicesRestVersion>
-        <bahmniRegistrationVersion>0.77-SNAPSHOT</bahmniRegistrationVersion>
-        <bahmniOpdVersion>0.77-SNAPSHOT</bahmniOpdVersion>
-        <bahmniAppsVersion>0.77-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>2.5.0</atomfeedModuleVersion>
         <bedManagementVersion>5.3-SNAPSHOT</bedManagementVersion>
         <mailappenderVersion>0.77-SNAPSHOT</mailappenderVersion>
@@ -356,32 +353,6 @@
             </snapshots>
         </repository>
     </repositories>
-
-
-    <profiles>
-        <profile>
-            <id>openmrs-release</id>
-            <!-- Bahmni Front End modules bundled as OpenMRS omods -->
-            <dependencies>
-                <dependency>
-                    <groupId>org.openmrs.module</groupId>
-                    <artifactId>bahmni.registration-omod</artifactId>
-                    <version>${bahmniRegistrationVersion}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.openmrs.module</groupId>
-                    <artifactId>bahmni.opd-omod</artifactId>
-                    <version>${bahmniOpdVersion}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.openmrs.module</groupId>
-                    <artifactId>bahmni.apps-omod</artifactId>
-                    <version>${bahmniAppsVersion}</version>
-                </dependency>
-            </dependencies>
-            <!-- end -->
-        </profile>
-    </profiles>
 
     <build>
         <pluginManagement>
