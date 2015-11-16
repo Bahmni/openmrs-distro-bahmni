@@ -21,7 +21,7 @@
         <uiframeworkModuleVersion>3.4</uiframeworkModuleVersion>
         <idgenModuleVersion>4.0</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
-        <emrapiModuleVersion>1.12</emrapiModuleVersion>
+        <emrapiModuleVersion>1.13-SNAPSHOT</emrapiModuleVersion>
         <uicommonsModuleVersion>1.7</uicommonsModuleVersion>
         <providerManagementVersion>2.3</providerManagementVersion>
         <reportingVersion>0.9.6</reportingVersion>
@@ -38,7 +38,7 @@
         <bahmniOpdVersion>0.76-SNAPSHOT</bahmniOpdVersion>
         <bahmniAppsVersion>0.76-SNAPSHOT</bahmniAppsVersion>
         <atomfeedModuleVersion>2.5.0</atomfeedModuleVersion>
-        <bedManagementVersion>5.3-SNAPSHOT</bedManagementVersion>
+        <bedManagementVersion>5.4-SNAPSHOT</bedManagementVersion>
         <dhisOmodVersion>1.0-SNAPSHOT</dhisOmodVersion>
         <mailappenderVersion>0.76-SNAPSHOT</mailappenderVersion>
         <appointmentschedulingModuleVersion>1.4</appointmentschedulingModuleVersion>
