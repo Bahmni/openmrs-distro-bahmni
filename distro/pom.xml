@@ -71,11 +71,6 @@
         </dependency>
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>openerp-atomfeed-client-omod</artifactId>
-            <version>${bahmniCoreVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bahmni.module</groupId>
             <artifactId>reference-data-omod</artifactId>
             <version>${bahmniCoreVersion}</version>
         </dependency>
