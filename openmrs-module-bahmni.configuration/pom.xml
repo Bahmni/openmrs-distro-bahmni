@@ -67,7 +67,7 @@
 
         <!-- End OpenMRS core -->
     </dependencies>
-    
+
     <build>
         <finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
         <resources>
