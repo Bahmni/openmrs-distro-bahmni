@@ -39,7 +39,7 @@
         <mailappenderVersion>0.77-SNAPSHOT</mailappenderVersion>
         <appointmentschedulingModuleVersion>1.4</appointmentschedulingModuleVersion>
         <appointmentSchedulinguiModuleVersion>1.0.3</appointmentSchedulinguiModuleVersion>
-        <coreappsModuleVersion>1.7</coreappsModuleVersion>
+        <coreappsModuleVersion>1.8-SNAPSHOT</coreappsModuleVersion>
         <htmlformentryModuleVersion>2.5</htmlformentryModuleVersion>
         <reportingrestModuleVersion>1.4</reportingrestModuleVersion>
         <appuiVersion>1.3</appuiVersion>
