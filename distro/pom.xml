@@ -33,7 +33,7 @@
         <serializationVersion>0.2.7</serializationVersion>
         <eventModuleVersion>2.2.1</eventModuleVersion>
         <addressHierarchyVersion>2.7</addressHierarchyVersion>
-        <webServicesRestVersion>2.13-SNAPSHOT</webServicesRestVersion>
+        <webServicesRestVersion>2.12.1</webServicesRestVersion>
         <atomfeedModuleVersion>2.5.0</atomfeedModuleVersion>
         <mailappenderVersion>0.78-SNAPSHOT</mailappenderVersion>
         <bedManagementVersion>5.5-SNAPSHOT</bedManagementVersion>
@@ -348,6 +348,14 @@
             <id>bahmni-artifactory</id>
             <name>bahmni-artifactory-snapshots</name>
             <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>bahmni-artifactory-release</id>
+            <name>bahmni-artifactory-release</name>
+            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-release-local</url>
             <snapshots>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
