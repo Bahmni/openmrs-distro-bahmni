@@ -33,7 +33,7 @@
         <serializationVersion>0.2.7</serializationVersion>
         <eventModuleVersion>2.2.1</eventModuleVersion>
         <addressHierarchyVersion>2.7</addressHierarchyVersion>
-        <webServicesRestVersion>2.12</webServicesRestVersion>
+        <webServicesRestVersion>2.13-SNAPSHOT</webServicesRestVersion>
         <atomfeedModuleVersion>2.5.0</atomfeedModuleVersion>
         <mailappenderVersion>0.78-SNAPSHOT</mailappenderVersion>
         <bedManagementVersion>5.5-SNAPSHOT</bedManagementVersion>
