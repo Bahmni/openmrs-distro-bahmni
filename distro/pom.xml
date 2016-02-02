@@ -34,7 +34,7 @@
         <eventModuleVersion>2.2.1</eventModuleVersion>
         <addressHierarchyVersion>2.8-SNAPSHOT</addressHierarchyVersion>
         <webServicesRestVersion>2.12.1</webServicesRestVersion>
-        <atomfeedModuleVersion>2.5.0</atomfeedModuleVersion>
+        <atomfeedModuleVersion>2.5.1</atomfeedModuleVersion>
         <mailappenderVersion>0.79-SNAPSHOT</mailappenderVersion>
         <bedManagementVersion>5.5-SNAPSHOT</bedManagementVersion>
         <appointmentschedulingModuleVersion>1.4</appointmentschedulingModuleVersion>
