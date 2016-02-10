@@ -32,7 +32,7 @@
         <metadataMappingVersion>1.0.2</metadataMappingVersion>
         <serializationVersion>0.2.10</serializationVersion>
         <eventModuleVersion>2.2.1</eventModuleVersion>
-        <addressHierarchyVersion>2.9</addressHierarchyVersion>
+        <addressHierarchyVersion>2.8</addressHierarchyVersion>
         <webServicesRestVersion>2.12.1</webServicesRestVersion>
         <mailappenderVersion>0.80-SNAPSHOT</mailappenderVersion>
         <atomfeedModuleVersion>2.5.1</atomfeedModuleVersion>
