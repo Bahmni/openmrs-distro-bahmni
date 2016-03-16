@@ -19,7 +19,7 @@
         <openMRSVersion>1.12.0-SNAPSHOT</openMRSVersion>
         <appframeworkModuleVersion>2.3</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.4</uiframeworkModuleVersion>
-        <idgenModuleVersion>4.0</idgenModuleVersion>
+        <idgenModuleVersion>4.3-SNAPSHOT</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
         <emrapiModuleVersion>1.13</emrapiModuleVersion>
         <uicommonsModuleVersion>1.7</uicommonsModuleVersion>
