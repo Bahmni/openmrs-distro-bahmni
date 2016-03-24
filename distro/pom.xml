@@ -38,7 +38,7 @@
         <atomfeedModuleVersion>2.5.1</atomfeedModuleVersion>
         <bedManagementVersion>5.5-SNAPSHOT</bedManagementVersion>
         <appointmentschedulingModuleVersion>1.4</appointmentschedulingModuleVersion>
-        <appointmentSchedulinguiModuleVersion>1.0.3</appointmentSchedulinguiModuleVersion>
+        <appointmentSchedulinguiModuleVersion>1.1</appointmentSchedulinguiModuleVersion>
         <coreappsModuleVersion>1.8</coreappsModuleVersion>
         <htmlformentryModuleVersion>2.5</htmlformentryModuleVersion>
         <reportingrestModuleVersion>1.4</reportingrestModuleVersion>
