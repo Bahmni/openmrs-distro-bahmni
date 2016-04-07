@@ -21,7 +21,7 @@
         <uiframeworkModuleVersion>3.4</uiframeworkModuleVersion>
         <idgenModuleVersion>4.3</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
-        <emrapiModuleVersion>1.13</emrapiModuleVersion>
+        <emrapiModuleVersion>1.14-SNAPSHOT</emrapiModuleVersion>
         <uicommonsModuleVersion>1.7</uicommonsModuleVersion>
         <providerManagementVersion>2.3</providerManagementVersion>
         <reportingVersion>0.9.8.1</reportingVersion>
