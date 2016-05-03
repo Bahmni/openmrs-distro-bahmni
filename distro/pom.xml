@@ -83,7 +83,7 @@
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>episodes</artifactId>
+            <artifactId>episodes-omod</artifactId>
             <version>${episodesVersion}</version>
         </dependency>
         <!-- end -->
