@@ -46,6 +46,7 @@
         <htmlformentryuiVersion>1.2</htmlformentryuiVersion>
         <bacteriologyVersion>1.0-SNAPSHOT</bacteriologyVersion>
         <rulesEngineVersion>1.0-SNAPSHOT</rulesEngineVersion>
+        <episodesVersion>0.1-SNAPSHOT</episodesVersion>
 
     </properties>
 
@@ -79,6 +80,11 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>reference-data-omod</artifactId>
             <version>${bahmniCoreVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>episodes</artifactId>
+            <version>${episodesVersion}</version>
         </dependency>
         <!-- end -->
 
