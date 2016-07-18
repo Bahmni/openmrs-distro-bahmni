@@ -25,7 +25,7 @@
         <uicommonsModuleVersion>1.7</uicommonsModuleVersion>
         <providerManagementVersion>2.3</providerManagementVersion>
         <reportingVersion>0.9.8.1</reportingVersion>
-        <metadataSharingVersion>1.1.10</metadataSharingVersion>
+        <metadataSharingVersion>1.2</metadataSharingVersion>
         <uilibraryVersion>2.0.4</uilibraryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
         <calculationVersion>1.1</calculationVersion>
