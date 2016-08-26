@@ -37,13 +37,6 @@
         <mailappenderVersion>0.84-SNAPSHOT</mailappenderVersion>
         <atomfeedModuleVersion>2.5.4</atomfeedModuleVersion>
         <bedManagementVersion>5.5-SNAPSHOT</bedManagementVersion>
-        <appointmentschedulingModuleVersion>1.4</appointmentschedulingModuleVersion>
-        <appointmentSchedulinguiModuleVersion>1.1</appointmentSchedulinguiModuleVersion>
-        <coreappsModuleVersion>1.8</coreappsModuleVersion>
-        <htmlformentryModuleVersion>2.5</htmlformentryModuleVersion>
-        <reportingrestModuleVersion>1.4</reportingrestModuleVersion>
-        <appuiVersion>1.3</appuiVersion>
-        <htmlformentryuiVersion>1.2</htmlformentryuiVersion>
         <bacteriologyVersion>1.0-SNAPSHOT</bacteriologyVersion>
         <rulesEngineVersion>0.84-SNAPSHOT</rulesEngineVersion>
         <episodesVersion>0.1-SNAPSHOT</episodesVersion>
@@ -162,54 +155,6 @@
             <artifactId>event-omod</artifactId>
             <version>${eventModuleVersion}</version>
         </dependency>
-
-        <!-- Modules required for Appointment Scheduling -->
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appointmentscheduling-omod</artifactId>
-            <version>${appointmentschedulingModuleVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appointmentschedulingui-omod</artifactId>
-            <version>${appointmentSchedulinguiModuleVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>coreapps-omod</artifactId>
-            <version>${coreappsModuleVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>htmlformentry-omod</artifactId>
-            <version>${htmlformentryModuleVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>reportingrest-omod</artifactId>
-            <version>${reportingrestModuleVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appui-omod</artifactId>
-            <version>${appuiVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>htmlformentryui-omod</artifactId>
-            <version>${htmlformentryuiVersion}</version>
-        </dependency>
-        <!-- end -->
-
-
-
         <!-- end -->
 
         <!-- Modules forked from OpenMRS and maintained in Bahmni -->
