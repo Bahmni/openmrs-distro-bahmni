@@ -24,7 +24,7 @@
         <emrapiModuleVersion>1.18-SNAPSHOT</emrapiModuleVersion>
         <uicommonsModuleVersion>1.10-SNAPSHOT</uicommonsModuleVersion>
         <providerManagementVersion>2.5-SNAPSHOT</providerManagementVersion>
-        <reportingVersion>0.10.2-SNAPSHOT</reportingVersion>
+        <reportingVersion>0.10.4</reportingVersion>
         <metadataSharingVersion>1.2.2-SNAPSHOT</metadataSharingVersion>
         <uilibraryVersion>2.0.5-SNAPSHOT</uilibraryVersion>
         <htmlwidgetsVersion>1.7.3-SNAPSHOT</htmlwidgetsVersion>
@@ -41,7 +41,6 @@
         <rulesEngineVersion>0.85-SNAPSHOT</rulesEngineVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
         <legacyUiOmodVersion>1.0</legacyUiOmodVersion>
-        <reportingCompatibilityOmodVersion>2.0.1-SNAPSHOT</reportingCompatibilityOmodVersion>
 
     </properties>
 
@@ -123,11 +122,6 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>reporting-omod</artifactId>
             <version>${reportingVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>reportingcompatibility-omod</artifactId>
-            <version>${reportingCompatibilityOmodVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
