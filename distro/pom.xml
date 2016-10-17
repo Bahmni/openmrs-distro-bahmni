@@ -15,8 +15,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <bahmniCoreVersion>0.85-SNAPSHOT</bahmniCoreVersion>
-        <openMRSVersion>1.12.0</openMRSVersion>
+        <bahmniCoreVersion>0.87-SNAPSHOT</bahmniCoreVersion>
+        <openMRSVersion>2.0.1-SNAPSHOT</openMRSVersion>
         <appframeworkModuleVersion>2.10-SNAPSHOT</appframeworkModuleVersion>
         <uiframeworkModuleVersion>3.8-SNAPSHOT</uiframeworkModuleVersion>
         <idgenModuleVersion>4.4-SNAPSHOT</idgenModuleVersion>
