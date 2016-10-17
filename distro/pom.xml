@@ -5,7 +5,7 @@
     <parent>
         <artifactId>bahmni</artifactId>
         <groupId>org.openmrs.distro</groupId>
-        <version>0.86-SNAPSHOT</version>
+        <version>0.87-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -34,11 +34,11 @@
         <eventModuleVersion>2.5-SNAPSHOT</eventModuleVersion>
         <addressHierarchyVersion>2.9</addressHierarchyVersion>
         <webServicesRestVersion>2.16</webServicesRestVersion>
-        <mailappenderVersion>0.85-SNAPSHOT</mailappenderVersion>
+        <mailappenderVersion>0.87-SNAPSHOT</mailappenderVersion>
         <atomfeedModuleVersion>2.5.5-SNAPSHOT</atomfeedModuleVersion>
         <bedManagementVersion>5.6-SNAPSHOT</bedManagementVersion>
         <bacteriologyVersion>1.1-SNAPSHOT</bacteriologyVersion>
-        <rulesEngineVersion>0.85-SNAPSHOT</rulesEngineVersion>
+        <rulesEngineVersion>0.87-SNAPSHOT</rulesEngineVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
         <legacyUiOmodVersion>1.0</legacyUiOmodVersion>
 
