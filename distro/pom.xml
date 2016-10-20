@@ -30,7 +30,7 @@
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
         <legacyUiOmodVersion>1.0</legacyUiOmodVersion>
         <mailappenderVersion>0.87-SNAPSHOT</mailappenderVersion>
-        <metadataMappingVersion>1.2.0</metadataMappingVersion>
+        <metadataMappingVersion>1.2.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
         <openMRSVersion>2.0.1-SNAPSHOT</openMRSVersion>
         <providerManagementVersion>2.5-SNAPSHOT</providerManagementVersion>
