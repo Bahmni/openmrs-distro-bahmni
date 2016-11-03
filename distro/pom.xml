@@ -21,17 +21,17 @@
         <uiframeworkModuleVersion>3.4</uiframeworkModuleVersion>
         <idgenModuleVersion>4.3</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
-        <emrapiModuleVersion>1.17</emrapiModuleVersion>
+        <emrapiModuleVersion>1.19-SNAPSHOT</emrapiModuleVersion>
         <uicommonsModuleVersion>1.7</uicommonsModuleVersion>
         <providerManagementVersion>2.3</providerManagementVersion>
         <reportingVersion>0.9.8.1</reportingVersion>
-        <metadataSharingVersion>1.2</metadataSharingVersion>
+        <metadataSharingVersion>1.2.2</metadataSharingVersion>
         <uilibraryVersion>2.0.4</uilibraryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
         <calculationVersion>1.1</calculationVersion>
-        <metadataMappingVersion>1.0.2</metadataMappingVersion>
+        <metadataMappingVersion>1.2.0</metadataMappingVersion>
         <serializationVersion>0.2.10</serializationVersion>
-        <eventModuleVersion>2.2.1</eventModuleVersion>
+        <eventModuleVersion>2.5</eventModuleVersion>
         <addressHierarchyVersion>2.8</addressHierarchyVersion>
         <webServicesRestVersion>2.14</webServicesRestVersion>
         <mailappenderVersion>0.86-SNAPSHOT</mailappenderVersion>
