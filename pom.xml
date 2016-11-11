@@ -48,14 +48,14 @@
 			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
 		</repository>
         <repository>
-            <id>bahmni-artifactory</id>
+            <id>repo.mybahmni.org</id>
             <name>bahmni-artifactory-snapshots</name>
-            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
+            <url>s3://repo.mybahmni.org/snapshot</url>
         </repository>
         <repository>
-            <id>bahmni-artifactory-release</id>
+            <id>repo.mybahmni.org</id>
             <name>bahmni-artifactory-release</name>
-            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-release-local</url>
+            <url>s3://repo.mybahmni.org/release</url>
         </repository>
 	</repositories>
 
@@ -72,9 +72,9 @@
 
 	<distributionManagement>
 	    <snapshotRepository>
-	        <id>bahmni-artifactory</id>
+	        <id>repo.mybahmni.org</id>
 	        <name>bahmni-artifactory-snapshots</name>
-	        <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
+	        <url>s3://repo.mybahmni.org/snapshot</url>
 	    </snapshotRepository>
 	</distributionManagement>
 </project>
