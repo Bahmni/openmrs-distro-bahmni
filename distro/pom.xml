@@ -28,7 +28,7 @@
         <htmlwidgetsVersion>1.7.3-SNAPSHOT</htmlwidgetsVersion>
         <idgenModuleVersion>4.4-SNAPSHOT</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
-        <legacyUiOmodVersion>1.0</legacyUiOmodVersion>
+        <legacyUiOmodVersion>1.2.4-SNAPSHOT</legacyUiOmodVersion>
         <mailappenderVersion>0.87-SNAPSHOT</mailappenderVersion>
         <metadataMappingVersion>1.2.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
