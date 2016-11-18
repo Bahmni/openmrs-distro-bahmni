@@ -48,12 +48,12 @@
 			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
 		</repository>
         <repository>
-            <id>repo.mybahmni.org</id>
+            <id>bahmni artifactory snapshots</id>
             <name>bahmni-artifactory-snapshots</name>
             <url>s3://repo.mybahmni.org/snapshot</url>
         </repository>
         <repository>
-            <id>repo.mybahmni.org</id>
+            <id>bahmni artifactory release</id>
             <name>bahmni-artifactory-release</name>
             <url>s3://repo.mybahmni.org/release</url>
         </repository>
