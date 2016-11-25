@@ -297,17 +297,17 @@
             </releases>
         </repository>
         <repository>
-            <id>bahmni-artifactory</id>
+            <id>repo.mybahmni.org</id>
             <name>bahmni-artifactory-snapshots</name>
-            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
+            <url>s3://repo.mybahmni.org/snapshot</url>
             <snapshots>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
         <repository>
-            <id>bahmni-artifactory-release</id>
+            <id>repo.mybahmni.org-release</id>
             <name>bahmni-artifactory-release</name>
-            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-release-local</url>
+            <url>s3://repo.mybahmni.org/release</url>
             <snapshots>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
@@ -457,6 +457,13 @@
                 </executions>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.kuali.maven.wagons</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version>1.2.1</version>
+            </extension>
+        </extensions>
     </build>
 
 </project>
