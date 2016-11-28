@@ -37,7 +37,7 @@
         <mailappenderVersion>0.86-SNAPSHOT</mailappenderVersion>
         <atomfeedModuleVersion>2.5.4</atomfeedModuleVersion>
         <bedManagementVersion>5.6-SNAPSHOT</bedManagementVersion>
-        <bacteriologyVersion>1.0-SNAPSHOT</bacteriologyVersion>
+        <bacteriologyVersion>1.1-SNAPSHOT</bacteriologyVersion>
         <rulesEngineVersion>0.86-SNAPSHOT</rulesEngineVersion>
         <episodesVersion>0.1-SNAPSHOT</episodesVersion>
 
