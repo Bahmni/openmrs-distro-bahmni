@@ -301,22 +301,19 @@
                 <updatePolicy>interval:10080</updatePolicy>
             </releases>
         </repository>
-        <repository>
-            <id>bahmni-artifactory</id>
-            <name>bahmni-artifactory-snapshots</name>
-            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
-            <snapshots>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>bahmni-artifactory-release</id>
-            <name>bahmni-artifactory-release</name>
-            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-release-local</url>
-            <snapshots>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
+       <repository>
+           <id>repo.mybahmni.org</id>
+           <name>bahmni-artifactory-snapshots</name>
+           <url>s3://repo.mybahmni.org/artifactory/snapshot</url>
+           <snapshots>
+               <updatePolicy>always</updatePolicy>
+           </snapshots>
+       </repository>
+       <repository>
+          <id>repo.mybahmni.org</id>
+          <name>bahmni-artifactory-release</name>
+          <url>s3://repo.mybahmni.org/artifactory/release</url>
+      </repository>
     </repositories>
 
     <build>
@@ -462,6 +459,7 @@
                 </executions>
             </plugin>
         </plugins>
+        
     </build>
 
 </project>
