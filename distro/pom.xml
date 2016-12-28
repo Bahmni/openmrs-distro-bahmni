@@ -41,6 +41,7 @@
         <uiframeworkModuleVersion>3.8</uiframeworkModuleVersion>
         <uilibraryVersion>2.0.5-SNAPSHOT</uilibraryVersion>
         <webServicesRestVersion>2.16</webServicesRestVersion>
+        <bahmniIEOmodVersion>1.0-SNAPSHOT</bahmniIEOmodVersion>
     </properties>
 
     <dependencies>
@@ -78,6 +79,11 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>episodes-omod</artifactId>
             <version>${episodesVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>bahmniIEApps-omod</artifactId>
+            <version>${bahmniIEOmodVersion}</version>
         </dependency>
         <!-- end -->
 
