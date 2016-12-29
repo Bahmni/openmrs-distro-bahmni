@@ -41,7 +41,7 @@
         <uiframeworkModuleVersion>3.8</uiframeworkModuleVersion>
         <uilibraryVersion>2.0.5-SNAPSHOT</uilibraryVersion>
         <webServicesRestVersion>2.16</webServicesRestVersion>
-        <bahmniIEOmodVersion>1.0-SNAPSHOT</bahmniIEOmodVersion>
+        <bahmniIEOmodVersion>0.88-SNAPSHOT</bahmniIEOmodVersion>
     </properties>
 
     <dependencies>
