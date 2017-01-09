@@ -82,7 +82,7 @@
         </dependency>
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>bahmniIEApps-omod</artifactId>
+            <artifactId>bahmni.ie.apps-omod</artifactId>
             <version>${bahmniIEOmodVersion}</version>
         </dependency>
         <!-- end -->
