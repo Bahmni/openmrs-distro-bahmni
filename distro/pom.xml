@@ -22,7 +22,7 @@
         <bahmniCoreVersion>0.89-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.6-SNAPSHOT</bedManagementVersion>
         <calculationVersion>1.3-SNAPSHOT</calculationVersion>
-        <emrapiModuleVersion>1.20</emrapiModuleVersion>
+        <emrapiModuleVersion>1.21.1-SNAPSHOT</emrapiModuleVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
         <eventModuleVersion>2.5</eventModuleVersion>
         <htmlwidgetsVersion>1.7.3-SNAPSHOT</htmlwidgetsVersion>
@@ -30,7 +30,7 @@
         <idgenWebServicesModuleVersion>1.1-SNAPSHOT</idgenWebServicesModuleVersion>
         <legacyUiOmodVersion>1.2.4-SNAPSHOT</legacyUiOmodVersion>
         <mailappenderVersion>0.89-SNAPSHOT</mailappenderVersion>
-        <metadataMappingVersion>1.2.1</metadataMappingVersion>
+        <metadataMappingVersion>1.3.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
         <openMRSVersion>2.1.0-SNAPSHOT</openMRSVersion>
         <providerManagementVersion>2.5.0</providerManagementVersion>
