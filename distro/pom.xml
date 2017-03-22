@@ -32,7 +32,7 @@
         <mailappenderVersion>0.89-SNAPSHOT</mailappenderVersion>
         <metadataMappingVersion>1.3.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
-        <openMRSVersion>2.1.0-alpha</openMRSVersion>
+        <openMRSVersion>2.1.1-SNAPSHOT</openMRSVersion>
         <providerManagementVersion>2.5.0</providerManagementVersion>
         <reportingVersion>0.10.4</reportingVersion>
         <rulesEngineVersion>0.89-SNAPSHOT</rulesEngineVersion>
