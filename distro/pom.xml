@@ -43,6 +43,7 @@
         <uilibraryVersion>2.0.5-SNAPSHOT</uilibraryVersion>
         <webServicesRestVersion>2.17</webServicesRestVersion>
         <bahmniIEOmodVersion>0.90-SNAPSHOT</bahmniIEOmodVersion>
+        <appointmentsVersion>1.0-SNAPSHOT</appointmentsVersion>
     </properties>
 
     <dependencies>
@@ -205,6 +206,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>auditlog-omod</artifactId>
             <version>${auditLogVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appointments-omod</artifactId>
+            <version>${appointmentsVersion}</version>
         </dependency>
         <!-- end -->
 
