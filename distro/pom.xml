@@ -35,8 +35,8 @@
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
         <openMRSVersion>2.1.1-SNAPSHOT</openMRSVersion>
         <providerManagementVersion>2.5.0</providerManagementVersion>
-        <reportingVersion>0.10.4</reportingVersion>
         <rulesEngineVersion>0.90-SNAPSHOT</rulesEngineVersion>
+        <reportingVersion>1.12.0</reportingVersion>
         <serializationVersion>0.2.12</serializationVersion>
         <uicommonsModuleVersion>1.10-SNAPSHOT</uicommonsModuleVersion>
         <uiframeworkModuleVersion>3.8</uiframeworkModuleVersion>
