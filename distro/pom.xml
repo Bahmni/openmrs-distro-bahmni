@@ -16,20 +16,20 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <addressHierarchyVersion>2.9</addressHierarchyVersion>
-        <appframeworkModuleVersion>2.10-SNAPSHOT</appframeworkModuleVersion>
+        <appframeworkModuleVersion>2.10.0</appframeworkModuleVersion>
         <atomfeedModuleVersion>2.5.5-SNAPSHOT</atomfeedModuleVersion>
         <bacteriologyVersion>1.1-SNAPSHOT</bacteriologyVersion>
         <auditLogVersion>1.0-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.90-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.6-SNAPSHOT</bedManagementVersion>
-        <calculationVersion>1.3-SNAPSHOT</calculationVersion>
-        <emrapiModuleVersion>1.23.0-SNAPSHOT</emrapiModuleVersion>
+        <calculationVersion>1.2</calculationVersion>
+        <emrapiModuleVersion>1.23.0</emrapiModuleVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
         <eventModuleVersion>2.5</eventModuleVersion>
-        <htmlwidgetsVersion>1.7.3-SNAPSHOT</htmlwidgetsVersion>
-        <idgenModuleVersion>4.4-SNAPSHOT</idgenModuleVersion>
+        <htmlwidgetsVersion>1.8.0</htmlwidgetsVersion>
+        <idgenModuleVersion>4.4.1</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.2-SNAPSHOT</idgenWebServicesModuleVersion>
-        <legacyUiOmodVersion>1.3.3-SNAPSHOT</legacyUiOmodVersion>
+        <legacyUiOmodVersion>1.3.3</legacyUiOmodVersion>
         <mailappenderVersion>0.90-SNAPSHOT</mailappenderVersion>
         <metadataMappingVersion>1.3.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
@@ -38,10 +38,10 @@
         <rulesEngineVersion>0.90-SNAPSHOT</rulesEngineVersion>
         <reportingVersion>1.12.0</reportingVersion>
         <serializationVersion>0.2.12</serializationVersion>
-        <uicommonsModuleVersion>1.10-SNAPSHOT</uicommonsModuleVersion>
+        <uicommonsModuleVersion>2.0</uicommonsModuleVersion>
         <uiframeworkModuleVersion>3.8</uiframeworkModuleVersion>
-        <uilibraryVersion>2.0.5-SNAPSHOT</uilibraryVersion>
-        <webServicesRestVersion>2.17</webServicesRestVersion>
+        <uilibraryVersion>2.0.5</uilibraryVersion>
+        <webServicesRestVersion>2.20.0</webServicesRestVersion>
         <bahmniIEOmodVersion>0.90-SNAPSHOT</bahmniIEOmodVersion>
         <appointmentsVersion>1.0-SNAPSHOT</appointmentsVersion>
     </properties>
