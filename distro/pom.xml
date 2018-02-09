@@ -21,7 +21,7 @@
         <bacteriologyVersion>1.1-SNAPSHOT</bacteriologyVersion>
         <auditLogVersion>1.0-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.91-SNAPSHOT</bahmniCoreVersion>
-        <bedManagementVersion>5.7.0-SANPSHOT</bedManagementVersion>
+        <bedManagementVersion>5.7.0-SNAPSHOT</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
         <emrapiModuleVersion>1.24.0-SNAPSHOT</emrapiModuleVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
@@ -164,17 +164,18 @@
             <type>omod</type>
         </dependency>
 
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>owa-omod</artifactId>
+            <version>${owaVersion}</version>
+        </dependency>
+
          <dependency>
             <groupId>org.openmrs</groupId>
             <artifactId>event-omod</artifactId>
             <version>${eventModuleVersion}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.openmrs</groupId>
-            <artifactId>owa-omod</artifactId>
-            <version>${owaVersion}</version>
-        </dependency>
         <!-- end -->
 
         <!-- Modules forked from OpenMRS and maintained in Bahmni -->
