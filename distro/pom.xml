@@ -44,7 +44,7 @@
         <uiframeworkModuleVersion>3.8</uiframeworkModuleVersion>
         <uilibraryVersion>2.0.5</uilibraryVersion>
         <webServicesRestVersion>2.20.0</webServicesRestVersion>
-        <reportingRestVersion>1.11.0</reportingRestVersion>
+        <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>0.91-SNAPSHOT</bahmniIEOmodVersion>
         <appointmentsVersion>1.0-SNAPSHOT</appointmentsVersion>
     </properties>
@@ -203,7 +203,7 @@
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>reportingrest</artifactId>
+            <artifactId>reportingrest-omod</artifactId>
             <version>${reportingRestVersion}</version>
         </dependency>
         <dependency>
@@ -231,7 +231,7 @@
 
          <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>operationtheater</artifactId>
+            <artifactId>operationtheater-omod</artifactId>
             <version>${operationTheaterVersion}</version>
         </dependency>
         <!-- end -->
