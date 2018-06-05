@@ -18,8 +18,8 @@
         <addressHierarchyVersion>2.9</addressHierarchyVersion>
         <appframeworkModuleVersion>2.10.0</appframeworkModuleVersion>
         <atomfeedModuleVersion>2.5.6</atomfeedModuleVersion>
-        <bacteriologyVersion>1.1-SNAPSHOT</bacteriologyVersion>
-        <auditLogVersion>1.0-SNAPSHOT</auditLogVersion>
+        <bacteriologyVersion>1.1</bacteriologyVersion>
+        <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.91-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.7.0</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
@@ -46,7 +46,7 @@
         <webServicesRestVersion>2.20.0</webServicesRestVersion>
         <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>0.91-SNAPSHOT</bahmniIEOmodVersion>
-        <appointmentsVersion>1.0-SNAPSHOT</appointmentsVersion>
+        <appointmentsVersion>1.1-SNAPSHOT</appointmentsVersion>
     </properties>
 
     <dependencies>
