@@ -21,9 +21,9 @@
         <bacteriologyVersion>1.1-SNAPSHOT</bacteriologyVersion>
         <auditLogVersion>1.0-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.91-SNAPSHOT</bahmniCoreVersion>
-        <bedManagementVersion>5.7.0-SNAPSHOT</bedManagementVersion>
+        <bedManagementVersion>5.7.0</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
-        <emrapiModuleVersion>1.24.0-SNAPSHOT</emrapiModuleVersion>
+        <emrapiModuleVersion>1.24.0</emrapiModuleVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
         <eventModuleVersion>2.5</eventModuleVersion>
         <owaVersion>1.9.0</owaVersion>
@@ -34,15 +34,17 @@
         <mailappenderVersion>0.91-SNAPSHOT</mailappenderVersion>
         <metadataMappingVersion>1.3.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
-        <openMRSVersion>2.1.3-SNAPSHOT</openMRSVersion>
+        <openMRSVersion>2.1.3</openMRSVersion>
+        <operationTheaterVersion>1.1.1</operationTheaterVersion>
         <providerManagementVersion>2.5.0</providerManagementVersion>
         <rulesEngineVersion>0.91-SNAPSHOT</rulesEngineVersion>
-        <reportingVersion>1.12.0</reportingVersion>
+        <reportingVersion>1.16.0</reportingVersion>
         <serializationVersion>0.2.12</serializationVersion>
         <uicommonsModuleVersion>2.0</uicommonsModuleVersion>
         <uiframeworkModuleVersion>3.8</uiframeworkModuleVersion>
         <uilibraryVersion>2.0.5</uilibraryVersion>
         <webServicesRestVersion>2.20.0</webServicesRestVersion>
+        <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>0.91-SNAPSHOT</bahmniIEOmodVersion>
         <appointmentsVersion>1.0-SNAPSHOT</appointmentsVersion>
     </properties>
@@ -200,6 +202,11 @@
             <version>${webServicesRestVersion}</version>
         </dependency>
         <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>reportingrest-omod</artifactId>
+            <version>${reportingRestVersion}</version>
+        </dependency>
+        <dependency>
             <groupId>org.bahmni.module</groupId>
             <artifactId>mail-appender</artifactId>
             <version>${mailappenderVersion}</version>
@@ -220,6 +227,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>appointments-omod</artifactId>
             <version>${appointmentsVersion}</version>
+        </dependency>
+
+         <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>operationtheater-omod</artifactId>
+            <version>${operationTheaterVersion}</version>
         </dependency>
         <!-- end -->
 
