@@ -23,7 +23,7 @@
         <bahmniCoreVersion>0.91-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.7.0</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
-        <emrapiModuleVersion>1.24.0</emrapiModuleVersion>
+        <emrapiModuleVersion>1.24.5-SNAPSHOT</emrapiModuleVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
         <eventModuleVersion>2.5</eventModuleVersion>
         <owaVersion>1.9.0</owaVersion>
