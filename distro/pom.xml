@@ -21,7 +21,7 @@
         <bacteriologyVersion>1.1</bacteriologyVersion>
         <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.91-SNAPSHOT</bahmniCoreVersion>
-        <bedManagementVersion>5.7.0</bedManagementVersion>
+        <bedManagementVersion>5.8.0-SNAPSHOT</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
         <emrapiModuleVersion>1.24.5-SNAPSHOT</emrapiModuleVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
