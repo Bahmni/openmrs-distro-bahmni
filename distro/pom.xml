@@ -21,7 +21,7 @@
         <bacteriologyVersion>1.1</bacteriologyVersion>
         <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.91-SNAPSHOT</bahmniCoreVersion>
-        <bedManagementVersion>5.8.0-SNAPSHOT</bedManagementVersion>
+        <bedManagementVersion>5.8.0</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
         <emrapiModuleVersion>1.24.5-SNAPSHOT</emrapiModuleVersion>
         <episodesVersion>1.0-SNAPSHOT</episodesVersion>
@@ -35,7 +35,7 @@
         <metadataMappingVersion>1.3.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
         <openMRSVersion>2.1.3</openMRSVersion>
-        <operationTheaterVersion>1.2.0-SNAPSHOT</operationTheaterVersion>
+        <operationTheaterVersion>1.2.0</operationTheaterVersion>
         <providerManagementVersion>2.5.0</providerManagementVersion>
         <rulesEngineVersion>0.91-SNAPSHOT</rulesEngineVersion>
         <reportingVersion>1.16.0</reportingVersion>
