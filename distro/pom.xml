@@ -47,7 +47,6 @@
         <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.1.0</bahmniIEOmodVersion>
         <appointmentsVersion>1.3.0-SNAPSHOT</appointmentsVersion>
-        <emailNotificationVersion>1.0.0-SNAPSHOT</emailNotificationVersion>
     </properties>
 
     <dependencies>
@@ -222,12 +221,6 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>auditlog-omod</artifactId>
             <version>${auditLogVersion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.bahmni.module</groupId>
-            <artifactId>email-notification-omod</artifactId>
-            <version>${emailNotificationVersion}</version>
         </dependency>
 
         <dependency>
