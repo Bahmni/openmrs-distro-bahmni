@@ -47,6 +47,7 @@
         <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.1.0</bahmniIEOmodVersion>
         <appointmentsVersion>1.3.0-SNAPSHOT</appointmentsVersion>
+        <pacsQueryVersion>1.1.0</pacsQueryVersion>
     </properties>
 
     <dependencies>
@@ -208,7 +209,7 @@
         </dependency>
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>mail-appender</artifactId>
+                <artifactId>mail-appender</artifactId>
             <version>${mailappenderVersion}</version>
         </dependency>
         <dependency>
@@ -233,6 +234,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>operationtheater-omod</artifactId>
             <version>${operationTheaterVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>pacsquery-omod</artifactId>
+            <version>${pacsQueryVersion}</version>
         </dependency>
         <!-- end -->
 
