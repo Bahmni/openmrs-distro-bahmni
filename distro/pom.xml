@@ -47,7 +47,7 @@
         <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.1.0</bahmniIEOmodVersion>
         <appointmentsVersion>1.3.0-SNAPSHOT</appointmentsVersion>
-        <pacsQueryVersion>1.1.0</pacsQueryVersion>
+        <pacsQueryVersion>1.2.0</pacsQueryVersion>
     </properties>
 
     <dependencies>
