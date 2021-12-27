@@ -32,7 +32,7 @@
 
     <repositories>
 	   <repository>
-		<id>github</id>
+		<id>bahmni-core</id>
 		<name>bahmni-core-snapshot</name>
 		<url>https://maven.pkg.github.com/Bahmni/bahmni-core</url>
 	   </repository>
