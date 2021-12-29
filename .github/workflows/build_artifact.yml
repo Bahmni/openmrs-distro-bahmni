@@ -2,9 +2,8 @@ name: Build OpenMRS Distro Bahmni
 
 on:
   push:
-    branches:
-      - master
-      - 'BAH-*'
+    branches: [ master ]
+
   pull_request:
     branches: [ master ]
 
@@ -22,7 +21,11 @@ jobs:
 
     - name: Build with Maven
       run: |
-       ./mvnw clean install
+       ./mvnw -s $GITHUB_WORKSPACE/.github/workflows/settings.xml clean install
+      env:
+        USER_NAME: ${{ secrets.USERNAME }}
+        ACCESS_TOKEN: ${{ secrets.PASSWORD }}
+
      
     - name: Upload artifacts 
       uses: actions/upload-artifact@v2

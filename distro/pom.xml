@@ -20,7 +20,7 @@
         <atomfeedModuleVersion>2.5.6</atomfeedModuleVersion>
         <bacteriologyVersion>1.2.0</bacteriologyVersion>
         <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
-        <bahmniCoreVersion>0.93-SNAPSHOT</bahmniCoreVersion>
+        <bahmniCoreVersion>0.94-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.11.0</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
         <emrapiModuleVersion>1.24.8</emrapiModuleVersion>
