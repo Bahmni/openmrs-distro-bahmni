@@ -1,7 +1,7 @@
 openmrs-distro-bahmni
 ==================
 
-Please add the settings.xml file present in `.github/workflows/` in `/.m2` repo and replace the USER_NAME and ACCESS_TOKEN and then proceed to build
+Please add the `settings.xml` file present in `.github/workflows/` in `/.m2` repo and replace the USER_NAME and ACCESS_TOKEN and then proceed to build
 
 `./mvnw clean deploy` command to create artifacts.
 
