@@ -1,7 +1,7 @@
-name: Build OpenMRS Distro Bahmni
+name: Validate PR
 
 on:
-  push:
+  pull_request:
     branches: [ master ]
 
 jobs:
@@ -22,11 +22,3 @@ jobs:
       env:
         USER_NAME: ${{ secrets.USERNAME }}
         ACCESS_TOKEN: ${{ secrets.PASSWORD }}
-
-     
-    - name: Upload artifacts 
-      uses: actions/upload-artifact@v2
-      with:
-          name: Bahmnicore
-          path: distro/target/distro-0.94-SNAPSHOT-distro.zip
-        
