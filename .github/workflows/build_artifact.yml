@@ -27,6 +27,6 @@ jobs:
     - name: Upload artifacts 
       uses: actions/upload-artifact@v2
       with:
-          name: Bahmnicore
+          name: BahmniDistro
           path: distro/target/distro-0.94-SNAPSHOT-distro.zip
         
