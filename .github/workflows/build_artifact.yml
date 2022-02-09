@@ -2,7 +2,9 @@ name: Build OpenMRS Distro Bahmni
 
 on:
   push:
-    branches: [master]
+    branches: 
+      - master
+      - BAH-*
 
 jobs:
   build:
