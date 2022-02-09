@@ -1,0 +1,53 @@
+name: bahmni-emr Deploy
+on:
+  # workflow_run:
+  #   workflows: ["Build OpenMRS Distro Bahmni"]
+  #   types:
+  #     - completed
+  push:
+    branches: 
+      - BAH-*
+env:
+  BAHMNI_VERSION: 0.94
+  BRANCH_NAME: BAH-1381
+jobs:
+  docker-build-publish:
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    name: Build & Publish Docker Image
+    # needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '8'
+      - name: Checkout bahmni-package
+        uses: actions/checkout@v2
+        with:
+          repository: Bahmni/bahmni-package
+          ref: ${{ env.BRANCH_NAME }}
+          path: bahmni-package
+      - run: curl -L -k -O "https://ci-server.mybahmni.org/go/files/Bahmni_MRS_v0_93/132/BuildDistroStage/1/BahmniDistro/openmrs-distro-bahmni-artifacts/distro-0.93-SNAPSHOT-distro.zip"
+
+      - name: Checkout default-config
+        run: |
+          curl -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/Bahmni/default-config/actions/artifacts | \
+          jq -r '.artifacts[0].archive_download_url' | \
+          xargs curl -L -o default_config.zip -H "Authorization: token ${{secrets.BAHMNI_PAT}}"
+      - run: ls
+      - run: unzip -q -o default_config.zip
+      - name: Checkout bahmni-scripts
+        uses: actions/checkout@v2
+        with:
+          repository: Bahmni/bahmni-scripts
+          path: bahmni-scripts
+      - name: Build Docker Image
+        run: ./bahmni-package/bahmni-docker/build_scripts/bahmni-web/docker_build.sh
+      - name: List Docker Images
+        run: docker images
+      - name: Push Docker Images
+        run: ./bahmni-package/bahmni-docker/build_scripts/bahmni-web/docker_publish.sh
+        env:
+          DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+          DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN}}
