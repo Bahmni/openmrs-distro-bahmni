@@ -14,7 +14,6 @@ jobs:
   docker-build-publish:
     # if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Build & Publish Docker Image
-    # needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-java@v2
@@ -28,7 +27,7 @@ jobs:
           ref: ${{ env.BRANCH_NAME }}
           path: bahmni-package
 
-      - name: Checkout default-config
+      - name: Download artifacts
         run: |
           curl -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/Bahmni/default-config/actions/artifacts | \
@@ -38,10 +37,10 @@ jobs:
           https://api.github.com/repos/Bahmni/openmrs-distro-bahmni/actions/artifacts | \
           jq -r '.artifacts[0].archive_download_url' | \
           xargs curl -L -o BahmniDistro.zip -H "Authorization: token ${{secrets.BAHMNI_PAT}}"
-      - run: ls -l
-      - run: unzip -q -o default_config.zip
-      - run: unzip -q -o BahmniDistro.zip
-      - run: ls -l
+      - name: Unzip artifacts
+        run: |
+          unzip -q -o default_config.zip &&\
+          unzip -q -o BahmniDistro.zip
       - name: Checkout bahmni-scripts
         uses: actions/checkout@v2
         with:
