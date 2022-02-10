@@ -29,6 +29,28 @@
                         <enabled>true</enabled>
                   </releases>
                 </repository>
+                <repository>
+                    <id>github-openmrs-module-rulesengine</id>
+                    <name>github packages</name>
+                    <url>https://maven.pkg.github.com/Bahmni/openmrs-module-rulesengine</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                            <enabled>true</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>github-openmrs-module-bahmni.ie.apps</id>
+                    <name>github packages</name>
+                    <url>https://maven.pkg.github.com/Bahmni/openmrs-module-bahmni.ie.apps</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                            <enabled>true</enabled>
+                    </releases>
+                </repository>
             </repositories>
         </profile>
     </profiles>
