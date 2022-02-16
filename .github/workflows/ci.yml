@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ master ]
   repository_dispatch:
-    types: ["openmrs-module-episodes-trigger","bahmni-core-trigger","openmrs-module-rulesengine-trigger","openmrs-module-bahmni.ie.apps-trigger"]
+    types: ["openmrs-module-episodes-trigger","bahmni-core-trigger","openmrs-module-rulesengine-trigger","openmrs-module-bahmni.ie.apps-trigger","bahmni-emr-package-trigger"]
 
 env:
   BAHMNI_VERSION: 0.94
