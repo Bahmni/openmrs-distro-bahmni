@@ -1,7 +1,7 @@
 name: Continuous Integration
 on:
   push:
-    branches: [ BAH-1412 ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
   repository_dispatch:
@@ -9,7 +9,7 @@ on:
 
 env:
   BAHMNI_VERSION: 0.94
-  BRANCH_NAME: BAH-1412
+  BRANCH_NAME: master
 jobs:
   build-and-upload-package:
     name: Test and Package
