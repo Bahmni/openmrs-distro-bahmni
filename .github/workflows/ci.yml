@@ -1,9 +1,11 @@
 name: Continuous Integration
 on:
   push:
-    branches: [BAH-1412]
+    branches: [ master ]
+    paths-ignore: 
+      - '**.md'
   pull_request:
-    branches: [master]
+    branches: [ master ]
   repository_dispatch:
     types:
       [
