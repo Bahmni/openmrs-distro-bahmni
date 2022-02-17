@@ -1,15 +1,20 @@
 name: Continuous Integration
 on:
   push:
-    branches: [ master ]
+    branches: [BAH-1412]
   pull_request:
-    branches: [ master ]
+    branches: [master]
   repository_dispatch:
-    types: ["openmrs-module-episodes-trigger","bahmni-core-trigger","openmrs-module-rulesengine-trigger","openmrs-module-bahmni.ie.apps-trigger"]
+    types:
+      [
+        "openmrs-module-episodes-trigger",
+        "bahmni-core-trigger",
+        "openmrs-module-rulesengine-trigger",
+        "openmrs-module-bahmni.ie.apps-trigger",
+      ]
 
 env:
   BAHMNI_VERSION: 0.94
-  BRANCH_NAME: master
 jobs:
   build-and-upload-package:
     name: Test and Package
@@ -31,46 +36,40 @@ jobs:
         with:
           name: BahmniDistro
           path: distro/target/distro-0.94-SNAPSHOT-distro.zip
-  
+
   docker-build-publish:
     name: Build & Publish Docker Image
     needs: build-and-upload-package
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-java@v2
         with:
-          distribution: 'zulu'
-          java-version: '8'
-      - name: Checkout bahmni-package
-        uses: actions/checkout@v2
+          distribution: "zulu"
+          java-version: "8"
+      - name: Download BahmniDistro
+        uses: actions/download-artifact@v2
         with:
-          repository: Bahmni/bahmni-package
-          ref: ${{ env.BRANCH_NAME }}
-          path: bahmni-package
-
+          name: BahmniDistro
+          path: package/resources
       - name: Download default_config.zip
         run: |
           curl -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/Bahmni/default-config/actions/artifacts | \
           jq -r '.artifacts[0].archive_download_url' | \
           xargs curl -L -o default_config.zip -H "Authorization: token ${{secrets.BAHMNI_PAT}}" &&\
-          unzip -q -o default_config.zip
-      - name: Download BahmniDistro
-        uses: actions/download-artifact@v2
-        with:
-          name: BahmniDistro
-          path: bahmni-package/bahmni-emr/resources
+          unzip -q -o default_config.zip 
       - name: Checkout bahmni-scripts
         uses: actions/checkout@v2
         with:
           repository: Bahmni/bahmni-scripts
           path: bahmni-scripts
       - name: Build Docker Image
-        run: ./bahmni-package/bahmni-docker/build_scripts/bahmni-emr/docker_build.sh
+        run: ./package/docker/scripts/docker_build.sh
       - name: List Docker Images
         run: docker images
       - name: Push Docker Images
-        run: ./bahmni-package/bahmni-docker/build_scripts/bahmni-emr/docker_publish.sh
+        run: ./package/docker/scripts/docker_publish.sh
         env:
           DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
           DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN}}
