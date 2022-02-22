@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <addressHierarchyVersion>2.9</addressHierarchyVersion>
         <appframeworkModuleVersion>2.10.0</appframeworkModuleVersion>
-        <atomfeedModuleVersion>2.5.7-SNAPSHOT</atomfeedModuleVersion>
+        <atomfeedModuleVersion>2.6.0</atomfeedModuleVersion>
         <bacteriologyVersion>1.2.0</bacteriologyVersion>
         <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.94-SNAPSHOT</bahmniCoreVersion>
@@ -30,11 +30,11 @@
         <htmlwidgetsVersion>1.8.0</htmlwidgetsVersion>
         <idgenModuleVersion>4.4.1</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.2-SNAPSHOT</idgenWebServicesModuleVersion>
-        <legacyUiOmodVersion>1.10.0-SNAPSHOT</legacyUiOmodVersion>
+        <legacyUiOmodVersion>1.10.0</legacyUiOmodVersion>
         <mailappenderVersion>0.92-SNAPSHOT</mailappenderVersion>
         <metadataMappingVersion>1.3.1</metadataMappingVersion>
         <metadataSharingVersion>1.2.2</metadataSharingVersion>
-        <openMRSVersion>2.1.5</openMRSVersion>
+        <openMRSVersion>2.1.6</openMRSVersion>
         <operationTheaterVersion>1.3.0</operationTheaterVersion>
         <providerManagementVersion>2.5.0</providerManagementVersion>
         <rulesEngineVersion>0.94-SNAPSHOT</rulesEngineVersion>
@@ -46,7 +46,7 @@
         <webServicesRestVersion>2.33.0</webServicesRestVersion>
         <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.2.0-SNAPSHOT</bahmniIEOmodVersion>
-        <appointmentsVersion>1.3.0</appointmentsVersion>
+        <appointmentsVersion>1.4.0-SNAPSHOT</appointmentsVersion>
         <pacsQueryVersion>1.2.0</pacsQueryVersion>
     </properties>
 
