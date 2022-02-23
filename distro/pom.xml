@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <addressHierarchyVersion>2.9</addressHierarchyVersion>
         <appframeworkModuleVersion>2.10.0</appframeworkModuleVersion>
-        <atomfeedModuleVersion>2.6.0</atomfeedModuleVersion>
+        <atomfeedModuleVersion>2.6.1</atomfeedModuleVersion>
         <bacteriologyVersion>1.2.0</bacteriologyVersion>
         <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.94-SNAPSHOT</bahmniCoreVersion>
