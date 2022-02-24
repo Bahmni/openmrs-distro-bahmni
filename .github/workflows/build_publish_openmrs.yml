@@ -1,9 +1,20 @@
 name: Build and Publish OpenMRS
 on:
   push:
-    branches: [ master, BAH-1412 ]
-    paths-ignore: 
-      - '**.md'
+    branches: [master]
+    paths-ignore:
+      - "**.md"
+      - ".github/workflows/build_publish_openmrs_freshDB.yml"
+      - ".github/workflows/build_publish_openmrs_demoDB.yml"
+      - "package/docker/db.Dockerfile"
+      - "package/docker/demodb.Dockerfile"
+      - "package/resources/openmrs_clean_dump.sql"
+      - "package/docker/scripts/docker_build_openmrs_freshDB.sh"
+      - "package/docker/scripts/docker_build_openmrs_demoDB.sh"
+      - "package/docker/scripts/docker_publish_openmrs_freshDB.sh"
+      - "package/docker/scripts/docker_publish_openmrs_demoDB.sh"
+  repository_dispatch:
+    types: ["default-config-trigger"]
 
 env:
   BAHMNI_VERSION: 0.94
@@ -31,7 +42,7 @@ jobs:
           https://api.github.com/repos/Bahmni/default-config/actions/artifacts | \
           jq -r '.artifacts[0].archive_download_url' | \
           xargs curl -L -o default_config.zip -H "Authorization: token ${{secrets.BAHMNI_PAT}}" &&\
-          unzip -q -o default_config.zip 
+          unzip -q -o default_config.zip
       - name: Build Docker Image
         run: ./package/docker/scripts/docker_build_openmrs.sh
       - name: List Docker Images
