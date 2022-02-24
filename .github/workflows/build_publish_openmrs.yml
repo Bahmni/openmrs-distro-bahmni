@@ -1,0 +1,43 @@
+name: Build and Publish OpenMRS
+on:
+  push:
+    branches: [ master, BAH-1412 ]
+    paths-ignore: 
+      - '**.md'
+
+env:
+  BAHMNI_VERSION: 0.94
+jobs:
+  docker-build-publish:
+    name: Docker Build & Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Build with Maven
+        run: |
+          ./mvnw -s $GITHUB_WORKSPACE/.github/workflows/settings.xml clean install
+        env:
+          USER_NAME: ${{ secrets.USERNAME }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Copy build artifact to docker resources
+        run: cp distro/target/distro-0.94-SNAPSHOT-distro.zip package/resources/
+      - name: Download default_config.zip
+        run: |
+          curl -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/Bahmni/default-config/actions/artifacts | \
+          jq -r '.artifacts[0].archive_download_url' | \
+          xargs curl -L -o default_config.zip -H "Authorization: token ${{secrets.BAHMNI_PAT}}" &&\
+          unzip -q -o default_config.zip 
+      - name: Build Docker Image
+        run: ./package/docker/scripts/docker_build_openmrs.sh
+      - name: List Docker Images
+        run: docker images
+      - name: Push Docker Images
+        run: ./package/docker/scripts/docker_publish_openmrs.sh
+        env:
+          DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+          DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN}}
