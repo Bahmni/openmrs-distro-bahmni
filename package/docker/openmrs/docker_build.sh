@@ -28,4 +28,4 @@ unzip -q -u -d build/default_config package/resources/default_config.zip
 
 # Building Docker images
 OPENMRS_IMAGE_TAG=${BAHMNI_VERSION}-${GITHUB_RUN_NUMBER}
-docker build -t bahmni/openmrs:${OPENMRS_IMAGE_TAG} -f package/docker/Dockerfile  . --no-cache
+docker build -t bahmni/openmrs:${OPENMRS_IMAGE_TAG} -t bahmni/openmrs:latest -f package/docker/openmrs/Dockerfile  . --no-cache

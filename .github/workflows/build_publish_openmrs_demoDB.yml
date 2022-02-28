@@ -1,12 +1,12 @@
 name: Build and Publish OpenMRS Demo DB
 on:
   push:
-    branches: [master]
+    branches: [master, BAH-1412]
     paths:
       - ".github/workflows/build_publish_openmrs_demoDB.yml"
-      - "package/docker/demodb.Dockerfile"
-      - "package/docker/scripts/docker_build_openmrs_demoDB.sh"
-      - "package/docker/scripts/docker_publish_openmrs_demoDB.sh"
+      - "package/docker/demoDB/**"
+      - "package/docker/docker_publish.sh"
+
   repository_dispatch:
     types: ["bahmni-scripts-trigger"]
 
@@ -24,11 +24,9 @@ jobs:
           repository: Bahmni/bahmni-scripts
           path: bahmni-scripts
       - name: Build Docker Image
-        run: ./package/docker/scripts/docker_build_openmrs_demoDB.sh
-      - name: List Docker Images
-        run: docker images
-      - name: Push Docker Images
-        run: ./package/docker/scripts/docker_publish_openmrs_demoDB.sh
+        run: ./package/docker/demoDB/docker_build.sh
+      - name: Push Docker Image
+        run: ./package/docker/docker_publish.sh bahmni/openmrs-db
         env:
           DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
           DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN}}

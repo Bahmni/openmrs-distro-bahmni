@@ -1,18 +1,15 @@
 name: Build and Publish OpenMRS
 on:
   push:
-    branches: [master]
+    branches: [master, BAH-1412]
     paths-ignore:
       - "**.md"
       - ".github/workflows/build_publish_openmrs_freshDB.yml"
       - ".github/workflows/build_publish_openmrs_demoDB.yml"
-      - "package/docker/db.Dockerfile"
-      - "package/docker/demodb.Dockerfile"
       - "package/resources/openmrs_clean_dump.sql"
-      - "package/docker/scripts/docker_build_openmrs_freshDB.sh"
-      - "package/docker/scripts/docker_build_openmrs_demoDB.sh"
-      - "package/docker/scripts/docker_publish_openmrs_freshDB.sh"
-      - "package/docker/scripts/docker_publish_openmrs_demoDB.sh"
+      - "package/docker/demoDB/**"
+      - "package/docker/freshDB/**"
+
   repository_dispatch:
     types: ["default-config-trigger"]
 
@@ -44,11 +41,9 @@ jobs:
           xargs curl -L -o default_config.zip -H "Authorization: token ${{secrets.BAHMNI_PAT}}" &&\
           unzip -q -o default_config.zip
       - name: Build Docker Image
-        run: ./package/docker/scripts/docker_build_openmrs.sh
-      - name: List Docker Images
-        run: docker images
-      - name: Push Docker Images
-        run: ./package/docker/scripts/docker_publish_openmrs.sh
+        run: ./package/docker/openmrs/docker_build.sh
+      - name: Push Docker Image
+        run: ./package/docker/docker_publish.sh bahmni/openmrs
         env:
           DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
           DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN}}
