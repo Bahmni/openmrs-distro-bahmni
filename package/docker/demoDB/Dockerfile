@@ -1,2 +1,5 @@
 FROM mysql:5.6
-COPY package/resources/openmrs_demo_dump.sql /docker-entrypoint-initdb.d
+
+ADD https://github.com/Bahmni/bahmni-scripts/blob/master/demo/db-backups/v0.92/openmrs_backup.sql.gz\?raw\=true /resources/
+RUN gunzip /resources/openmrs_backup.sql.gz && chmod +rx /resources/*.sql
+RUN cp /resources/openmrs_backup.sql /docker-entrypoint-initdb.d/

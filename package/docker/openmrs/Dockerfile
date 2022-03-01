@@ -1,10 +1,33 @@
 FROM openmrs/openmrs-distro-platform:2.1.4
 
-COPY build/openmrs-modules/*.omod /usr/local/tomcat/.OpenMRS/modules/
+ENV ATOMFEED_CLIENT_VERSION=1.9.4
+ENV LIQUIBASE_VERSION=2.0.5
+ENV BAHMNI_VERSION=0.94
+ENV DISTRO_PATH=distro-${BAHMNI_VERSION}-SNAPSHOT
+
+# Creating Config Directories
+RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
+RUN mkdir -p /tmp/artifacts/default_config/
+RUN mkdir -p /tmp/artifacts/distro/ 
+RUN mkdir /resources/
+RUN mkdir -p /etc/bahmni-lab-connect/
+
+# Downloading atomfeed client and liquibase core
+RUN curl -L -o /resources/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar "https://oss.sonatype.org/content/repositories/releases/org/ict4h/atomfeed-client/${ATOMFEED_CLIENT_VERSION}/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar"
+RUN curl -L -o /resources/liquibase-core-${LIQUIBASE_VERSION}.jar "https://oss.sonatype.org/content/repositories/releases/org/liquibase/liquibase-core/${LIQUIBASE_VERSION}/liquibase-core-${LIQUIBASE_VERSION}.jar"
+
+#unzip default_config and distro
+ADD package/resources/default_config.zip /tmp/artifacts/
+RUN unzip -d /tmp/artifacts/ /tmp/artifacts/default_config.zip 
+
+ADD package/resources/${DISTRO_PATH}-distro.zip /tmp/artifacts/
+RUN unzip -d /tmp/artifacts/ /tmp/artifacts/${DISTRO_PATH}-distro.zip
+
+RUN cp /tmp/artifacts/${DISTRO_PATH}/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
-COPY package/resources/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
-COPY package/resources/liquibase-core-*.jar /etc/bahmni-lab-connect/liquibase-core.jar
-COPY build/default_config /etc/bahmni_config/
+RUN cp /resources/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
+RUN cp /resources/liquibase-core-*.jar /etc/bahmni-lab-connect/liquibase-core.jar
+RUN cp -r /tmp/artifacts/default_config /etc/bahmni_config/
 
 # Creating Upload Directories
 RUN mkdir -p /home/bahmni/patient_images
