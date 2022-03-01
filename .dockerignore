@@ -7,7 +7,6 @@
 **/*.jasper
 **/out/
 **/classes
-**/target
 **/.gradle
 **/*.DS_Store
 **/*.class
