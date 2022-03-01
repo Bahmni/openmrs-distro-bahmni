@@ -1,13 +1,11 @@
 name: Build and Publish OpenMRS Fresh DB
 on:
   push:
-    branches: [master, BAH-1412]
+    branches: [master]
     paths:
       - ".github/workflows/build_publish_openmrs_freshDB.yml"
       - "package/resources/openmrs_clean_dump.sql"
       - "package/docker/freshDB/**"
-      - "package/docker/docker_publish.sh"
-
 
 env:
   BAHMNI_VERSION: 0.94
