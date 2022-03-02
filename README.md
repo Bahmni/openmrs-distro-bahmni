@@ -1,7 +1,7 @@
 openmrs-distro-bahmni
 ==================
 
-In order to use the bahmnicore artifacts from github packages, please add the `settings.xml` file present in `.github/workflows/` in `/.m2` repo and replace the USER_NAME (Github username) and ACCESS_TOKEN (GitHub PAT) and then proceed to build
+In order to use the bahmnicore artifacts from github packages, please add the `settings.xml` file present in `.github/` in `/.m2` repo and replace the USER_NAME (Github username) and ACCESS_TOKEN (GitHub PAT) and then proceed to build
 
 Else the artifacts by default would be downloaded from S3.
 
