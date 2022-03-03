@@ -6,7 +6,6 @@ on:
       - "**.md"
       - ".github/workflows/build_publish_openmrs_freshDB.yml"
       - ".github/workflows/build_publish_openmrs_demoDB.yml"
-      - "package/resources/openmrs_clean_dump.sql"
       - "package/docker/demoDB/**"
       - "package/docker/freshDB/**"
 
