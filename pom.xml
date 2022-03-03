@@ -31,50 +31,6 @@
 	</scm>
 
     <repositories>
-	   <repository>
-		<id>github</id>
-		<name>github packages</name>
-		<url>https://maven.pkg.github.com/Bahmni/bahmni-core</url>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
-		<releases>
-				<enabled>true</enabled>
-		</releases>
-	   </repository>
-	   <repository>
-		<id>github-openmrs-module-episodes</id>
-		<name>github packages</name>
-		<url>https://maven.pkg.github.com/Bahmni/openmrs-module-episodes</url>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
-		<releases>
-				<enabled>true</enabled>
-		</releases>
-	   </repository>
-	   <repository>
-		<id>github-openmrs-module-rulesengine</id>
-		<name>github packages</name>
-		<url>https://maven.pkg.github.com/Bahmni/openmrs-module-rulesengine</url>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
-		<releases>
-				<enabled>true</enabled>
-		</releases>
-	   </repository>
-	   <repository>
-		<id>github-openmrs-module-bahmni.ie.apps</id>
-		<name>github packages</name>
-		<url>https://maven.pkg.github.com/Bahmni/openmrs-module-bahmni.ie.apps</url>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
-		<releases>
-				<enabled>true</enabled>
-		</releases>
-	   </repository>
         <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>

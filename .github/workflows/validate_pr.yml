@@ -15,7 +15,4 @@ jobs:
           java-version: 1.8
       - name: Build with Maven
         run: |
-          ./mvnw -s .github/settings.xml clean install
-        env:
-          USER_NAME: ${{ secrets.USERNAME }}
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ./mvnw clean install
