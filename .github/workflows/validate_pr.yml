@@ -15,4 +15,4 @@ jobs:
           java-version: 1.8
       - name: Build with Maven
         run: |
-          ./mvnw clean install
+          ./mvnw --no-transfer-progress -U clean install

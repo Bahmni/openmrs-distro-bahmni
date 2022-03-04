@@ -272,7 +272,7 @@
         <repository>
             <id>rubygems-proxy</id>
             <name>Rubygems Proxy</name>
-            <url>http://rubygems-proxy.torquebox.org/releases</url>
+            <url>https://rubygems-proxy.torquebox.org/releases</url>
             <layout>default</layout>
             <releases>
                 <enabled>true</enabled>
@@ -352,7 +352,7 @@
        <repository>
            <id>repo.mybahmni.org</id>
            <name>bahmni-artifactory-snapshots</name>
-           <url>http://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
+           <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
            <snapshots>
                <updatePolicy>always</updatePolicy>
            </snapshots>
@@ -360,7 +360,7 @@
        <repository>
           <id>repo.mybahmni.org-release</id>
           <name>bahmni-artifactory-release</name>
-          <url>http://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
+          <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
       </repository>
     </repositories>
 
