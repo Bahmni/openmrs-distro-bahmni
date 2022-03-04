@@ -31,17 +31,6 @@
 	</scm>
 
     <repositories>
-	   <repository>
-		<id>github</id>
-		<name>github packages</name>
-		<url>https://maven.pkg.github.com/Bahmni/bahmni-core</url>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
-		<releases>
-				<enabled>true</enabled>
-		</releases>
-	   </repository>
         <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
