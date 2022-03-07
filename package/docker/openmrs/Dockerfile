@@ -1,6 +1,6 @@
-FROM openmrs/openmrs-distro-platform:2.1.4
+FROM openmrs/openmrs-distro-platform:2.1.6-SNAPSHOT
 
-ENV ATOMFEED_CLIENT_VERSION=1.9.4
+ENV ATOMFEED_CLIENT_VERSION=1.10.1
 ENV LIQUIBASE_VERSION=2.0.5
 
 # Creating Config Directories
