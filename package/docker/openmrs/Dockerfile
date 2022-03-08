@@ -1,6 +1,6 @@
-FROM openmrs/openmrs-distro-platform:2.1.4
+FROM openmrs/openmrs-distro-platform:2.1.6-SNAPSHOT
 
-ENV ATOMFEED_CLIENT_VERSION=1.9.4
+ENV ATOMFEED_CLIENT_VERSION=1.10.1
 ENV LIQUIBASE_VERSION=2.0.5
 
 # Creating Config Directories
@@ -15,13 +15,13 @@ RUN curl -L -o /tmp/artifacts/liquibase-core-${LIQUIBASE_VERSION}.jar "https://o
 
 #unzip default_config
 ADD package/resources/default_config.zip /tmp/artifacts/
-RUN unzip -d /tmp/artifacts/ /tmp/artifacts/default_config.zip 
+RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip 
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
 RUN cp /tmp/artifacts/liquibase-core-*.jar /etc/bahmni-lab-connect/liquibase-core.jar
-RUN cp -r /tmp/artifacts/default_config /etc/bahmni_config/
+RUN cp -r /tmp/artifacts/default_config/. /etc/bahmni_config/
 
 # Creating Upload Directories
 RUN mkdir -p /home/bahmni/patient_images
