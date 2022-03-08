@@ -19,7 +19,7 @@
         <appframeworkModuleVersion>2.10.0</appframeworkModuleVersion>
         <atomfeedModuleVersion>2.6.1</atomfeedModuleVersion>
         <bacteriologyVersion>1.2.0</bacteriologyVersion>
-        <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
+        <auditLogVersion>1.2.0</auditLogVersion>
         <bahmniCoreVersion>0.94-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.11.0</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
@@ -219,7 +219,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.openmrs.module</groupId>
+            <groupId>org.bahmni.module</groupId>
             <artifactId>auditlog-omod</artifactId>
             <version>${auditLogVersion}</version>
         </dependency>
