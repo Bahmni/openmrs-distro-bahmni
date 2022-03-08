@@ -48,6 +48,7 @@
         <bahmniIEOmodVersion>1.2.0-SNAPSHOT</bahmniIEOmodVersion>
         <appointmentsVersion>1.4.0-SNAPSHOT</appointmentsVersion>
         <pacsQueryVersion>1.2.0</pacsQueryVersion>
+        <fhir2ModuleVersion>1.3.0</fhir2ModuleVersion>
     </properties>
 
     <dependencies>
@@ -177,6 +178,12 @@
             <groupId>org.openmrs</groupId>
             <artifactId>event-omod</artifactId>
             <version>${eventModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>fhir2-omod</artifactId>
+            <version>${fhir2ModuleVersion}</version>
         </dependency>
 
         <!-- end -->
