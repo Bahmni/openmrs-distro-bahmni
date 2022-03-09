@@ -45,7 +45,7 @@
         <uilibraryVersion>2.0.5</uilibraryVersion>
         <webServicesRestVersion>2.33.0</webServicesRestVersion>
         <reportingRestVersion>1.10.0</reportingRestVersion>
-        <bahmniIEOmodVersion>1.2.0-SNAPSHOT</bahmniIEOmodVersion>
+        <bahmniIEOmodVersion>1.2.0</bahmniIEOmodVersion>
         <appointmentsVersion>1.4.0-SNAPSHOT</appointmentsVersion>
         <pacsQueryVersion>1.2.0</pacsQueryVersion>
     </properties>
