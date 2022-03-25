@@ -18,6 +18,8 @@ ADD package/resources/default_config.zip /tmp/artifacts/
 RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip 
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
+COPY package/resources/fhir2-omod-1.0.0-SNAPSHOT.omod /usr/local/tomcat/.OpenMRS/modules/
+COPY package/resources/hipmodule-omod-0.1-SNAPSHOT.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
 RUN cp /tmp/artifacts/liquibase-core-*.jar /etc/bahmni-lab-connect/liquibase-core.jar
