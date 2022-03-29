@@ -31,7 +31,9 @@ jobs:
           USER_NAME: ${{ secrets.USERNAME }}
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Download default_config.zip
-        run: sh .github/download_artifact.sh default-config default_config ${{secrets.BAHMNI_PAT}}
+        run: sh .github/download_artifact.sh default-config DefaultConfig ${{secrets.BAHMNI_PAT}}
+      - name: Download hip module omod
+        run: sh .github/download_artifact.sh openmrs-module-hip Package ${{secrets.BAHMNI_PAT}}
       - name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
