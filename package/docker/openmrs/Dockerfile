@@ -8,7 +8,7 @@ RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
 RUN mkdir -p /tmp/artifacts/default_config/
 RUN mkdir -p /tmp/artifacts/distro/ 
 RUN mkdir -p /etc/bahmni-lab-connect/
-#RUN mkdir -p /etc/bahmni_config/
+RUN mkdir -p /etc/bahmni_config/
 
 # Downloading atomfeed client and liquibase core
 RUN curl -L -o /tmp/artifacts/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar "https://oss.sonatype.org/content/repositories/releases/org/ict4h/atomfeed-client/${ATOMFEED_CLIENT_VERSION}/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar"
