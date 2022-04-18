@@ -15,7 +15,7 @@ RUN curl -L -o /tmp/artifacts/liquibase-core-${LIQUIBASE_VERSION}.jar "https://o
 
 #unzip default_config
 ADD package/resources/default_config.zip /tmp/artifacts/
-RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip 
+RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/

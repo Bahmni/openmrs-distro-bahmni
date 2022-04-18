@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>bahmni</artifactId>
         <groupId>org.openmrs.distro</groupId>
@@ -20,7 +18,7 @@
         <atomfeedModuleVersion>2.6.1</atomfeedModuleVersion>
         <bacteriologyVersion>1.2.0</bacteriologyVersion>
         <auditLogVersion>1.2.0</auditLogVersion>
-        <bahmniCoreVersion>0.94-SNAPSHOT</bahmniCoreVersion>
+        <bahmniCoreVersion>0.93-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.12.0</bedManagementVersion>
         <calculationVersion>1.2</calculationVersion>
         <emrapiModuleVersion>1.24.8</emrapiModuleVersion>
@@ -37,7 +35,7 @@
         <openMRSVersion>2.1.6</openMRSVersion>
         <operationTheaterVersion>1.4.0</operationTheaterVersion>
         <providerManagementVersion>2.5.0</providerManagementVersion>
-        <rulesEngineVersion>0.94-SNAPSHOT</rulesEngineVersion>
+        <rulesEngineVersion>0.93-SNAPSHOT</rulesEngineVersion>
         <reportingVersion>1.16.0</reportingVersion>
         <serializationVersion>0.2.12</serializationVersion>
         <uicommonsModuleVersion>2.0</uicommonsModuleVersion>
@@ -47,8 +45,9 @@
         <reportingRestVersion>1.10.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.2.0</bahmniIEOmodVersion>
         <appointmentsVersion>1.4.0</appointmentsVersion>
-        <pacsQueryVersion>1.2.0</pacsQueryVersion>
+        <pacsQueryVersion>1.0.0-SNAPSHOT</pacsQueryVersion>
         <fhir2ModuleVersion>1.3.0</fhir2ModuleVersion>
+        <initializer>2.3.0-SNAPSHOT</initializer>
     </properties>
 
     <dependencies>
@@ -120,7 +119,7 @@
             <artifactId>uicommons-omod</artifactId>
             <version>${uicommonsModuleVersion}</version>
         </dependency>
-         <dependency>
+        <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>emrapi-omod</artifactId>
             <version>${emrapiModuleVersion}</version>
@@ -174,7 +173,7 @@
             <version>${owaVersion}</version>
         </dependency>
 
-         <dependency>
+        <dependency>
             <groupId>org.openmrs</groupId>
             <artifactId>event-omod</artifactId>
             <version>${eventModuleVersion}</version>
@@ -216,7 +215,7 @@
         </dependency>
         <dependency>
             <groupId>org.bahmni.module</groupId>
-                <artifactId>mail-appender</artifactId>
+            <artifactId>mail-appender</artifactId>
             <version>${mailappenderVersion}</version>
         </dependency>
         <dependency>
@@ -237,7 +236,7 @@
             <version>${appointmentsVersion}</version>
         </dependency>
 
-         <dependency>
+        <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>operationtheater-omod</artifactId>
             <version>${operationTheaterVersion}</version>
@@ -248,13 +247,18 @@
             <artifactId>pacsquery-omod</artifactId>
             <version>${pacsQueryVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>initializer-omod</artifactId>
+            <version>${initializer}</version>
+        </dependency>
         <!-- end -->
 
         <!-- Modules from other maintainers-->
         <dependency>
-          <groupId>org.ict4h.openmrs</groupId>
-          <artifactId>openmrs-atomfeed-omod</artifactId>
-          <version>${atomfeedModuleVersion}</version>
+            <groupId>org.ict4h.openmrs</groupId>
+            <artifactId>openmrs-atomfeed-omod</artifactId>
+            <version>${atomfeedModuleVersion}</version>
         </dependency>
         <!-- end -->
     </dependencies>
@@ -356,19 +360,27 @@
                 <updatePolicy>interval:10080</updatePolicy>
             </releases>
         </repository>
-       <repository>
-           <id>repo.mybahmni.org</id>
-           <name>bahmni-artifactory-snapshots</name>
-           <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
-           <snapshots>
-               <updatePolicy>always</updatePolicy>
-           </snapshots>
-       </repository>
-       <repository>
-          <id>repo.mybahmni.org-release</id>
-          <name>bahmni-artifactory-release</name>
-          <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
-      </repository>
+        <repository>
+            <id>repo.mybahmni.org</id>
+            <name>bahmni-artifactory-snapshots</name>
+            <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>repo.mybahmni.org-release</id>
+            <name>bahmni-artifactory-release</name>
+            <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
+        </repository>
+        <repository>
+            <!-- Mekom repository, for Initializer -->
+            <id>mks-nexus-public</id>
+            <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
     </repositories>
 
     <build>
@@ -439,14 +451,14 @@
                         </goals>
                     </execution>
 
-                     <execution>
+                    <execution>
                         <id>copy-other-jars</id>
                         <phase>package</phase>
                         <configuration>
                             <target>
                                 <move todir="${project.build.directory}/distro">
                                     <fileset dir="${project.build.directory}/dependencies">
-                                        <include name="*.jar"/>
+                                        <include name="*.jar" />
                                     </fileset>
                                 </move>
                             </target>
@@ -463,7 +475,7 @@
                             <target>
                                 <move todir="${project.build.directory}/distro">
                                     <fileset dir="${project.build.directory}/dependencies">
-                                        <include name="*.war"/>
+                                        <include name="*.war" />
                                     </fileset>
                                 </move>
                             </target>
