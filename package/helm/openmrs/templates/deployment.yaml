@@ -1,61 +1,116 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "openmrs.fullname" . }}
+  name: {{ .Chart.Name }}
   labels:
-    {{- include "openmrs.labels" . | nindent 4 }}
+    app: {{ .Chart.Name }}
+    environment: {{ .Values.metadata.labels.environment }}
+
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "openmrs.selectorLabels" . | nindent 6 }}
+      app: {{ .Chart.Name }}
+      environment: {{ .Values.metadata.labels.environment }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
-      annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
-        {{- include "openmrs.selectorLabels" . | nindent 8 }}
+        app: {{ .Chart.Name }}
+        environment: {{ .Values.metadata.labels.environment }}
     spec:
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      serviceAccountName: {{ include "openmrs.serviceAccountName" . }}
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
-              containerPort: 80
+            - containerPort: 8080
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+          env:
+            - name: DB_AUTO_UPDATE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Chart.Name }}-config
+                  key: dbAutoUpdate
+            - name: DB_CREATE_TABLES
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Chart.Name }}-config
+                  key: dbCreateTables
+            - name: DB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Chart.Name }}-config
+                  key: dbName
+            - name: DEBUG
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Chart.Name }}-config
+                  key: debug
+            - name: MODULE_WEB_ADMIN
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Chart.Name }}-config
+                  key: moduleWebAdmin
+            - name: OPENELIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Chart.Name }}-config
+                  key: openELISHost
+            - name: OPENELIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Chart.Name }}-config
+                  key: openELISPort
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Chart.Name }}-secrets
+                  key: dbHost
+                  optional: false
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Chart.Name }}-secrets
+                  key: dbPassword
+                  optional: false
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Chart.Name }}-secrets
+                  key: dbUsername
+                  optional: false
+            - name: OPENELIS_ATOMFEED_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Chart.Name }}-secrets
+                  key: openELISAtomFeedPassword
+                  optional: false
+            - name: OPENELIS_ATOMFEED_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Chart.Name }}-secrets
+                  key: openELISAtomFeedUser
+                  optional: false
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      {{- with .Values.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.affinity }}
-      affinity:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.tolerations }}
-      tolerations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+          # volumeMounts:
+          #   - mountPath: /usr/local/tomcat/.OpenMRS/modules
+          #     name: openmrs-data
+          #   - mountPath: /home/bahmni/patient_images
+          #     name: openmrs-patient-images
+          #   - mountPath: /home/bahmni/document_images
+          #     name: openmrs-document-images
+      restartPolicy: Always
+      # volumes:
+      #   - name: openmrs-data
+      #     persistentVolumeClaim:
+      #       claimName: openmrs-data-pvc
+      #   - name: openmrs-patient-images
+      #     persistentVolumeClaim:
+      #       claimName: openmrs-patient-images-pvc
+      #   - name: openmrs-document-images
+      #     persistentVolumeClaim:
+      #       claimName: openmrs-document-images-pvc
+
+

@@ -1,15 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "openmrs.fullname" . }}
+  name: {{ .Chart.Name }}
   labels:
-    {{- include "openmrs.labels" . | nindent 4 }}
+    app: {{ .Chart.Name }}
+    environment: {{ .Values.metadata.labels.environment }}
+
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 8080
       protocol: TCP
-      name: http
+      name: '8080'
   selector:
-    {{- include "openmrs.selectorLabels" . | nindent 4 }}
+    app: {{ .Chart.Name }}
+    environment: {{ .Values.metadata.labels.environment }}
