@@ -5,7 +5,8 @@ metadata:
     environment: dev
 
 image:
-  repository: bahmni/openmrs
+  repository: bahmni
+  name: openmrs
   tag: latest
 
 service:
