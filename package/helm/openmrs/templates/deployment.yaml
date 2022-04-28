@@ -26,72 +26,13 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
-          env:
-            - name: DB_AUTO_UPDATE
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Chart.Name }}-config
-                  key: dbAutoUpdate
-            - name: DB_CREATE_TABLES
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Chart.Name }}-config
-                  key: dbCreateTables
-            - name: DB_DATABASE
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Chart.Name }}-config
-                  key: dbName
-            - name: DEBUG
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Chart.Name }}-config
-                  key: debug
-            - name: MODULE_WEB_ADMIN
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Chart.Name }}-config
-                  key: moduleWebAdmin
-            - name: OPENELIS_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Chart.Name }}-config
-                  key: openELISHost
-            - name: OPENELIS_PORT
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Chart.Name }}-config
-                  key: openELISPort
-            - name: DB_HOST
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Chart.Name }}-secrets
-                  key: dbHost
-                  optional: false
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Chart.Name }}-secrets
-                  key: dbPassword
-                  optional: false
-            - name: DB_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Chart.Name }}-secrets
-                  key: dbUsername
-                  optional: false
-            - name: OPENELIS_ATOMFEED_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Chart.Name }}-secrets
-                  key: openELISAtomFeedPassword
-                  optional: false
-            - name: OPENELIS_ATOMFEED_USER
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Chart.Name }}-secrets
-                  key: openELISAtomFeedUser
-                  optional: false
+          envFrom:
+            - configMapRef:
+                name: {{ .Chart.Name }}-config
+                optional: false
+            - secretRef:
+                 name: {{.Chart.Name }}-secrets
+                 optional: false
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           # volumeMounts:

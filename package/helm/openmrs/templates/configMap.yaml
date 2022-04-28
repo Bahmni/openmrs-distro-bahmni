@@ -3,10 +3,10 @@ kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}-config
 data:
-  dbAutoUpdate: "{{ .Values.config.dbAutoUpdate }}"
-  dbCreateTables: "{{ .Values.config.dbCreateTables }}"
-  dbName: "{{ .Values.config.dbName }}"
-  debug: "{{ .Values.config.debug }}"
-  moduleWebAdmin: "{{ .Values.config.moduleWebAdmin }}"
-  openELISHost: "{{ .Values.config.openELISHost }}"
-  openELISPort: "{{ .Values.config.openELISPort }}"
+  DB_AUTO_UPDATE: "{{ .Values.config.DB_AUTO_UPDATE }}"
+  DB_CREATE_TABLES: "{{ .Values.config.DB_CREATE_TABLES }}"
+  DB_DATABASE: "{{ .Values.config.DB_NAME }}"
+  DEBUG: "{{ .Values.config.DEBUG }}"
+  MODULE_WEB_ADMIN: "{{ .Values.config.MODULE_WEB_ADMIN }}"
+  OPENELIS_HOST: "{{ .Values.config.OPENELIS_HOST }}"
+  OPENELIS_PORT: "{{ .Values.config.OPENELIS_PORT }}"
