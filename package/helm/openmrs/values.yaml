@@ -6,7 +6,7 @@ metadata:
 
 image:
   repository: bahmni/openmrs
-  tag: 0.94-16
+  tag: latest
 
 service:
   type: LoadBalancer
