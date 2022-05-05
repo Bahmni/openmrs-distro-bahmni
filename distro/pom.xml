@@ -277,20 +277,6 @@
 
     <repositories>
         <repository>
-            <id>rubygems-proxy</id>
-            <name>Rubygems Proxy</name>
-            <url>https://rubygems-proxy.torquebox.org/releases</url>
-            <layout>default</layout>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>interval:10080</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>never</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -348,27 +334,6 @@
                 <updatePolicy>interval:10080</updatePolicy>
             </snapshots>
         </repository>
-        <repository>
-            <id>openmrs-repo</id>
-            <name>OpenMRS Nexus Repository</name>
-            <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
-            <releases>
-                <updatePolicy>interval:10080</updatePolicy>
-            </releases>
-        </repository>
-       <repository>
-           <id>repo.mybahmni.org</id>
-           <name>bahmni-artifactory-snapshots</name>
-           <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
-           <snapshots>
-               <updatePolicy>always</updatePolicy>
-           </snapshots>
-       </repository>
-       <repository>
-          <id>repo.mybahmni.org-release</id>
-          <name>bahmni-artifactory-release</name>
-          <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
-      </repository>
     </repositories>
 
     <build>
