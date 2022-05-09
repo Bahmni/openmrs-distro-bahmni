@@ -76,7 +76,7 @@ jobs:
       needs: [get-version]
       env:
         ARTIFACT_VERSION: ${{ needs.get-version.outputs.version }}-${{github.run_number}}
-        HELM_CHART_PATH: openmrs-distro-bahmni/package/helm/
+        HELM_CHART_PATH: openmrs-distro-bahmni/package/helm/openmrs
       steps:
         - name: Checkout
           uses: actions/checkout@v2
