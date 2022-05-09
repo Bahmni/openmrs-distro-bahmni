@@ -1,0 +1,43 @@
+replicaCount: 1
+
+metadata:
+  labels:
+    environment: dev
+
+image:
+  repository: bahmni
+  name: openmrs
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 8080
+
+config:
+  DB_AUTO_UPDATE: true
+  DB_CREATE_TABLES: false
+  DB_NAME: openmrs
+  DEBUG: false
+  MODULE_WEB_ADMIN: false
+  OPENELIS_HOST: openelis
+  OPENELIS_PORT: '8052'
+
+secrets:
+  DB_HOST: ""
+  DB_USERNAME: ""
+  DB_PASSWORD: ""
+  OPENELIS_ATOMFEED_USER: ""
+  OPENELIS_ATOMFEED_PASSWORD: ""
+
+resources:
+  requests:
+    memory: "4Gi"
+  limits:
+      memory: "5Gi"
+
+autoscaling:
+  enabled: false
+#  minReplicas: 1
+#  maxReplicas: 5
+#  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80

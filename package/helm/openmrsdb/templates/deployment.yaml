@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app: {{ .Chart.Name }}
+    environment: {{ .Values.metadata.labels.environment }}
+
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+      environment: {{ .Values.metadata.labels.environment }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+        environment: {{ .Values.metadata.labels.environment }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          ports:
+            - containerPort: 3306
+          envFrom:
+            - configMapRef:
+                name: {{ .Chart.Name }}-config
+                optional: false
+            - secretRef:
+                name: {{.Chart.Name }}-secrets
+                optional: false
+          resources: {}
+          # volumeMounts:
+          #   - mountPath: /var/lib/mysql
+          #     name: openmrsdbdata
+      restartPolicy: Always
+        # volumes:
+        #   - name: openmrsdbdata
+        #     persistentVolumeClaim:
+        #       claimName: openmrsdbdata-pvc
