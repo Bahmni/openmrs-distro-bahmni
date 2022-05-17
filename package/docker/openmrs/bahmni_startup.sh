@@ -13,6 +13,9 @@ echo "Substituting Environment Variables..."
 envsubst < /etc/bahmni-emr/templates/bahmnicore.properties.template > /usr/local/tomcat/.OpenMRS/bahmnicore.properties
 /usr/local/tomcat/wait-for-it.sh --timeout=3600 ${DB_HOST}:3306
 
+#DB Setup
+./dbSetup.sh
+
 # Running Atomfeed Migrations
 java $CHANGE_LOG_TABLE -jar $LIQUIBASE_JAR --driver=$DRIVER --url=$URL --username=$DB_USERNAME --password=$DB_PASSWORD --classpath=/etc/bahmni-lab-connect/atomfeed-client.jar:/usr/local/tomcat/webapps/openmrs.war --changeLogFile=sql/db_migrations.xml update
 
