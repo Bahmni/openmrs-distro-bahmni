@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app: {{ .Chart.Name }}
+    environment: {{ .Values.metadata.labels.environment }}
+
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+      environment: {{ .Values.metadata.labels.environment }}
+  revisionHistoryLimit: 5
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+        environment: {{ .Values.metadata.labels.environment }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: {{ .Chart.Name }}-config
+                optional: false
+            - secretRef:
+                 name: {{.Chart.Name }}-secrets
+                 optional: false
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          # volumeMounts:
+          #   - mountPath: /usr/local/tomcat/.OpenMRS/modules
+          #     name: openmrs-data
+          #   - mountPath: /home/bahmni/patient_images
+          #     name: openmrs-patient-images
+          #   - mountPath: /home/bahmni/document_images
+          #     name: openmrs-document-images
+      restartPolicy: Always
+      # volumes:
+      #   - name: openmrs-data
+      #     persistentVolumeClaim:
+      #       claimName: openmrs-data-pvc
+      #   - name: openmrs-patient-images
+      #     persistentVolumeClaim:
+      #       claimName: openmrs-patient-images-pvc
+      #   - name: openmrs-document-images
+      #     persistentVolumeClaim:
+      #       claimName: openmrs-document-images-pvc
+
+
