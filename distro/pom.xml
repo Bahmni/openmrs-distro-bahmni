@@ -69,11 +69,6 @@
         </dependency>
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>bahmnicore-omod</artifactId>
-            <version>${bahmniCoreVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bahmni.module</groupId>
             <artifactId>openelis-atomfeed-client-omod</artifactId>
             <version>${bahmniCoreVersion}</version>
         </dependency>
