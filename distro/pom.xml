@@ -299,9 +299,6 @@
             <id>openmrs-repo</id>
             <name>OpenMRS Nexus Repository</name>
             <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
-            <releases>
-                <updatePolicy>interval:10080</updatePolicy>
-            </releases>
         </repository>
        <repository>
            <id>repo.mybahmni.org</id>
