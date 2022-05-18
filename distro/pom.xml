@@ -277,6 +277,20 @@
 
     <repositories>
         <repository>
+            <id>rubygems-proxy</id>
+            <name>Rubygems Proxy</name>
+            <url>https://rubygems-proxy.torquebox.org/releases</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>interval:10080</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -285,6 +299,7 @@
             </releases>
             <snapshots>
                 <enabled>true</enabled>
+                <updatePolicy>interval:10080</updatePolicy>
             </snapshots>
         </repository>
         <repository>
@@ -293,12 +308,53 @@
             <name>Repository for dependencies</name>
             <snapshots>
                 <enabled>true</enabled>
+                <updatePolicy>interval:10080</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-maven-release</id>
+            <name>Spring Maven Release Repository</name>
+            <url>https://maven.springframework.org/release</url>
+            <releases>
+                <updatePolicy>interval:10080</updatePolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>apache-maven-release</id>
+            <name>Apache Maven Release Repository</name>
+            <url>https://repository.apache.org/content/repositories/releases</url>
+            <releases>
+                <updatePolicy>interval:10080</updatePolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>JBoss</id>
+            <name>The "public-jboss" repository group provides a combined view all JBoss community project artifacts
+            </name>
+            <layout>default</layout>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
+            <releases>
+                <updatePolicy>interval:10080</updatePolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>spring-repo</id>
+            <name>Spring Maven Repository</name>
+            <url>https://maven.springframework.org/milestone</url>
+            <releases>
+                <updatePolicy>interval:10080</updatePolicy>
+            </releases>
+            <snapshots>
+                <updatePolicy>interval:10080</updatePolicy>
             </snapshots>
         </repository>
         <repository>
             <id>openmrs-repo</id>
             <name>OpenMRS Nexus Repository</name>
             <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+            <releases>
+                <updatePolicy>interval:10080</updatePolicy>
+            </releases>
         </repository>
        <repository>
            <id>repo.mybahmni.org</id>
