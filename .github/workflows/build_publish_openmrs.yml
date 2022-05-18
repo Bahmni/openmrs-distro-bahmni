@@ -75,7 +75,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: [get-version, docker-build-publish]
       env:
-        ARTIFACT_VERSION: ${{ needs.get-version.outputs.version }}-${{github.run_number}}
+        ARTIFACT_VERSION: ${{ needs.get-version.outputs.version }}
         HELM_CHART_PATH: openmrs-distro-bahmni/package/helm/openmrs
       steps:
         - name: Checkout
