@@ -1,5 +1,0 @@
-apiVersion: v2
-name: openmrsdb
-description: Helm Chart for Bahmni Openmrs-db
-type: application
-version: 1.0.0
