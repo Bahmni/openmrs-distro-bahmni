@@ -28,13 +28,13 @@ jobs:
       - name: Set Version Output
         id: get-version
         run: |
-          VERSION=$(cat package/.baseversion)
+          VERSION=$(cat package/.appversion)
           if [ $(git tag -l "$VERSION") ]; then 
-            echo "Version $VERSION already released. Please update your version in package/.baseversion"
+            echo "Version $VERSION already released. Please update your version in package/.appversion"
             exit 1
           else
-            echo "Setting version $VERSION"
-            echo ::set-output name=version::$VERSION
+            echo "Setting version $VERSION-${{github.run_number}}"
+            echo ::set-output name=version::$VERSION-${{github.run_number}}
           fi
 
   docker-build-publish:
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ get-version ]
     env:
-      ARTIFACT_VERSION: ${{ needs.get-version.outputs.version }}-${{github.run_number}}
+      ARTIFACT_VERSION: ${{ needs.get-version.outputs.version }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 1.8
