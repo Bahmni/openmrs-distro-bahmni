@@ -20,7 +20,7 @@ then
   gunzip openmrs.sql.gz
 else
   echo "Loading Clean Dump Data..."
-  curl -L -o openmrs.sql 'https://raw.githubusercontent.com/Bahmni/openmrs-distro-bahmni/master/package/docker/freshDB/openmrs_clean_dump.sql'
+  curl -L -o openmrs.sql 'https://raw.githubusercontent.com/Bahmni/openmrs-distro-bahmni/master/package/resources/openmrs_clean_dump.sql'
 fi
 mysql --force --host="${DB_HOST}" --user="${DB_USERNAME}" --password="${DB_PASSWORD}" "${DB_DATABASE}" < openmrs.sql
 echo "DB Setup Done"
