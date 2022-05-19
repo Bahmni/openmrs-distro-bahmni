@@ -17,6 +17,8 @@ config:
   DB_AUTO_UPDATE: true
   DB_CREATE_TABLES: false
   DB_NAME: openmrs
+  LOAD_DEMO_DATA: true
+  DB_DUMP_GZIP_URL: ''
   DEBUG: false
   MODULE_WEB_ADMIN: false
   OPENELIS_HOST: openelis
@@ -24,6 +26,8 @@ config:
 
 secrets:
   DB_HOST: ""
+  DB_ROOT_USERNAME: ""
+  DB_ROOT_PASSWORD: ""
   DB_USERNAME: ""
   DB_PASSWORD: ""
   OPENELIS_ATOMFEED_USER: ""
