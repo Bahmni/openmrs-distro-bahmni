@@ -23,6 +23,14 @@ RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-cli
 RUN cp /tmp/artifacts/liquibase-core-*.jar /etc/bahmni-lab-connect/liquibase-core.jar
 RUN cp -r /tmp/artifacts/default_config/. /etc/bahmni_config/
 
+# Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
+RUN ln -s /etc/bahmni_config/openmrs/obscalculator /usr/local/tomcat/.OpenMRS/obscalculator
+RUN ln -s /etc/bahmni_config/openmrs/ordertemplates /usr/local/tomcat/.OpenMRS/ordertemplates
+RUN ln -s /etc/bahmni_config/openmrs/encounterModifier /usr/local/tomcat/.OpenMRS/encounterModifier
+RUN ln -s /etc/bahmni_config/openmrs/patientMatchingAlgorithm /usr/local/tomcat/.OpenMRS/patientMatchingAlgorithm
+RUN ln -s /etc/bahmni_config/openmrs/elisFeedInterceptor /usr/local/tomcat/.OpenMRS/elisFeedInterceptor
+RUN ln -s /etc/bahmni_config /usr/local/tomcat/.OpenMRS/bahmni_config
+
 # Creating Upload Directories
 RUN mkdir -p /home/bahmni/patient_images
 RUN mkdir -p /home/bahmni/document_images
