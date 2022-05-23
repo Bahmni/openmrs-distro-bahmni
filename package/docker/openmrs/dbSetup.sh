@@ -9,8 +9,9 @@ if [ "${DBEXISTS}" == "${DB_DATABASE}" ]; then
 fi
 echo "Creating Database ${DB_DATABASE}.."
 mysql --host="${DB_HOST}" --user="${DB_ROOT_USERNAME}" --password="${DB_ROOT_PASSWORD}" -e "CREATE DATABASE ${DB_DATABASE};"
-mysql --host="${DB_HOST}" --user="${DB_ROOT_USERNAME}" --password="${DB_ROOT_PASSWORD}" -e "CREATE USER '${DB_USERNAME}' IDENTIFIED BY '${DB_PASSWORD}';"
-mysql --host="${DB_HOST}" --user="${DB_ROOT_USERNAME}" --password="${DB_ROOT_PASSWORD}" -e "GRANT ALL PRIVILEGES ON ${DB_DATABASE}. * TO '${DB_USERNAME}';"
+# Since we are injecting root user for both i.e. DB_USERNAME and DB_ROOT_USERNAME - it cannot create itself. We need to move this responsibility out of application code.
+# mysql --host="${DB_HOST}" --user="${DB_ROOT_USERNAME}" --password="${DB_ROOT_PASSWORD}" -e "CREATE USER '${DB_USERNAME}' IDENTIFIED BY '${DB_PASSWORD}';"
+# mysql --host="${DB_HOST}" --user="${DB_ROOT_USERNAME}" --password="${DB_ROOT_PASSWORD}" -e "GRANT ALL PRIVILEGES ON ${DB_DATABASE}. * TO '${DB_USERNAME}';"
 
 echo "Populating Data into Database.."
 if [ "${LOAD_DEMO_DATA}" == "true"  ]
