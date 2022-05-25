@@ -48,9 +48,13 @@ RUN chmod +x /usr/local/tomcat/dbSetup.sh
 RUN unzip -o /usr/local/tomcat/webapps/openmrs.war -d /usr/local/tomcat/webapps/openmrs/
 RUN rm /usr/local/tomcat/webapps/openmrs/WEB-INF/bundledModules/fhir-*.omod
 <<<<<<< HEAD
+<<<<<<< HEAD
 COPY package/docker/openmrs/omod/*.omod /usr/local/tomcat/.OpenMRS/modules/ 
 =======
 COPY package/docker/omod/*.omod /usr/local/tomcat/.OpenMRS/modules/ 
 >>>>>>> 6e5f6a7 (BAH-1543 | Add. Update docker file to install openmrs-fhir2-extension omod)
+=======
+COPY package/docker/openmrs/omod/*.omod /usr/local/tomcat/.OpenMRS/modules/ 
+>>>>>>> 76d19c5 (BAH-1543 | Add. Update docker file to install openmrs-fhir2-extension omod)
 RUN rm -rf /tmp/artifacts 
 CMD ["./bahmni_startup.sh"]
