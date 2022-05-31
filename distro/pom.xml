@@ -49,6 +49,7 @@
         <appointmentsVersion>1.4.0</appointmentsVersion>
         <pacsQueryVersion>1.2.0</pacsQueryVersion>
         <fhir2ModuleVersion>1.3.0</fhir2ModuleVersion>
+        <fhir2ExtensionModuleVersion>1.1.0-SNAPSHOT</fhir2ExtensionModuleVersion>
     </properties>
 
     <dependencies>
@@ -247,6 +248,12 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>pacsquery-omod</artifactId>
             <version>${pacsQueryVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>fhir2Extension-omod</artifactId>
+            <version>${fhir2ExtensionModuleVersion}</version>
         </dependency>
         <!-- end -->
 
