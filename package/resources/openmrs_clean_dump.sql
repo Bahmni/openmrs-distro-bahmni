@@ -5830,7 +5830,7 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `add_concept`(INOUT new_concept_id INT,
+CREATE PROCEDURE `add_concept`(INOUT new_concept_id INT,
                               INOUT concept_name_short_id INT,
                               INOUT concept_name_full_id INT,
                               name_of_concept VARCHAR(255),
@@ -5889,7 +5889,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `add_concept_answer`(concept_id INT,
+CREATE PROCEDURE `add_concept_answer`(concept_id INT,
                               answer_concept_id INT,
                               sort_weight DOUBLE)
 BEGIN
@@ -5910,7 +5910,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `add_concept_description`(concept_id INT,
+CREATE PROCEDURE `add_concept_description`(concept_id INT,
                               description VARCHAR(250))
 BEGIN
 	INSERT INTO concept_description(uuid, concept_id, description, locale, creator, date_created) values(uuid(), concept_id, description, 'en', 1, now());
@@ -5930,7 +5930,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `add_concept_numeric`(concept_id INT,
+CREATE PROCEDURE `add_concept_numeric`(concept_id INT,
 							  low_normal DOUBLE,
 							  hi_normal DOUBLE,
 							  units VARCHAR(50))
@@ -5952,7 +5952,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `add_concept_reference_map`(concept_id INT,
+CREATE PROCEDURE `add_concept_reference_map`(concept_id INT,
 							  concept_source_id INT,
 							  reference_term VARCHAR(255),
                               reference_type_id INT)
@@ -5982,7 +5982,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `add_concept_set_members`(set_concept_id INT,
+CREATE PROCEDURE `add_concept_set_members`(set_concept_id INT,
                               member_concept_id INT,weight INT)
 BEGIN
 	INSERT INTO concept_set (concept_id, concept_set,sort_weight,creator,date_created,uuid)
@@ -6003,7 +6003,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `delete_concept`(name_concept VARCHAR(255))
+CREATE PROCEDURE `delete_concept`(name_concept VARCHAR(255))
 BEGIN
             DECLARE conceptId INT default 0;
                 select concept_id INTO conceptId from concept_name where name = name_concept and locale_preferred = 1;
@@ -6031,7 +6031,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `introduce_new_address_level`(parent_field_name VARCHAR(160), new_field_name VARCHAR(160), new_field_address_field_name VARCHAR(160))
+CREATE PROCEDURE `introduce_new_address_level`(parent_field_name VARCHAR(160), new_field_name VARCHAR(160), new_field_address_field_name VARCHAR(160))
 introduce_new_address_level_proc: BEGIN
   DECLARE done INT DEFAULT FALSE;
   DECLARE parent_field_level_id INT;
@@ -6088,7 +6088,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`openmrs-user`@`localhost` PROCEDURE `set_value_as_concept_id`(person_attribute_type_name VARCHAR(255))
+CREATE PROCEDURE `set_value_as_concept_id`(person_attribute_type_name VARCHAR(255))
 BEGIN
   DECLARE c_id INT;
   DECLARE pa_id INT;
