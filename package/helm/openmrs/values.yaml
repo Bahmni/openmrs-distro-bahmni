@@ -17,7 +17,6 @@ config:
   DB_AUTO_UPDATE: true
   DB_CREATE_TABLES: true
   DB_NAME: openmrs
-  DB_DUMP_GZIP_URL: ''
   DEBUG: false
   MODULE_WEB_ADMIN: false
   OPENELIS_HOST: openelis
