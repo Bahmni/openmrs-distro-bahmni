@@ -15,40 +15,40 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <addressHierarchyVersion>2.9</addressHierarchyVersion>
-        <appframeworkModuleVersion>2.10.0</appframeworkModuleVersion>
+        <addressHierarchyVersion>2.14.2</addressHierarchyVersion>
+        <appframeworkModuleVersion>2.16.0</appframeworkModuleVersion>
         <atomfeedModuleVersion>2.6.1</atomfeedModuleVersion>
-        <bacteriologyVersion>1.2.0</bacteriologyVersion>
-        <auditLogVersion>1.2.0</auditLogVersion>
+        <bacteriologyVersion>1.3.1-SNAPSHOT</bacteriologyVersion>
+        <auditLogVersion>1.3.0-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.94-SNAPSHOT</bahmniCoreVersion>
-        <bedManagementVersion>5.12.0</bedManagementVersion>
-        <calculationVersion>1.2</calculationVersion>
-        <emrapiModuleVersion>1.24.8</emrapiModuleVersion>
-        <episodesVersion>1.0-SNAPSHOT</episodesVersion>
-        <eventModuleVersion>2.8.0</eventModuleVersion>
-        <owaVersion>1.9.0</owaVersion>
-        <htmlwidgetsVersion>1.8.0</htmlwidgetsVersion>
-        <idgenModuleVersion>4.4.1</idgenModuleVersion>
-        <idgenWebServicesModuleVersion>1.2-SNAPSHOT</idgenWebServicesModuleVersion>
-        <legacyUiOmodVersion>1.10.0</legacyUiOmodVersion>
+        <bedManagementVersion>5.13.0</bedManagementVersion>
+        <calculationVersion>1.3.0</calculationVersion>
+        <emrapiModuleVersion>1.32.0</emrapiModuleVersion>
+        <episodesVersion>1.0.1-SNAPSHOT</episodesVersion>
+        <eventModuleVersion>2.10.0</eventModuleVersion>
+        <owaVersion>1.7.0</owaVersion>
+        <htmlwidgetsVersion>1.10.0</htmlwidgetsVersion>
+        <idgenModuleVersion>4.7.0</idgenModuleVersion>
+        <idgenWebServicesModuleVersion>1.3-SNAPSHOT</idgenWebServicesModuleVersion>
+        <legacyUiOmodVersion>1.8.4</legacyUiOmodVersion>
         <mailappenderVersion>0.94.2</mailappenderVersion>
-        <metadataMappingVersion>1.3.1</metadataMappingVersion>
-        <metadataSharingVersion>1.2.2</metadataSharingVersion>
+        <metadataMappingVersion>1.4.0</metadataMappingVersion>
+        <metadataSharingVersion>1.8.0</metadataSharingVersion>
         <openMRSVersion>2.4.2</openMRSVersion>
         <operationTheaterVersion>1.4.0</operationTheaterVersion>
-        <providerManagementVersion>2.5.0</providerManagementVersion>
-        <rulesEngineVersion>0.94-SNAPSHOT</rulesEngineVersion>
-        <reportingVersion>1.16.0</reportingVersion>
-        <serializationVersion>0.2.12</serializationVersion>
-        <uicommonsModuleVersion>2.0</uicommonsModuleVersion>
-        <uiframeworkModuleVersion>3.8</uiframeworkModuleVersion>
-        <uilibraryVersion>2.0.5</uilibraryVersion>
+        <providerManagementVersion>2.13.0</providerManagementVersion>
+        <rulesEngineVersion>0.94.1-SNAPSHOT</rulesEngineVersion>
+        <reportingVersion>1.23.0</reportingVersion>
+        <serializationVersion>0.2.15</serializationVersion>
+        <uicommonsModuleVersion>2.19.0</uicommonsModuleVersion>
+        <uiframeworkModuleVersion>3.22.0</uiframeworkModuleVersion>
+        <uilibraryVersion>2.0.7</uilibraryVersion>
         <webServicesRestVersion>2.33.0</webServicesRestVersion>
-        <reportingRestVersion>1.10.0</reportingRestVersion>
-        <bahmniIEOmodVersion>1.2.0</bahmniIEOmodVersion>
+        <reportingRestVersion>1.12.0</reportingRestVersion>
+        <bahmniIEOmodVersion>1.3.1-SNAPSHOT</bahmniIEOmodVersion>
         <appointmentsVersion>1.4.0</appointmentsVersion>
         <pacsQueryVersion>1.2.0</pacsQueryVersion>
-        <fhir2ModuleVersion>1.4.0-SNAPSHOT</fhir2ModuleVersion>
+        <fhir2ModuleVersion>1.2.2</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>1.1.0-SNAPSHOT</fhir2ExtensionModuleVersion>
     </properties>
 

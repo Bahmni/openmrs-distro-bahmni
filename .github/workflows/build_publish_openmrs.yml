@@ -1,7 +1,7 @@
 name: Build and Publish OpenMRS
 on:
   push:
-    branches: [ master ]
+    branches: [ OMRS-master-2.4 ]
     paths-ignore:
       - "**.md"
       - ".github/workflows/build_publish_openmrs_freshDB.yml"
@@ -68,7 +68,7 @@ jobs:
           context: .
           file: package/docker/openmrs/Dockerfile
           push: true
-          tags: bahmni/openmrs:${{ env.ARTIFACT_VERSION }},bahmni/openmrs:latest
+          tags: bahmni/openmrs:OMRS-master-2.4
 
   helm-package-publish:
       name: Helm Package & Publish
