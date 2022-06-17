@@ -18,7 +18,7 @@
         <addressHierarchyVersion>2.14.2</addressHierarchyVersion>
         <appframeworkModuleVersion>2.16.0</appframeworkModuleVersion>
         <atomfeedModuleVersion>2.6.2-SNAPSHOT</atomfeedModuleVersion>
-        <bacteriologyVersion>1.3.0.1-SNAPSHOT</bacteriologyVersion>
+        <bacteriologyVersion>1.2.0</bacteriologyVersion>
         <auditLogVersion>1.3.0.1-SNAPSHOT</auditLogVersion>
         <bahmniCoreVersion>0.94.1-SNAPSHOT</bahmniCoreVersion>
         <bedManagementVersion>5.13.0</bedManagementVersion>
