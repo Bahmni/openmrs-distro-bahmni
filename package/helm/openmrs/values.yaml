@@ -3,6 +3,7 @@ replicaCount: 1
 metadata:
   labels:
     environment: dev
+    name : openmrs-document-images-pvc
 
 image:
   repository: bahmni
@@ -41,3 +42,6 @@ autoscaling:
 #  maxReplicas: 5
 #  targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
+
+storage:
+  capacity: "2Gi"
