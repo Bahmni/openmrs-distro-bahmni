@@ -1,4 +1,4 @@
-FROM openmrs/openmrs-distro-platform:2.1.6-SNAPSHOT
+FROM openmrs/openmrs-distro-platform:2.4.2
 
 ENV ATOMFEED_CLIENT_VERSION=1.10.1
 ENV LIQUIBASE_VERSION=2.0.5
