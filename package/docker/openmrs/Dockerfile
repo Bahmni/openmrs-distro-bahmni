@@ -1,7 +1,7 @@
 FROM openmrs/openmrs-distro-platform:2.4.2
 
 ENV ATOMFEED_CLIENT_VERSION=1.10.1
-ENV LIQUIBASE_VERSION=2.0.5
+ENV LIQUIBASE_VERSION=3.10.2
 
 # Creating Config Directories
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
