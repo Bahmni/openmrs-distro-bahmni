@@ -5,24 +5,34 @@ metadata:
     name: {{ .Values.metadata.labels.name }}
   name: {{ .Values.metadata.labels.name }}
 spec:
-  storageClassName: standard
+  storageClassName: efs-sc
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: {{ .Values.storage.capacity }}
 ---
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: openmrs-document-images-pv
 spec:
-  storageClassName: standard
-  claimRef:
-    name: {{ .Values.metadata.labels.name }}
   capacity:
-    storage: {{ .Values.storage.capacity }}
+    storage: 10Gi
+  volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
+  mountOptions:
+    - tls
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    namespace: {{ .Values.metadata.labels.environment }}
+    name: {{ .Values.metadata.labels.name }}
+  storageClassName: efs-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-02abd51ca5920a0a6
   hostPath:
-    path: '/Users/bahmni/openmrs-document-images'
+    path: '/openmrs-document-images'
+
