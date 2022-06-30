@@ -1,5 +1,8 @@
 replicaCount: 1
 
+global:
+  storageClass: bahmni-efs-sc
+
 metadata:
   labels:
     environment: dev
