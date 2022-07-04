@@ -46,5 +46,8 @@ autoscaling:
 #  targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-storage:
-  capacity: "2Gi"
+volumes:
+  patient-documents:
+    capacity: "2Gi"
+    claimName: openmrs-document-images-pvc
+  
