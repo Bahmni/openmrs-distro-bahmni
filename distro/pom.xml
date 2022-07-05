@@ -50,6 +50,7 @@
         <pacsQueryVersion>1.2.0</pacsQueryVersion>
         <fhir2ModuleVersion>1.4.0-SNAPSHOT</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>1.1.0-SNAPSHOT</fhir2ExtensionModuleVersion>
+        <openConceptLabVersion>1.3.0</openConceptLabVersion>
     </properties>
 
     <dependencies>
@@ -262,6 +263,12 @@
           <groupId>org.ict4h.openmrs</groupId>
           <artifactId>openmrs-atomfeed-omod</artifactId>
           <version>${atomfeedModuleVersion}</version>
+        </dependency>
+        
+        <dependency>
+          <groupId>org.openmrs.module</groupId>
+          <artifactId>openconceptlab-omod</artifactId>
+          <version>${openConceptLabVersion}</version>
         </dependency>
         <!-- end -->
     </dependencies>
