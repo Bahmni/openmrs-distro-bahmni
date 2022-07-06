@@ -6,7 +6,6 @@ global:
 metadata:
   labels:
     environment: dev
-    name : openmrs-document-images-pvc
 
 image:
   repository: bahmni
