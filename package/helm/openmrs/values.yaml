@@ -1,5 +1,8 @@
 replicaCount: 1
 
+global:
+  storageClass: ""
+
 metadata:
   labels:
     environment: dev
@@ -41,3 +44,9 @@ autoscaling:
 #  maxReplicas: 5
 #  targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
+
+volumes:
+  patientDocuments:
+    capacity: "2Gi"
+    claimName: openmrs-document-images-pvc
+  
