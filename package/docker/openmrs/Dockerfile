@@ -6,7 +6,7 @@ ENV LIQUIBASE_VERSION=3.10.2
 # Creating Config Directories
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
 RUN mkdir -p /tmp/artifacts/default_config/
-RUN mkdir -p /tmp/artifacts/distro/ 
+RUN mkdir -p /tmp/artifacts/distro/
 RUN mkdir -p /etc/bahmni-lab-connect/
 
 # Downloading atomfeed client and liquibase core
@@ -15,7 +15,7 @@ RUN curl -L -o /tmp/artifacts/liquibase-core-${LIQUIBASE_VERSION}.jar "https://o
 
 #unzip default_config
 ADD package/resources/default_config.zip /tmp/artifacts/
-RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip 
+RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
@@ -47,6 +47,5 @@ COPY package/resources/openmrs-runtime.properties /usr/local/tomcat/.OpenMRS/
 
 # Removing FHIR OMOD that comes bundled with OMRS base image
 RUN unzip -o /usr/local/tomcat/webapps/openmrs.war -d /usr/local/tomcat/webapps/openmrs/
-RUN rm /usr/local/tomcat/webapps/openmrs/WEB-INF/bundledModules/fhir*.omod
-RUN rm -rf /tmp/artifacts 
+RUN rm -rf /tmp/artifacts
 CMD ["./bahmni_startup.sh"]
