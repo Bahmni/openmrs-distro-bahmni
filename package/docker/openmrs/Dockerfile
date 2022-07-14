@@ -1,7 +1,7 @@
-FROM openmrs/openmrs-distro-platform:2.1.6-SNAPSHOT
+FROM openmrs/openmrs-distro-platform:2.4.2
 
 ENV ATOMFEED_CLIENT_VERSION=1.10.1
-ENV LIQUIBASE_VERSION=2.0.5
+ENV LIQUIBASE_VERSION=3.10.2
 
 # Creating Config Directories
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
@@ -42,8 +42,11 @@ RUN apt-get update && apt-get install gettext-base
 COPY package/docker/openmrs/bahmni_startup.sh /usr/local/tomcat/
 RUN chmod +x /usr/local/tomcat/bahmni_startup.sh
 
+# About adding recent openmrs-runtime.properties file
+COPY package/resources/openmrs-runtime.properties /usr/local/tomcat/.OpenMRS/
+
 # Removing FHIR OMOD that comes bundled with OMRS base image
 RUN unzip -o /usr/local/tomcat/webapps/openmrs.war -d /usr/local/tomcat/webapps/openmrs/
-RUN rm /usr/local/tomcat/webapps/openmrs/WEB-INF/bundledModules/fhir-*.omod
+RUN rm /usr/local/tomcat/webapps/openmrs/WEB-INF/bundledModules/fhir*.omod
 RUN rm -rf /tmp/artifacts 
 CMD ["./bahmni_startup.sh"]
