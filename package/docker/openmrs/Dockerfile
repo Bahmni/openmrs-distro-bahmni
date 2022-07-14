@@ -19,6 +19,13 @@ RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
+
+# Add the latest ot, fhir and web-services modules with OMRS:2.4.2 changes
+RUN rm /usr/local/tomcat/.OpenMRS/modules/operationtheater*.omod
+RUN rm /usr/local/tomcat/.OpenMRS/modules/webservices.rest*.omod
+RUN rm /usr/local/tomcat/.OpenMRS/modules/fhir2Extension*.omod
+COPY package/docker/openmrs/resources/*.omod /usr/local/tomcat/.OpenMRS/modules/
+
 RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
 RUN cp /tmp/artifacts/liquibase-core-*.jar /etc/bahmni-lab-connect/liquibase-core.jar
 RUN cp -r /tmp/artifacts/default_config/. /etc/bahmni_config/
