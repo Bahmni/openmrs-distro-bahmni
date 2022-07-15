@@ -25,6 +25,7 @@ COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/b
 RUN rm /usr/local/tomcat/.OpenMRS/modules/operationtheater*.omod
 RUN rm /usr/local/tomcat/.OpenMRS/modules/webservices.rest*.omod
 RUN rm /usr/local/tomcat/.OpenMRS/modules/fhir2Extension*.omod
+RUN rm /usr/local/tomcat/.OpenMRS/modules/hipmodule*.omod
 COPY package/docker/openmrs/resources/*.omod /usr/local/tomcat/.OpenMRS/modules/
 
 RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
