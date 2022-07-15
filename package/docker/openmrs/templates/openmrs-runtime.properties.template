@@ -1,0 +1,5 @@
+connection.url=jdbc\:mysql\://${DB_HOST}\:3306/${DB_DATABASE}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8&zeroDateTimeBehavior\=convertToNull
+module.allow_web_admin=${MODULE_WEB_ADMIN}
+connection.username=${DB_USERNAME}
+auto_update_database=${DB_AUTO_UPDATE}
+connection.password=${DB_PASSWORD}

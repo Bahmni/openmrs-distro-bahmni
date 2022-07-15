@@ -18,7 +18,7 @@
 			<name>mario-areias</name>
 		</developer>
 	</developers>
-	
+
 	<organization>
 		<name>OpenMRS</name>
 		<url>http://openmrs.org</url>
@@ -48,18 +48,28 @@
 			<url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
 		</repository>
 		<repository>
-		   <id>repo.mybahmni.org</id>
-		   <name>bahmni-artifactory-snapshots</name>
-		   <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
-		   <snapshots>
-		       <updatePolicy>always</updatePolicy>
-		   </snapshots>
-	       </repository>
-	      <repository>
-		  <id>repo.mybahmni.org-release</id>
-		  <name>bahmni-artifactory-release</name>
-		  <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
-	      </repository>
+			<id>repo.mybahmni.org</id>
+			<name>bahmni-artifactory-snapshots</name>
+			<url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>repo.mybahmni.org-release</id>
+			<name>bahmni-artifactory-release</name>
+			<url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
+		</repository>
+		<repository>
+			<id>mks-repo</id>
+			<name>Mekom Solutions Nexus Releases</name>
+			<url>https://nexus.mekomsolutions.net/repository/maven-releases</url>
+		</repository>
+		<repository>
+			<id>mks-repo-snapshots</id>
+			<name>Mekom Solutions Nexus Snapshots</name>
+			<url>https://nexus.mekomsolutions.net/repository/maven-snapshots</url>
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
