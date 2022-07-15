@@ -19,6 +19,7 @@ RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
+COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
 
 # Add the latest ot, fhir and web-services modules with OMRS:2.4.2 changes
 RUN rm /usr/local/tomcat/.OpenMRS/modules/operationtheater*.omod
@@ -48,9 +49,6 @@ RUN apt-get update && apt-get install gettext-base
 
 COPY package/docker/openmrs/bahmni_startup.sh /usr/local/tomcat/
 RUN chmod +x /usr/local/tomcat/bahmni_startup.sh
-
-# About adding recent openmrs-runtime.properties file
-COPY package/resources/openmrs-runtime.properties /usr/local/tomcat/.OpenMRS/
 
 # Removing FHIR OMOD that comes bundled with OMRS base image
 RUN unzip -o /usr/local/tomcat/webapps/openmrs.war -d /usr/local/tomcat/webapps/openmrs/
