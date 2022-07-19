@@ -45,7 +45,7 @@ RUN mkdir -p /home/bahmni/document_images
 COPY package/resources/blank-user.png /etc/bahmni/
 
 # Used by envsubst command for replacing environment values at runtime
-RUN apt-get update && apt-get install gettext-base
+RUN apt-get update && apt-get install gettext-base mysql-client -y
 
 COPY package/docker/openmrs/bahmni_startup.sh /usr/local/tomcat/
 RUN chmod +x /usr/local/tomcat/bahmni_startup.sh
