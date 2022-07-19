@@ -17,5 +17,7 @@ envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > /usr/
 # Running Atomfeed Migrations
 # java $CHANGE_LOG_TABLE -jar $LIQUIBASE_JAR --driver=$DRIVER --url=$URL --username=$DB_USERNAME --password=$DB_PASSWORD --classpath=/etc/bahmni-lab-connect/atomfeed-client.jar:/usr/local/tomcat/webapps/openmrs.war --changeLogFile=sql/db_migrations.xml update
 
+mysql --host="${DB_HOST}" --user="${DB_USERNAME}" --password="${DB_PASSWORD}" "${DB_DATABASE}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
+
 echo "Running OpenMRS Startup Script..."
 ./startup.sh
