@@ -4,6 +4,7 @@ ENV ATOMFEED_CLIENT_VERSION=1.10.1
 ENV LIQUIBASE_VERSION=3.10.2
 ENV LOGBACK_CORE_VERSION=1.2.3
 ENV SLF4J_API_VERSION=1.7.28
+
 # Creating Config Directories
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
 RUN mkdir -p /tmp/artifacts/default_config/
@@ -15,6 +16,7 @@ RUN curl -L -o /tmp/artifacts/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar "ht
 RUN curl -L -o /tmp/artifacts/liquibase-core-${LIQUIBASE_VERSION}.jar "https://oss.sonatype.org/content/repositories/releases/org/liquibase/liquibase-core/${LIQUIBASE_VERSION}/liquibase-core-${LIQUIBASE_VERSION}.jar"
 RUN curl -L -o /tmp/artifacts/logback-core-${LOGBACK_CORE_VERSION}.jar "https://repo1.maven.org/maven2/ch/qos/logback/logback-core/${LOGBACK_CORE_VERSION}/logback-core-${LOGBACK_CORE_VERSION}.jar"
 RUN curl -L -o /tmp/artifacts/slf4j-api-${SLF4J_API_VERSION}.jar "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/${SLF4J_API_VERSION}/slf4j-api-${SLF4J_API_VERSION}.jar"
+
 #unzip default_config
 ADD package/resources/default_config.zip /tmp/artifacts/
 RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip

@@ -21,7 +21,7 @@ envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > /usr/
 /usr/local/tomcat/wait-for-it.sh --timeout=3600 ${DB_HOST}:3306
 
 # Running Atomfeed Migrations
-java $CHANGE_LOG_TABLE -cp $CLASS_PATH liquibase.integration.commandline.Main --driver=$DRIVER --url=$URL --username=$DB_USERNAME --password=$DB_PASSWORD --classpath=$ATOMFEED_CLIENT_JAR:/usr/local/tomcat/webapps/openmrs.war --changeLogFile=sql/db_migrations.xml update
+java $CHANGE_LOG_TABLE -cp $CLASS_PATH liquibase.integration.commandline.Main --driver=$DRIVER --url=$URL --username=$DB_USERNAME --password=$DB_PASSWORD --classpath=$ATOMFEED_CLIENT_JAR:/usr/local/tomcat/webapps/openmrs.war --changeLogFile=/etc/bahmni_config/openmrs/migrations/liquibase.xml update
 
 mysql --host="${DB_HOST}" --user="${DB_USERNAME}" --password="${DB_PASSWORD}" "${DB_DATABASE}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
 
