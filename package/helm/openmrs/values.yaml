@@ -2,6 +2,9 @@ replicaCount: 1
 
 global:
   storageClass: ""
+  nodeSelector: {}
+  affinity: {}
+  tolerations: {}
 
 metadata:
   labels:
@@ -49,4 +52,7 @@ volumes:
   patientDocuments:
     capacity: "2Gi"
     claimName: openmrs-document-images-pvc
-  
+
+nodeSelector: {}
+affinity: {}
+tolerations: {}
