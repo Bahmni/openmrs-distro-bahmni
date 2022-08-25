@@ -26,7 +26,6 @@ COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/b
 # Add the latest ot, fhir and web-services modules with OMRS:2.4.2 changes
 RUN rm /usr/local/tomcat/.OpenMRS/modules/operationtheater*.omod
 RUN rm /usr/local/tomcat/.OpenMRS/modules/webservices.rest*.omod
-RUN rm /usr/local/tomcat/.OpenMRS/modules/fhir2*.omod
 COPY package/docker/openmrs/resources/*.omod /usr/local/tomcat/.OpenMRS/modules/
 
 RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
