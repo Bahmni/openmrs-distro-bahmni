@@ -1,7 +1,7 @@
-FROM openmrs/openmrs-distro-platform:2.4.2
+FROM openmrs/openmrs-distro-platform:2.5.5
 
 ENV ATOMFEED_CLIENT_VERSION=1.10.1
-ENV LIQUIBASE_VERSION=3.10.2
+ENV LIQUIBASE_VERSION=4.4.3
 ENV LOGBACK_CORE_VERSION=1.2.3
 ENV SLF4J_API_VERSION=1.7.28
 # Creating Config Directories

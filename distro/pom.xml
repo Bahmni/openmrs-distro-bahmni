@@ -34,7 +34,7 @@
         <mailappenderVersion>0.94.3-SNAPSHOT</mailappenderVersion>
         <metadataMappingVersion>1.4.0</metadataMappingVersion>
         <metadataSharingVersion>1.8.0</metadataSharingVersion>
-        <openMRSVersion>2.4.2</openMRSVersion>
+        <openMRSVersion>2.5.5</openMRSVersion>
         <operationTheaterVersion>1.6.0</operationTheaterVersion>
         <providerManagementVersion>2.13.0</providerManagementVersion>
         <rulesEngineVersion>0.94-SNAPSHOT</rulesEngineVersion>
