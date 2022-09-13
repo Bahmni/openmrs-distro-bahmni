@@ -1,7 +1,7 @@
 name: Build and Publish OpenMRS
 on:
   push:
-    branches: [ master ]
+    branches: [ master, test ]
     paths-ignore:
       - "**.md"
       - ".github/workflows/build_publish_openmrs_freshDB.yml"
