@@ -74,6 +74,8 @@ spec:
               name: openmrs-initializer-checksums
             - mountPath: /home/bahmni/clinical_forms
               name: openmrs-clinical-forms
+            - mountPath: /etc/bahmni_config
+              name: bahmni-config
       restartPolicy: Always
       volumes:
       #   - name: openmrs-data
@@ -91,3 +93,6 @@ spec:
         - name: openmrs-clinical-forms
           persistentVolumeClaim:
             claimName: openmrs-clinical-forms-pvc
+        - name: bahmni-config
+          persistentVolumeClaim:
+            claimName: bahmni-config-pvc

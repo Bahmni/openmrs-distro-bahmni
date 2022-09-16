@@ -6,7 +6,6 @@ ENV LOGBACK_CORE_VERSION=1.2.3
 ENV SLF4J_API_VERSION=1.7.28
 # Creating Config Directories
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
-RUN mkdir -p /tmp/artifacts/default_config/
 RUN mkdir -p /tmp/artifacts/distro/
 RUN mkdir -p /etc/bahmni-lab-connect/
 
@@ -15,9 +14,7 @@ RUN curl -L -o /tmp/artifacts/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar "ht
 RUN curl -L -o /tmp/artifacts/liquibase-core-${LIQUIBASE_VERSION}.jar "https://oss.sonatype.org/content/repositories/releases/org/liquibase/liquibase-core/${LIQUIBASE_VERSION}/liquibase-core-${LIQUIBASE_VERSION}.jar"
 RUN curl -L -o /tmp/artifacts/logback-core-${LOGBACK_CORE_VERSION}.jar "https://repo1.maven.org/maven2/ch/qos/logback/logback-core/${LOGBACK_CORE_VERSION}/logback-core-${LOGBACK_CORE_VERSION}.jar"
 RUN curl -L -o /tmp/artifacts/slf4j-api-${SLF4J_API_VERSION}.jar "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/${SLF4J_API_VERSION}/slf4j-api-${SLF4J_API_VERSION}.jar"
-#unzip default_config
-ADD package/resources/default_config.zip /tmp/artifacts/
-RUN unzip -d /tmp/artifacts/default_config/ /tmp/artifacts/default_config.zip
+
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
@@ -32,7 +29,7 @@ RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-cli
 RUN cp /tmp/artifacts/liquibase-core-*.jar /etc/bahmni-lab-connect/liquibase-core.jar
 RUN cp /tmp/artifacts/logback-core-*.jar /etc/bahmni-lab-connect/logback-core.jar
 RUN cp /tmp/artifacts/slf4j-api-*.jar /etc/bahmni-lab-connect/slf4j-api.jar
-RUN cp -r /tmp/artifacts/default_config/. /etc/bahmni_config/
+
 
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
 RUN ln -s /etc/bahmni_config/openmrs/obscalculator /usr/local/tomcat/.OpenMRS/obscalculator

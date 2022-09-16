@@ -23,6 +23,19 @@ envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > /usr/
 # Running Atomfeed Migrations
 # java $CHANGE_LOG_TABLE -cp $CLASS_PATH liquibase.integration.commandline.Main --driver=$DRIVER --url=$URL --username=$DB_USERNAME --password=$DB_PASSWORD --classpath=$ATOMFEED_CLIENT_JAR:/usr/local/tomcat/webapps/openmrs.war --changeLogFile=sql/db_migrations.xml update
 
+#Copying OMODS from bahmni_config
+configOMODCount=$(ls -1 /etc/bahmni_config/openmrs/omods/*.omod 2>/dev/null | wc -l)
+if [ "$configOMODCount" -gt 0 ]
+then
+  cp /etc/bahmni_config/openmrs/omods/*.omod /usr/local/tomcat/.OpenMRS/modules/
+fi
+
+#Copy Configuration Folder for Initializer OMOD
+if [ -d /etc/bahmni_config/masterdata/configuration ]
+then
+  cp -r /etc/bahmni_config/masterdata/configuration /usr/local/tomcat/.OpenMRS/
+fi
+
 mysql --host="${DB_HOST}" --user="${DB_USERNAME}" --password="${DB_PASSWORD}" "${DB_DATABASE}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
 
 echo "Running OpenMRS Startup Script..."

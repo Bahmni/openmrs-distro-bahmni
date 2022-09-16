@@ -9,9 +9,6 @@ on:
       - "package/docker/demoDB/**"
       - "package/docker/freshDB/**"
 
-  repository_dispatch:
-    types: ["default-config-trigger"]
-
 jobs:
   get-version:
     #This job reads the .appversion file and checks it against tags in the repo so that overlap builds don't occur.
@@ -55,10 +52,8 @@ jobs:
         env:
           USER_NAME: ${{ secrets.USERNAME }}
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Download default_config.zip
-        run: sh .github/download_artifact.sh default-config default_config ${{secrets.BAHMNI_PAT}}
       - name: Login to DockerHub
-        uses: docker/login-action@v1 
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
