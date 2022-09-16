@@ -1,0 +1,99 @@
+plugins {
+    id "nebula.ospackage" version "3.4.0"
+    id "de.undercouch.download" version "2.1.0"
+}
+
+import de.undercouch.gradle.tasks.download.Download
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url 'http://mavenrepo.openmrs.org/nexus/content/repositories/public'
+    }
+    maven {
+        url 'https://oss.sonatype.org/content/repositories'
+    }
+    mavenLocal()
+}
+
+group 'org.bahmni.lab'
+version project.version
+
+apply plugin: 'java'
+
+task downloadAtomFeedClient(type: Download) {
+    src 'https://oss.sonatype.org/content/repositories/releases/org/ict4h/atomfeed-client/'+project.atomFeedClient+'/atomfeed-client-'+project.atomFeedClient+'.jar'
+    dest "${projectDir}/resources/"
+}
+
+downloadAtomFeedClient.onlyIf { !(new File("${projectDir}/resources/atomfeed-client-"+project.atomFeedClient+".jar").exists()) }
+
+task downloadLiquibaseJar(type: Download) {
+    src 'https://oss.sonatype.org/content/repositories/releases/org/liquibase/liquibase-core/'+project.liquibase+'/liquibase-core-'+project.liquibase+'.jar'
+    dest "${projectDir}/resources/"
+}
+
+downloadLiquibaseJar.onlyIf { !(new File("${projectDir}/resources/liquibase-core-"+project.liquibase+".jar").exists()) }
+
+ospackage {
+    packageName = 'bahmni-lab-connect'
+    version = project.version
+    release = project.hasProperty('release') ? project.release : ""
+    arch = NOARCH
+    os = LINUX
+    user = 'bahmni'
+
+    into '/opt/bahmni-lab-connect'
+
+    from ("${projectDir}/resources/") {
+        fileMode = 0644
+        createDirectoryEntry = true
+        into "modules"
+        include("openelis-atomfeed-client-*.omod")
+    }
+
+    //to use it in classpath for migration - classpath does not allow wildcards
+    from ("${projectDir}/resources/") {
+        fileMode = 0644
+        createDirectoryEntry = true
+        into "openelis-atomfeed-client"
+        include("openelis-atomfeed-client-*.omod")
+        rename('(openelis-atomfeed-client)-(.*).omod', '$1.omod')
+    }
+
+    from ("${projectDir}/resources/") {
+        fileMode = 0744
+        createDirectoryEntry = true
+        include("run-liquibase.sh")
+    }
+
+    from("${projectDir}/resources/") {
+        fileMode = 0644
+        user 'bahmni'
+        createDirectoryEntry = true
+        into 'lib'
+        include('atomfeed-client-*.jar')
+        include('liquibase-core-*.jar')
+        rename('atomfeed-client-'+project.atomFeedClient+'.jar', 'atomfeed-client.jar')
+    }
+}
+
+buildRpm {
+    dependsOn 'build','downloadAtomFeedClient','downloadLiquibaseJar'
+
+    preInstall file("${projectDir}/scripts/preinstall.sh")
+    postInstall file("${projectDir}/scripts/postinstall.sh")
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "org.bahmni.deployment.launch.Main"
+    }
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
