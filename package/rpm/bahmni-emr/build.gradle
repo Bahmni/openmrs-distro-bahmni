@@ -28,7 +28,7 @@ task extractWar(dependsOn: 'downloadMRSWar', type: Copy) {
 }
 
 task normalizeJarName(type: Copy) {
-    from "${projectDir}/../resources/"
+    from "${projectDir}/../../resources/"
     into "${buildDir}" + "/libs/"
     include('core-1.0-SNAPSHOT.jar')
     rename('core-1.0-SNAPSHOT.jar', 'openmrs.jar')
@@ -111,7 +111,7 @@ ospackage {
         into 'openmrs/scripts'
     }
 
-    from("${buildDir}/distro*/") {
+    from("${buildDir}/distro-0.94-SNAPSHOT/") {
         fileMode = 0644
         createDirectoryEntry = true
         into 'modules'
