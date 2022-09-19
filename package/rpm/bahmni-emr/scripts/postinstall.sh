@@ -21,8 +21,9 @@ fi
 chkconfig --add openmrs
 
 #copy configs
-sudo mkdir -p /opt/openmrs/openmrs/WEB-INF/classes/ && cp /opt/openmrs/etc/log4j.xml /opt/openmrs/openmrs/WEB-INF/classes/
-sudo cp -f /opt/openmrs/etc/web.xml /opt/openmrs/openmrs/WEB-INF/
+## Commented below after OMRS upgrade
+#sudo mkdir -p /opt/openmrs/openmrs/WEB-INF/classes/ && cp /opt/openmrs/etc/log4j.xml /opt/openmrs/openmrs/WEB-INF/classes/
+#sudo cp -f /opt/openmrs/etc/web.xml /opt/openmrs/openmrs/WEB-INF/
 
 # permissions
 sudo chown -R bahmni:bahmni /opt/openmrs
