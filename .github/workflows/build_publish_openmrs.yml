@@ -1,47 +1,27 @@
 name: Build and Publish OpenMRS
 on:
   push:
-    branches: [ master, BAH-2291 ]
+    branches:
+      - master
+      - 'release-*'
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
     paths-ignore:
       - "**.md"
-      - ".github/workflows/build_publish_openmrs_freshDB.yml"
-      - ".github/workflows/build_publish_openmrs_demoDB.yml"
-      - "package/docker/demoDB/**"
-      - "package/docker/freshDB/**"
 
 jobs:
-  get-version:
-    #This job reads the .appversion file and checks it against tags in the repo so that overlap builds don't occur.
-    #Also provides version as output for other jobs.
-    name: Get Version
+  build-publish-docker-helm:
+    name: Build & Publish Docker Image & Helm Chart
     runs-on: ubuntu-latest
-    outputs:
-      version: ${{ steps.get-version.outputs.version }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Set Version Output
-        id: get-version
-        run: |
-          VERSION=$(cat package/.appversion)
-          if [ $(git tag -l "$VERSION") ]; then 
-            echo "Version $VERSION already released. Please update your version in package/.appversion"
-            exit 1
-          else
-            echo "Setting version $VERSION-${{github.run_number}}"
-            echo ::set-output name=version::$VERSION-${{github.run_number}}
-          fi
-
-  docker-build-publish:
-    name: Docker Build & Publish
-    runs-on: ubuntu-latest
-    needs: [ get-version ]
     env:
-      ARTIFACT_VERSION: ${{ needs.get-version.outputs.version }}
+      HELM_CHART_PATH: package/helm/openmrs
     steps:
       - uses: actions/checkout@v2
+      - name: Set env.ARTIFACT_VERSION
+        run: |
+          wget -q https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/main/setArtifactVersion.sh && chmod +x setArtifactVersion.sh
+          ./setArtifactVersion.sh
+          rm setArtifactVersion.sh
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
         with:
@@ -63,51 +43,37 @@ jobs:
           context: .
           file: package/docker/openmrs/Dockerfile
           push: true
-          tags: bahmni/openmrs:${{ env.ARTIFACT_VERSION }}
+          tags: bahmni/openmrs:${{ env.ARTIFACT_VERSION }},bahmni/openmrs:latest
+      - name: Update Version and Image Tag
+        run: |
+          yq --inplace '.image.tag = "${{ env.ARTIFACT_VERSION }}"' $HELM_CHART_PATH/values.yaml
+          yq --inplace '.version = "${{ env.ARTIFACT_VERSION }}"' $HELM_CHART_PATH/Chart.yaml
+      - name: Helm Lint
+        run: helm lint $HELM_CHART_PATH
 
-  helm-package-publish:
-      name: Helm Package & Publish
-      runs-on: ubuntu-latest
-      needs: [get-version, docker-build-publish]
-      env:
-        ARTIFACT_VERSION: ${{ needs.get-version.outputs.version }}
-        HELM_CHART_PATH: openmrs-distro-bahmni/package/helm/openmrs
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-          with:
-            path: openmrs-distro-bahmni
-        - name: Update Version and Image Tag
-          run: |
-            yq --inplace '.image.tag = "${{ env.ARTIFACT_VERSION }}"' $HELM_CHART_PATH/values.yaml
-            yq --inplace '.version = "${{ env.ARTIFACT_VERSION }}"' $HELM_CHART_PATH/Chart.yaml
+      - name: Helm Package
+        run: helm package $HELM_CHART_PATH
 
-        - name: Helm Lint
-          run: helm lint $HELM_CHART_PATH
+      - name: Checkout Charts Repository
+        uses: actions/checkout@v2
+        with:
+          repository: Bahmni/helm-charts
+          ref: gh-pages
+          path: helm-charts
+          persist-credentials: false
 
-        - name: Helm Package
-          run: helm package $HELM_CHART_PATH
+      - name: Copy Helm Archive
+        run: cp openmrs-${{ env.ARTIFACT_VERSION }}.tgz helm-charts/openmrs/
 
-        - name: Checkout Charts Repository
-          uses: actions/checkout@v2
-          with:
-            repository: Bahmni/helm-charts
-            ref: gh-pages
-            path: helm-charts
-            persist-credentials: false
+      - name: Helm Index
+        working-directory: helm-charts/
+        run: helm repo index --merge index.yaml --url https://bahmni.github.io/helm-charts/  .
 
-        - name: Copy Helm Archive
-          run: cp openmrs-${{ env.ARTIFACT_VERSION }}.tgz helm-charts/openmrs/
-
-        - name: Helm Index
-          working-directory: helm-charts/
-          run: helm repo index --merge index.yaml --url https://bahmni.github.io/helm-charts/  .
-
-        - name: Commit and Push Chart Repository
-          working-directory: helm-charts/
-          run: |
-            git config user.name ${{ secrets.BAHMNI_USERNAME}}
-            git config user.email ${{ secrets.BAHMNI_EMAIL}}
-            git add .
-            git commit -m "Release of openmrs-${{ env.ARTIFACT_VERSION }}"
-            git push 'https://${{ secrets.BAHMNI_USERNAME}}:${{ secrets.BAHMNI_PAT}}@github.com/bahmni/helm-charts.git' gh-pages
+      - name: Commit and Push Chart Repository
+        working-directory: helm-charts/
+        run: |
+          git config user.name ${{ secrets.BAHMNI_USERNAME}}
+          git config user.email ${{ secrets.BAHMNI_EMAIL}}
+          git add .
+          git commit -m "Release of openmrs-${{ env.ARTIFACT_VERSION }}"
+          git push 'https://${{ secrets.BAHMNI_USERNAME}}:${{ secrets.BAHMNI_PAT}}@github.com/bahmni/helm-charts.git' gh-pages

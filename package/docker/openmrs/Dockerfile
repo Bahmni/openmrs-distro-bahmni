@@ -1,4 +1,4 @@
-FROM openmrs/openmrs-distro-platform:2.5.7-SNAPSHOT
+FROM openmrs/openmrs-distro-platform:2.5.7
 
 ENV ATOMFEED_CLIENT_VERSION=1.10.1
 ENV LIQUIBASE_VERSION=4.4.3
@@ -20,10 +20,9 @@ COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
 
-# Add the latest ot, fhir and web-services modules with OMRS:2.4.2 changes
+# Add the latest ot and web-services modules with OMRS:2.4.2 changes
 RUN rm /usr/local/tomcat/.OpenMRS/modules/operationtheater*.omod
 RUN rm /usr/local/tomcat/.OpenMRS/modules/webservices.rest*.omod
-RUN rm /usr/local/tomcat/.OpenMRS/modules/initializer*.omod
 COPY package/docker/openmrs/resources/*.omod /usr/local/tomcat/.OpenMRS/modules/
 
 RUN cp /tmp/artifacts/atomfeed-client-*.jar /etc/bahmni-lab-connect/atomfeed-client.jar
