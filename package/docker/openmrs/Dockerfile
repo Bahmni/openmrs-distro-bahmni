@@ -1,8 +1,20 @@
 FROM openmrs/openmrs-distro-platform:2.5.7
 
+ENV ATOMFEED_CLIENT_VERSION=1.10.1
+ENV LIQUIBASE_VERSION=4.4.3
+ENV LOGBACK_CORE_VERSION=1.2.3
+ENV SLF4J_API_VERSION=1.7.28
+ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.17.2
 # Creating Config Directories
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
 RUN mkdir -p /tmp/artifacts/default_config/
+
+# Downloading atomfeed client and liquibase core
+RUN curl -L -o /tmp/artifacts/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar "https://oss.sonatype.org/content/repositories/releases/org/ict4h/atomfeed-client/${ATOMFEED_CLIENT_VERSION}/atomfeed-client-${ATOMFEED_CLIENT_VERSION}.jar"
+RUN curl -L -o /tmp/artifacts/liquibase-core-${LIQUIBASE_VERSION}.jar "https://oss.sonatype.org/content/repositories/releases/org/liquibase/liquibase-core/${LIQUIBASE_VERSION}/liquibase-core-${LIQUIBASE_VERSION}.jar"
+RUN curl -L -o /tmp/artifacts/logback-core-${LOGBACK_CORE_VERSION}.jar "https://repo1.maven.org/maven2/ch/qos/logback/logback-core/${LOGBACK_CORE_VERSION}/logback-core-${LOGBACK_CORE_VERSION}.jar"
+RUN curl -L -o /tmp/artifacts/slf4j-api-${SLF4J_API_VERSION}.jar "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/${SLF4J_API_VERSION}/slf4j-api-${SLF4J_API_VERSION}.jar"
+RUN curl -L -o /tmp/artifacts/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar "https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_PROMETHEUS_JAVAAGENT_VERSION}/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar"
 
 #unzip default_config
 ADD package/resources/default_config.zip /tmp/artifacts/
@@ -37,5 +49,14 @@ RUN apt-get update && apt-get install gettext-base mysql-client -y
 
 COPY package/docker/openmrs/bahmni_startup.sh /usr/local/tomcat/
 RUN chmod +x /usr/local/tomcat/bahmni_startup.sh
+
+COPY package/docker/openmrs/setenv.sh /usr/local/tomcat/bin
+COPY package/docker/openmrs/config.yml /usr/local/tomcat/bin
+RUN chmod +x /usr/local/tomcat/bin/setenv.sh
+RUN chmod +x /usr/local/tomcat/bin/config.yml
+
+# Removing FHIR OMOD that comes bundled with OMRS base image
+RUN unzip -o /usr/local/tomcat/webapps/openmrs.war -d /usr/local/tomcat/webapps/openmrs/
+RUN cp /tmp/artifacts/jmx_prometheus_javaagent-*.jar /usr/local/tomcat/webapps/openmrs/WEB-INF/lib/jmx_prometheus_javaagent.jar
 RUN rm -rf /tmp/artifacts
 CMD ["./bahmni_startup.sh"]
