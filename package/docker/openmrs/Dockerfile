@@ -29,5 +29,4 @@ RUN apt-get update && apt-get install gettext-base mysql-client -y
 
 COPY package/docker/openmrs/bahmni_startup.sh /usr/local/tomcat/
 RUN chmod +x /usr/local/tomcat/bahmni_startup.sh
-RUN rm -rf /tmp/artifacts
 CMD ["./bahmni_startup.sh"]
