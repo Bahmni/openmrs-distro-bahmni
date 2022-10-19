@@ -9,13 +9,6 @@ envsubst < /etc/bahmni-emr/templates/bahmnicore.properties.template > /usr/local
 envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
 /usr/local/tomcat/wait-for-it.sh --timeout=3600 ${DB_HOST}:3306
 
-echo "Copying OMODS from bahmni_config"
-configOMODCount=$(ls -1 /etc/bahmni_config/openmrs/omods/*.omod 2>/dev/null | wc -l)
-if [ "$configOMODCount" -gt 0 ]
-then
-  cp /etc/bahmni_config/openmrs/omods/*.omod /usr/local/tomcat/.OpenMRS/modules/
-fi
-
 echo "Copy Configuration Folder from bahmni_config"
 if [ -d /etc/bahmni_config/masterdata/configuration ]
 then
