@@ -9,6 +9,11 @@ envsubst < /etc/bahmni-emr/templates/bahmnicore.properties.template > /usr/local
 envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
 /usr/local/tomcat/wait-for-it.sh --timeout=3600 ${DB_HOST}:3306
 
+echo "Copy Configuration Folder from bahmni_config"
+if [ -d /etc/bahmni_config/masterdata/configuration ]
+then
+  cp -r /etc/bahmni_config/masterdata/configuration/ /usr/local/tomcat/.OpenMRS/configuration/
+fi
 mysql --host="${DB_HOST}" --user="${DB_USERNAME}" --password="${DB_PASSWORD}" "${DB_DATABASE}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
 
 echo "Running OpenMRS Startup Script..."
