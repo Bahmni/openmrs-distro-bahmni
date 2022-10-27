@@ -1,7 +1,11 @@
 FROM openmrs/openmrs-distro-platform:2.5.7
 
+ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.17.2
 # Creating Config Directories
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
+
+RUN curl -L -o /tmp/artifacts/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar "https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_PROMETHEUS_JAVAAGENT_VERSION}/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar"
+
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
@@ -29,4 +33,13 @@ RUN apt-get update && apt-get install gettext-base mysql-client -y
 
 COPY package/docker/openmrs/bahmni_startup.sh /usr/local/tomcat/
 RUN chmod +x /usr/local/tomcat/bahmni_startup.sh
+
+COPY package/docker/openmrs/setenv.sh /usr/local/tomcat/bin
+COPY package/docker/openmrs/config.yml /usr/local/tomcat/bin
+RUN chmod +x /usr/local/tomcat/bin/setenv.sh
+RUN chmod +x /usr/local/tomcat/bin/config.yml
+
+RUN cp /tmp/artifacts/jmx_prometheus_javaagent-*.jar /usr/local/tomcat/webapps/openmrs/WEB-INF/lib/jmx_prometheus_javaagent.jar
+RUN rm -rf /tmp/artifacts
+
 CMD ["./bahmni_startup.sh"]
