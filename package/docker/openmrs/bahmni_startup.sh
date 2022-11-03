@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+java -javaagent:/etc/jvm_metrics/jmx_prometheus_javaagent.jar=8280:/etc/jvm_metrics/config.yml
+
 # This script is used to run startup commands before starting OpenMRS distro startup script that comes with docker image. The last line starts OpenMRS script.
 echo "Running Bahmnni EMR Startup Script..."
 
