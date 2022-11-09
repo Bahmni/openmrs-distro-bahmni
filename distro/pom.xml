@@ -52,6 +52,7 @@
         <fhir2ExtensionModuleVersion>1.1.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>1.3.0</openConceptLabVersion>
         <initializerModuleVersion>2.4.0-SNAPSHOT</initializerModuleVersion>
+        <bahmniCommonsVersion>1.0.0-SNAPSHOT</bahmniCommonsVersion>
 
     </properties>
 
@@ -257,6 +258,12 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>fhir2Extension-omod</artifactId>
             <version>${fhir2ExtensionModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>bahmni-commons-omod</artifactId>
+            <version>${bahmniCommonsVersion}</version>
         </dependency>
         <!-- end -->
 
