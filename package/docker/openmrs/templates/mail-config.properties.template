@@ -1,3 +1,4 @@
+mail.send=${SEND_MAIL}
 mail.transport.protocol=${MAIL_TRANSPORT_PROTOCOL}
 mail.smtp.host=${MAIL_SMTP_HOST}
 mail.smtp.port=${MAIL_SMTP_PORT}
