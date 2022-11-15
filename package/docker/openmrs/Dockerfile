@@ -11,6 +11,7 @@ RUN curl -L -o /tmp/artifacts/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGEN
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
+COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmni-emr/templates/
 
 # Add the latest ot and web-services modules with OMRS:2.4.2 changes
 RUN rm /usr/local/tomcat/.OpenMRS/modules/operationtheater*.omod
