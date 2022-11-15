@@ -49,6 +49,9 @@ volumes:
   patientDocuments:
     capacity: "2Gi"
     claimName: openmrs-document-images-pvc
+  patientImages:
+    capacity: "2Gi"
+    claimName: openmrs-patient-images-pvc
   initializerChecksums:
     capacity: "1Gi"
   clinicalForms:
