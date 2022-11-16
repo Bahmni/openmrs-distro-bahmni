@@ -7,6 +7,7 @@ echo "Running Bahmnni EMR Startup Script..."
 echo "Substituting Environment Variables..."
 envsubst < /etc/bahmni-emr/templates/bahmnicore.properties.template > /usr/local/tomcat/.OpenMRS/bahmnicore.properties
 envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
+envsubst < /etc/bahmni-emr/templates/mail-config.properties.template > /usr/local/tomcat/.OpenMRS/mail-config.properties
 /usr/local/tomcat/wait-for-it.sh --timeout=3600 ${DB_HOST}:3306
 
 echo "Copy Configuration Folder from bahmni_config"
