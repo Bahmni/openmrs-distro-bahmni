@@ -81,9 +81,9 @@ spec:
       #   - name: openmrs-data
       #     persistentVolumeClaim:
       #       claimName: openmrs-data-pvc
-         - name: openmrs-patient-images
-           persistentVolumeClaim:
-             claimName: {{ .Values.volumes.patientImages.claimName }}
+        - name: openmrs-patient-images
+          persistentVolumeClaim:
+           claimName: {{ .Values.volumes.patientImages.claimName }}
         - name: openmrs-document-images
           persistentVolumeClaim:
             claimName: {{ .Values.volumes.patientDocuments.claimName }}
