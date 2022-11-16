@@ -4,11 +4,11 @@ metadata:
   labels:
     app: {{ .Chart.Name }}
     environment: {{ .Values.metadata.labels.environment }}
-  name: {{ .Values.volumes.patientDocuments.claimName }}
+  name: {{ .Values.volumes.patientImages.claimName }}
 spec:
   storageClassName: {{ .Values.global.storageClass }}
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: {{ .Values.volumes.patientDocuments.capacity }}
+      storage: {{ .Values.volumes.patientImages.capacity }}
