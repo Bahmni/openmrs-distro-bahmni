@@ -28,6 +28,15 @@ config:
   MODULE_WEB_ADMIN: false
   OPENELIS_HOST: openelis
   OPENELIS_PORT: '8052'
+  MAIL_TRANSPORT_PROTOCOL: smtps
+  MAIL_SMTP_AUTH: true
+  MAIL_SMTP_STARTTLS_ENABLE: true
+  MAIL_SMTP_SSL_ENABLE: true
+  MAIL_DEBUG: false
+  SEND_MAIL: ""
+  MAIL_FROM: ""
+  MAIL_SMTP_PORT: ""
+  MAIL_SMTP_HOST: ""
 
 secrets:
   DB_HOST: ""
@@ -35,6 +44,8 @@ secrets:
   DB_PASSWORD: ""
   OPENELIS_ATOMFEED_USER: ""
   OPENELIS_ATOMFEED_PASSWORD: ""
+  MAIL_USER: ""
+  MAIL_PASSWORD: ""
 
 resources: {}
 
