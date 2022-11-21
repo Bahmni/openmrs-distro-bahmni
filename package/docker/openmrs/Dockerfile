@@ -5,7 +5,7 @@ ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.17.2
 RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
 RUN mkdir -p /tmp/artifacts/
 RUN mkdir -p /etc/jvm_metrics/
-
+RUN mkdir -p /etc/jvm_profiling/
 RUN curl -L -o /tmp/artifacts/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar "https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_PROMETHEUS_JAVAAGENT_VERSION}/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar"
 
 COPY distro/target/distro/*.omod /usr/local/tomcat/.OpenMRS/modules/
@@ -24,6 +24,11 @@ RUN ln -s /etc/bahmni_config/openmrs/encounterModifier /usr/local/tomcat/.OpenMR
 RUN ln -s /etc/bahmni_config/openmrs/patientMatchingAlgorithm /usr/local/tomcat/.OpenMRS/patientMatchingAlgorithm
 RUN ln -s /etc/bahmni_config/openmrs/elisFeedInterceptor /usr/local/tomcat/.OpenMRS/elisFeedInterceptor
 RUN ln -s /etc/bahmni_config /usr/local/tomcat/.OpenMRS/bahmni_config
+
+# YourKit installation for Java profiling
+RUN wget https://www.yourkit.com/download/docker/YourKit-JavaProfiler-2022.9-docker.zip -P /tmp/ && \
+  unzip /tmp/YourKit-JavaProfiler-2022.9-docker.zip -d /etc/jvm_profiling && \
+  rm /tmp/YourKit-JavaProfiler-2022.9-docker.zip
 
 # Creating Upload Directories
 RUN mkdir -p /home/bahmni/patient_images
