@@ -19,7 +19,7 @@ service:
   type: ClusterIP
   port: 8080
   jmxport: 8280
-  profiler: 10001
+  profilerport: 10001
 
 config:
   DB_AUTO_UPDATE: true

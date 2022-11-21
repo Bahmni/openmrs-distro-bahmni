@@ -17,7 +17,7 @@ spec:
       targetPort: 8280
       protocol: TCP
       name: '8280'
-    - port: {{ .Values.service.profiler }}
+    - port: {{ .Values.service.profilerport }}
       targetPort: 10001
       protocol: TCP
       name: '10001'
