@@ -15,7 +15,6 @@ COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmn
 
 # Add the latest ot and web-services modules with OMRS:2.4.2 changes
 RUN rm /usr/local/tomcat/.OpenMRS/modules/operationtheater*.omod
-RUN rm /usr/local/tomcat/.OpenMRS/modules/webservices.rest*.omod
 COPY package/docker/openmrs/resources/*.omod /usr/local/tomcat/.OpenMRS/modules/
 
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
