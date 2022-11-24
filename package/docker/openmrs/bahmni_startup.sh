@@ -5,17 +5,17 @@ set -e
 echo "Running Bahmnni EMR Startup Script..."
 
 echo "Substituting Environment Variables..."
-envsubst < /etc/bahmni-emr/templates/bahmnicore.properties.template > /usr/local/tomcat/.OpenMRS/bahmnicore.properties
-envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
-envsubst < /etc/bahmni-emr/templates/mail-config.properties.template > /usr/local/tomcat/.OpenMRS/mail-config.properties
-/usr/local/tomcat/wait-for-it.sh --timeout=3600 ${DB_HOST}:3306
+envsubst < /etc/bahmni-emr/templates/bahmnicore.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/bahmnicore.properties
+envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/openmrs-runtime.properties
+envsubst < /etc/bahmni-emr/templates/mail-config.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/mail-config.properties
+/openmrs/wait-for-it.sh --timeout=3600 ${OMRS_DB_HOSTNAME}:3306
 
 echo "Copy Configuration Folder from bahmni_config"
 if [ -d /etc/bahmni_config/masterdata/configuration ]
 then
-  cp -r /etc/bahmni_config/masterdata/configuration/ /usr/local/tomcat/.OpenMRS/configuration/
+  cp -r /etc/bahmni_config/masterdata/configuration/ ${OPENMRS_APPLICATION_DATA_DIRECTORY}/configuration/
 fi
-mysql --host="${DB_HOST}" --user="${DB_USERNAME}" --password="${DB_PASSWORD}" "${DB_DATABASE}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
+mysql --host="${OMRS_DB_HOSTNAME}" --user="${OMRS_DB_USERNAME}" --password="${OMRS_DB_PASSWORD}" "${OMRS_DB_NAME}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
 
 echo "Running OpenMRS Startup Script..."
 ./startup.sh
