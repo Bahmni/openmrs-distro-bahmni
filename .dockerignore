@@ -15,3 +15,5 @@
 **/.svn/
 **/deploy.sh
 **/build/
+distro/target/distro/operationtheater*.omod
+distro/target/distro/webservices.rest*.omod

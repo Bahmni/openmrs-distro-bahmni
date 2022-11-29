@@ -1,5 +1,7 @@
 replicaCount: 1
 
+OPENMRS_APPLICATION_DATA_DIRECTORY: /openmrs/data
+
 global:
   storageClass: ""
   nodeSelector: {}
@@ -21,11 +23,11 @@ service:
   jmxport: 8280
 
 config:
-  DB_AUTO_UPDATE: true
-  DB_CREATE_TABLES: true
-  DB_NAME: openmrs
+  OMRS_AUTO_UPDATE_DATABASE: true
+  OMRS_CREATE_TABLES: true
+  OMRS_DB_NAME: openmrs
   DEBUG: false
-  MODULE_WEB_ADMIN: false
+  OMRS_MODULE_WEB_ADMIN: false
   OPENELIS_HOST: openelis
   OPENELIS_PORT: '8052'
   MAIL_TRANSPORT_PROTOCOL: smtps
@@ -39,9 +41,9 @@ config:
   MAIL_SMTP_HOST: ""
 
 secrets:
-  DB_HOST: ""
-  DB_USERNAME: ""
-  DB_PASSWORD: ""
+  OMRS_DB_HOSTNAME: ""
+  OMRS_DB_USERNAME: ""
+  OMRS_DB_PASSWORD: ""
   OPENELIS_ATOMFEED_USER: ""
   OPENELIS_ATOMFEED_PASSWORD: ""
   MAIL_USER: ""
