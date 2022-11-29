@@ -2,8 +2,8 @@ FROM openmrs/openmrs-core:2.5.x-nightly
 
 ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.17.2
 ENV OPENMRS_APPLICATION_DATA_DIRECTORY=/openmrs/data
+
 # Creating Config Directories
-#RUN mkdir -p /usr/local/tomcat/.OpenMRS/modules/
 RUN mkdir -p /tmp/artifacts/
 RUN mkdir -p /etc/jvm_metrics/
 
@@ -22,7 +22,7 @@ RUN ln -s /etc/bahmni_config/openmrs/ordertemplates ${OPENMRS_APPLICATION_DATA_D
 RUN ln -s /etc/bahmni_config/openmrs/encounterModifier ${OPENMRS_APPLICATION_DATA_DIRECTORY}/encounterModifier
 RUN ln -s /etc/bahmni_config/openmrs/patientMatchingAlgorithm ${OPENMRS_APPLICATION_DATA_DIRECTORY}/patientMatchingAlgorithm
 RUN ln -s /etc/bahmni_config/openmrs/elisFeedInterceptor ${OPENMRS_APPLICATION_DATA_DIRECTORY}/elisFeedInterceptor
-RUN ln -s /etc/bahmni_config /openmrs/bahmni_config
+RUN ln -s /etc/bahmni_config ${OPENMRS_APPLICATION_DATA_DIRECTORY}/bahmni_config
 
 # Creating Upload Directories
 RUN mkdir -p /home/bahmni/patient_images

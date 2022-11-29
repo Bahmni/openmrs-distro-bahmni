@@ -64,13 +64,13 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-          #   - mountPath: /usr/local/tomcat/.OpenMRS/modules
-          #     name: openmrs-data
+{{/*           - mountPath: "{{ .Values.OPENMRS_APPLICATION_DATA_DIRECTORY }}/modules"*/}}
+{{/*             name: openmrs-data*/}}
             - mountPath: /home/bahmni/patient_images
               name: openmrs-patient-images
             - mountPath: /home/bahmni/document_images
               name: openmrs-document-images
-            - mountPath: /usr/local/tomcat/.OpenMRS/configuration_checksums
+            - mountPath: "{{ .Values.OPENMRS_APPLICATION_DATA_DIRECTORY }}/configuration_checksums"
               name: openmrs-initializer-checksums
             - mountPath: /home/bahmni/clinical_forms
               name: openmrs-clinical-forms
