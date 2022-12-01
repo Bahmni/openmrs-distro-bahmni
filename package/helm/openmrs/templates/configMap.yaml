@@ -6,7 +6,7 @@ data:
   OMRS_AUTO_UPDATE_DATABASE: "{{ .Values.config.OMRS_AUTO_UPDATE_DATABASE }}"
   OMRS_CREATE_TABLES: "{{ .Values.config.OMRS_CREATE_TABLES }}"
   OMRS_DB_NAME: "{{ .Values.config.OMRS_DB_NAME }}"
-  DEBUG: "{{ .Values.config.DEBUG }}"
+  OMRS_DEV_DEBUG_PORT: "{{ .Values.config.OMRS_DEV_DEBUG_PORT }}"
   OMRS_MODULE_WEB_ADMIN: "{{ .Values.config.OMRS_MODULE_WEB_ADMIN }}"
   OPENELIS_HOST: "{{ .Values.config.OPENELIS_HOST }}"
   OPENELIS_PORT: "{{ .Values.config.OPENELIS_PORT }}"
