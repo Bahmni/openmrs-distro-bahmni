@@ -8,6 +8,8 @@ data:
   OMRS_DB_NAME: "{{ .Values.config.OMRS_DB_NAME }}"
   OMRS_DEV_DEBUG_PORT: "{{ .Values.config.OMRS_DEV_DEBUG_PORT }}"
   OMRS_MODULE_WEB_ADMIN: "{{ .Values.config.OMRS_MODULE_WEB_ADMIN }}"
+  OMRS_JAVA_SERVER_OPTS: "{{ .Values.config.OMRS_JAVA_SERVER_OPTS }}"
+  OMRS_JAVA_MEMORY_OPTS: "{{ .Values.config.OMRS_JAVA_MEMORY_OPTS }}"
   OPENELIS_HOST: "{{ .Values.config.OPENELIS_HOST }}"
   OPENELIS_PORT: "{{ .Values.config.OPENELIS_PORT }}"
   MAIL_TRANSPORT_PROTOCOL: "{{ .Values.config.MAIL_TRANSPORT_PROTOCOL }}"
