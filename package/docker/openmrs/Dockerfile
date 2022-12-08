@@ -43,10 +43,6 @@ RUN cp /tmp/artifacts/jmx_prometheus_javaagent-*.jar /etc/jvm_metrics/jmx_promet
 COPY package/docker/openmrs/config.yml /etc/jvm_metrics/
 RUN chmod +x /etc/jvm_metrics/config.yml
 
-
-COPY package/docker/openmrs/setenv.sh /usr/local/tomcat/bin
-RUN chmod +x /usr/local/tomcat/bin/setenv.sh
-
 RUN rm -rf /tmp/artifacts
 
 CMD ["./bahmni_startup.sh"]
