@@ -34,7 +34,10 @@ RUN yum install -y \
     mysql \
     mysql-client \
     gettext-base \
-    gettext
+    gettext \
+    acl
+
+RUN setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
 
 COPY package/docker/openmrs/bahmni_startup.sh /openmrs/
 RUN chmod +x /openmrs/bahmni_startup.sh
