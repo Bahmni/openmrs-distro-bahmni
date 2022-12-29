@@ -17,5 +17,11 @@ then
 fi
 mysql --host="${OMRS_DB_HOSTNAME}" --user="${OMRS_DB_USERNAME}" --password="${OMRS_DB_PASSWORD}" "${OMRS_DB_NAME}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
 
+if [ "${OMRS_DOCKER_ENV}" = 'true' ]
+then
+echo "setting the folder permissions"
+setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
+fi
+
 echo "Running OpenMRS Startup Script..."
 ./startup.sh
