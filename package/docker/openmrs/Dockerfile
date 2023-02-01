@@ -1,4 +1,4 @@
-FROM openmrs/openmrs-core:2.5.x-nightly
+FROM openmrs/openmrs-core:2.5.9
 
 ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.17.2
 ENV OPENMRS_APPLICATION_DATA_DIRECTORY=/openmrs/data
@@ -14,7 +14,11 @@ COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmni-emr/templates/
 
-COPY package/docker/openmrs/resources/*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# Copies the operationtheater and webservices OMODs from the Docker resources directory instead of the distro target directory.
+# This is done by adding a Docker ignore rule in the .dockerignore file.
+# See lines 18 and 19 in .dockerignore for more details.
+COPY package/docker/openmrs/resources/operationtheater-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/docker/openmrs/resources/webservices.rest-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
 RUN ln -s /etc/bahmni_config/openmrs/obscalculator ${OPENMRS_APPLICATION_DATA_DIRECTORY}/obscalculator
