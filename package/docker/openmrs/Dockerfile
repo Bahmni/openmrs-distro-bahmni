@@ -3,6 +3,8 @@ FROM openmrs/openmrs-core:2.5.9
 ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.17.2
 ENV OPENMRS_APPLICATION_DATA_DIRECTORY=/openmrs/data
 
+USER root
+
 # Creating Config Directories
 RUN mkdir -p /tmp/artifacts/
 RUN mkdir -p /etc/jvm_metrics/

@@ -35,7 +35,7 @@
         <metadataMappingVersion>1.5.0</metadataMappingVersion>
         <metadataSharingVersion>1.8.0</metadataSharingVersion>
         <openMRSVersion>2.5.7</openMRSVersion>
-        <operationTheaterVersion>1.6.0</operationTheaterVersion>
+        <operationTheaterVersion>1.7.0</operationTheaterVersion>
         <providerManagementVersion>2.13.0</providerManagementVersion>
         <rulesEngineVersion>0.94-SNAPSHOT</rulesEngineVersion>
         <reportingVersion>1.23.0</reportingVersion>
@@ -51,7 +51,7 @@
         <fhir2ModuleVersion>1.8.0</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>1.1.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>1.3.0</openConceptLabVersion>
-        <initializerModuleVersion>2.4.0-SNAPSHOT</initializerModuleVersion>
+        <initializerModuleVersion>2.4.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.0.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>1.0.0-SNAPSHOT</teleconsultationVersion>
 
@@ -348,6 +348,7 @@
           <name>bahmni-artifactory-release</name>
           <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
       </repository>
+
     </repositories>
 
     <build>
