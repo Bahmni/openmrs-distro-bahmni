@@ -8,6 +8,7 @@ echo "Substituting Environment Variables..."
 envsubst < /etc/bahmni-emr/templates/bahmnicore.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/bahmnicore.properties
 envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/openmrs-runtime.properties
 envsubst < /etc/bahmni-emr/templates/mail-config.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/mail-config.properties
+envsubst < /etc/bahmni-emr/templates/sms.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/sms.properties
 /openmrs/wait-for-it.sh --timeout=3600 ${OMRS_DB_HOSTNAME}:3306
 
 echo "Copy Configuration Folder from bahmni_config"

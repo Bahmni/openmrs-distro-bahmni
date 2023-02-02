@@ -55,6 +55,7 @@ COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DI
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmni-emr/templates/
+COPY package/docker/openmrs/templates/sms.properties.template /etc/bahmni-emr/templates/
 
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
 RUN ln -s /etc/bahmni_config/openmrs/obscalculator ${OPENMRS_APPLICATION_DATA_DIRECTORY}/obscalculator

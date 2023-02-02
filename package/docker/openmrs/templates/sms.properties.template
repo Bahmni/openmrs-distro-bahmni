@@ -1,0 +1,4 @@
+sms.en.prescriptionSMS=Date: #visitDate\nPrescription For Patient: #patientName, #gender, #age years.\nDoctor: #doctorDetail (#location)\n#prescriptionDetails
+sms.fr.prescriptionSMS=Date: #visitDate\nPrescription For Patient: #patientName, #gender, #age years.\nDoctor: #doctorDetail \n#prescriptionDetails
+sms.timeZone=IST
+sms.url=http://otp/notification/sms
