@@ -9,18 +9,52 @@ USER root
 RUN mkdir -p /tmp/artifacts/
 RUN mkdir -p /etc/jvm_metrics/
 
+# Download JMX Prometheus Java agent 
 RUN curl -L -o /tmp/artifacts/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar "https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_PROMETHEUS_JAVAAGENT_VERSION}/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar"
 
-COPY distro/target/distro/*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# Copy omods to OpenMRS Application Data Directory
+COPY distro/target/distro/addresshierarchy-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/appframework-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/appointments-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/auditlog-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bacteriology-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bahmni-commons-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bahmni.ie.apps-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bahmnicore-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bedmanagement-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/calculation-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/emrapi-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/episodes-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/event*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/fhir2*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/htmlwidgets*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/idgen*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/initializer*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/legacyui*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/metadatamapping*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/metadatasharing*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/openconceptlab*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/openelis-atomfeed-client*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/operationtheater*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/owa*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/pacsquery*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/providermanagement*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/reference-data*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/reporting*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/reportingrest*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/rulesengine*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/serialization.xstream*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/teleconsultation*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/uicommons*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/uiframework*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/uilibrary*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/docker/openmrs/resources/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+
+# Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmni-emr/templates/
-
-# Copies the operationtheater and webservices OMODs from the Docker resources directory instead of the distro target directory.
-# This is done by adding a Docker ignore rule in the .dockerignore file.
-# See lines 18 and 19 in .dockerignore for more details.
-COPY package/docker/openmrs/resources/operationtheater-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY package/docker/openmrs/resources/webservices.rest-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
 RUN ln -s /etc/bahmni_config/openmrs/obscalculator ${OPENMRS_APPLICATION_DATA_DIRECTORY}/obscalculator
@@ -43,6 +77,7 @@ RUN yum install -y \
     gettext \
     acl
 
+# Modify file permissions for document_images directory
 RUN setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
 
 COPY package/docker/openmrs/bahmni_startup.sh /openmrs/
