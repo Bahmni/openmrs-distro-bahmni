@@ -9,7 +9,7 @@ USER root
 RUN mkdir -p /tmp/artifacts/
 RUN mkdir -p /etc/jvm_metrics/
 
-# Download JMX Prometheus Java agent 
+# Download JMX Prometheus Java agent
 RUN curl -L -o /tmp/artifacts/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar "https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_PROMETHEUS_JAVAAGENT_VERSION}/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar"
 
 # Copy omods to OpenMRS Application Data Directory
@@ -49,7 +49,7 @@ COPY distro/target/distro/teleconsultation*.omod  ${OPENMRS_APPLICATION_DATA_DIR
 COPY distro/target/distro/uicommons*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/uiframework*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/uilibrary*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY package/docker/openmrs/resources/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
