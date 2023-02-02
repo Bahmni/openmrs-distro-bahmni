@@ -15,4 +15,3 @@
 **/.svn/
 **/deploy.sh
 **/build/
-distro/target/distro/webservices.rest*.omod

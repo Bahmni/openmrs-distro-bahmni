@@ -43,7 +43,7 @@
         <uicommonsModuleVersion>2.19.0</uicommonsModuleVersion>
         <uiframeworkModuleVersion>3.22.0</uiframeworkModuleVersion>
         <uilibraryVersion>2.0.7</uilibraryVersion>
-        <webServicesRestVersion>2.33.0</webServicesRestVersion>
+        <webServicesRestVersion>2.39.0-SNAPSHOT</webServicesRestVersion>
         <reportingRestVersion>1.12.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.3.0-SNAPSHOT</bahmniIEOmodVersion>
         <appointmentsVersion>1.6.0-SNAPSHOT</appointmentsVersion>
