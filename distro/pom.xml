@@ -81,7 +81,7 @@
         </dependency>
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>fhir-ts-services-omod</artifactId>
+            <artifactId>fhir-ts-services-int-omod</artifactId>
             <version>${terminologyServicesVersion}</version>
         </dependency>
         <dependency>
