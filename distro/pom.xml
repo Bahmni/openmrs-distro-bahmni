@@ -54,6 +54,7 @@
         <initializerModuleVersion>2.4.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.0.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>1.0.0-SNAPSHOT</teleconsultationVersion>
+        <communicationVersion>1.0.0-SNAPSHOT</communicationVersion>
 
     </properties>
 
@@ -271,6 +272,12 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>teleconsultation-omod</artifactId>
             <version>${teleconsultationVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>communication-omod</artifactId>
+            <version>${communicationVersion}</version>
         </dependency>
         <!-- end -->
 
