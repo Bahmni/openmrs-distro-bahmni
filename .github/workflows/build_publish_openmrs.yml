@@ -55,7 +55,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: package/docker/openmrs/Dockerfile
           push: true
-          tags: bahmni/openmrs:${{ env.ARTIFACT_VERSION }},bahmni/openmrs:latest
+          tags: bahmni/openmrs:${{ env.ARTIFACT_VERSION }},bahmni/openmrs:perf-test
       - name: Update Version and Image Tag
         run: |
           yq --inplace '.image.tag = "${{ env.ARTIFACT_VERSION }}"' $HELM_CHART_PATH/values.yaml
