@@ -47,14 +47,14 @@
         <reportingRestVersion>1.12.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.3.0</bahmniIEOmodVersion>
         <appointmentsVersion>1.7.0</appointmentsVersion>
-        <pacsQueryVersion>1.3.0</pacsQueryVersion>
+        <pacsQueryVersion>1.4.0</pacsQueryVersion>
         <fhir2ModuleVersion>1.8.0</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>1.1.0</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>1.3.0</openConceptLabVersion>
         <initializerModuleVersion>2.4.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.0.0</bahmniCommonsVersion>
-        <teleconsultationVersion>1.0.0</teleconsultationVersion>
-        <communicationVersion>1.0.0</communicationVersion>
+        <teleconsultationVersion>1.1.0</teleconsultationVersion>
+        <communicationVersion>1.1.0</communicationVersion>
 
     </properties>
 
