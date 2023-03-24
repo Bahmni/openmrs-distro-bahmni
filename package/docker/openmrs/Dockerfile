@@ -1,4 +1,4 @@
-FROM openmrs/openmrs-core:2.5.x-nightly
+FROM openmrs/openmrs-core:2.5.11
 
 ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.17.2
 ENV OPENMRS_APPLICATION_DATA_DIRECTORY=/openmrs/data
