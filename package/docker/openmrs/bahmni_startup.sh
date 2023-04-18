@@ -21,6 +21,7 @@ if [ "${OMRS_DOCKER_ENV}" = 'true' ]
 then
 echo "setting the folder permissions"
 setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
+setfacl -d -m o::rx -m g::rx /home/bahmni/uploaded_results/
 fi
 
 echo "Running OpenMRS Startup Script..."
