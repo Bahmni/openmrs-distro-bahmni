@@ -4,6 +4,7 @@ bahmnicore.images.directory=/home/bahmni/patient_images
 bahmnicore.images.directory.defaultImage=/etc/bahmni/blank-user.png
 bahmnicore.urls.patientimages=/patient_images
 bahmnicore.documents.baseDirectory=/home/bahmni/document_images
+bahmnicore.documents.lablitebaseDirectory=/home/bahmni/uploaded_results
 
 
 openelis.uri=http://${OPENELIS_HOST}:${OPENELIS_PORT}/
