@@ -98,3 +98,6 @@ spec:
         - name: bahmni-config
           persistentVolumeClaim:
             claimName: bahmni-config-pvc
+        - name: bahmni-uploaded-results
+          persistentVolumeClaim:
+            claimName: bahmni-uploaded-results-pvc
