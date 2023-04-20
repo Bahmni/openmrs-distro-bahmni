@@ -76,6 +76,8 @@ spec:
               name: openmrs-clinical-forms
             - mountPath: /etc/bahmni_config
               name: bahmni-config
+            - mountPath: /home/bahmni/uploaded_results
+              name: bahmni-uploaded-results
       restartPolicy: Always
       volumes:
       #   - name: openmrs-data
@@ -96,3 +98,6 @@ spec:
         - name: bahmni-config
           persistentVolumeClaim:
             claimName: bahmni-config-pvc
+        - name: bahmni-uploaded-results
+          persistentVolumeClaim:
+            claimName: bahmni-uploaded-results-pvc
