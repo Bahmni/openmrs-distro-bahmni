@@ -72,6 +72,8 @@ volumes:
     capacity: "1Gi"
   clinicalForms:
     capacity: "1Gi"
+  uploadedResults:
+    capacity: "2Gi"
 nodeSelector: {}
 affinity: {}
 tolerations: {}
