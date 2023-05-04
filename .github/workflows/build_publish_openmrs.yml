@@ -56,4 +56,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: package/docker/openmrs/Dockerfile
           push: true
-          tags: bahmni/openmrs:ipd-${{ github.run_number }}, bahmni/appointments:ipd
+          tags: bahmni/openmrs:ipd-${{ github.run_number }}, bahmni/openmrs:ipd
