@@ -22,3 +22,4 @@ data:
   MAIL_SMTP_PORT: "{{ .Values.config.MAIL_SMTP_PORT }}"
   MAIL_SMTP_HOST: "{{ .Values.config.MAIL_SMTP_HOST }}"
   OMRS_DOCKER_ENV: "{{ .Values.config.OMRS_DOCKER_ENV }}"
+  TZ: "{{ .Values.global.TZ }}"
