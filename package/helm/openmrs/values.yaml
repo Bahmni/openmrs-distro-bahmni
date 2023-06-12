@@ -43,6 +43,7 @@ config:
   MAIL_SMTP_PORT: ""
   MAIL_SMTP_HOST: ""
   OMRS_DOCKER_ENV: 'false'
+  OMRS_C3P0_MAX_SIZE: 50
 
 secrets:
   OMRS_DB_HOSTNAME: ""

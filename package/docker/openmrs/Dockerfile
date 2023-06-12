@@ -89,6 +89,12 @@ RUN cp /tmp/artifacts/jmx_prometheus_javaagent-*.jar /etc/jvm_metrics/jmx_promet
 COPY package/docker/openmrs/config.yml /etc/jvm_metrics/
 RUN chmod +x /etc/jvm_metrics/config.yml
 
+# Modify Startup Script to add Hibernate Properties
+COPY package/resources/add_hibernate_properties.sh add_hibernate_properties.sh
+RUN chmod +x add_hibernate_properties.sh 
+RUN ./add_hibernate_properties.sh
+RUN rm -rf add_hibernate_properties.sh
+
 RUN rm -rf /tmp/artifacts
 
 CMD ["./bahmni_startup.sh"]
