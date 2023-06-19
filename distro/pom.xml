@@ -52,7 +52,7 @@
         <fhir2ExtensionModuleVersion>1.2.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>1.3.0</openConceptLabVersion>
         <initializerModuleVersion>2.4.0</initializerModuleVersion>
-        <bahmniCommonsVersion>1.0.0</bahmniCommonsVersion>
+        <bahmniCommonsVersion>1.1.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>1.1.0</teleconsultationVersion>
         <communicationVersion>1.1.0</communicationVersion>
 
@@ -264,7 +264,7 @@
 
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>bahmni-commons-omod</artifactId>
+            <artifactId>bahmni-commons-ipd-omod</artifactId>
             <version>${bahmniCommonsVersion}</version>
         </dependency>
 
