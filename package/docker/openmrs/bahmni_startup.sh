@@ -26,8 +26,6 @@ fi
 
 if [ "${EVENT_PUBLISH_TOGGLE}" == "true" ]; then
   envsubst < /etc/bahmni-emr/templates/tomcat_context_with_event_resource.template > /usr/local/tomcat/conf/context.xml
-else
-  cp /etc/bahmni-emr/templates/tomcat_default_context.template /usr/local/tomcat/conf/context.xml
 fi
 
 echo "Running OpenMRS Startup Script..."
