@@ -1,2 +1,2 @@
-concept.weight.uuid=${WEIGHT-CONCEPT-UUID}
-concept.height.uuid=${HEIGHT-CONCEPT-UUID}
+concept.weight.uuid=${WEIGHT_CONCEPT_UUID}
+concept.height.uuid=${HEIGHT_CONCEPT_UUID}
