@@ -4,3 +4,4 @@ openmrs.user= ${OPENMRS_SYSTEM_SMS_USER}
 openmrs.password= ${OPENMRS_SYSTEM_SMS_PASSWORD}
 openmrs.connectionTimeoutInMilliseconds=10000
 openmrs.replyTimeoutInMilliseconds=20000
+sms.uri=${SMS_URL}
