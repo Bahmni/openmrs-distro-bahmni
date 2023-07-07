@@ -55,6 +55,7 @@
         <bahmniCommonsVersion>1.1.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>1.1.0</teleconsultationVersion>
         <communicationVersion>1.1.0</communicationVersion>
+        <bahmniEventsVersion>1.0.0-SNAPSHOT</bahmniEventsVersion>
 
     </properties>
 
@@ -278,6 +279,12 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>communication-omod</artifactId>
             <version>${communicationVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>bahmni-events-omod</artifactId>
+            <version>${bahmniEventsVersion}</version>
         </dependency>
         <!-- end -->
 
