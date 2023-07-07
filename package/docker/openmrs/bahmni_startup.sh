@@ -25,7 +25,7 @@ setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
 setfacl -d -m o::rx -m g::rx /home/bahmni/uploaded_results/
 fi
 
-if [ "${EVENT_PUBLISH_TOGGLE}" == "true" ]; then
+if [ "${PUBLISH_PATIENT_EVENTS_TO_JMS}" == "true" ]; then
   envsubst < /etc/bahmni-emr/templates/tomcat_context_with_event_resource.template > /usr/local/tomcat/conf/context.xml
 fi
 
