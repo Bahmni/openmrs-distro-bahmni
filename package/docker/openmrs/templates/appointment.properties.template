@@ -1,7 +1,2 @@
-openmrs.auth.uri=http://${OPENMRS_HOST}:${OPENMRS_PORT}/openmrs/ws/rest/v1/session
-openmrs.root.uri=http://${OPENMRS_HOST}:${OPENMRS_PORT}/openmrs/ws/rest/v1
-openmrs.user= ${OPENMRS_SYSTEM_SMS_USER}
-openmrs.password= ${OPENMRS_SYSTEM_SMS_PASSWORD}
-openmrs.connectionTimeoutInMilliseconds=10000
-openmrs.replyTimeoutInMilliseconds=20000
+sms-service.token= ${SMS_SERVICE_TOKEN}
 sms.uri=${SMS_URL}
