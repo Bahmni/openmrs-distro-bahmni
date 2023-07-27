@@ -16,7 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <openMRSVersion>2.5.11</openMRSVersion>
+        <openMRSVersion>2.5.12</openMRSVersion>
         <MODULE_ID>${project.parent.artifactId}</MODULE_ID>
         <MODULE_NAME>${project.parent.name}</MODULE_NAME>
         <MODULE_VERSION>${project.parent.version}</MODULE_VERSION>
