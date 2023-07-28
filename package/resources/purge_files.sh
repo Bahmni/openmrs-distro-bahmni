@@ -3,6 +3,8 @@
 dir_path="/openmrs/data/fhirExports"
 log_file="/openmrs/data/purge.log"
 
+cutoff_time=$(( 48 * 60 ))
+
 log_message() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$log_file"
     echo "$1"
@@ -13,4 +15,4 @@ if [ ! -d "$dir_path" ]; then
     exit 1
 fi
 
-find "$dir_path" -type f -mmin +1 -delete
+find "$dir_path" -type f -mmin +"$cutoff_time" -delete

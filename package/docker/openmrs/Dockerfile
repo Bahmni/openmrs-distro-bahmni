@@ -102,7 +102,7 @@ RUN rm -rf add_hibernate_properties.sh
 # Add cron job to run every 1 hour to purge old exported files
 COPY package/resources/purge_files.sh /openmrs/
 RUN chmod +x /openmrs/purge_files.sh
-RUN echo "*/1 * * * * /openmrs/purge_files.sh" > /etc/cron.d/purge_files
+RUN echo "0 * * * * /openmrs/purge_files.sh" > /etc/cron.d/purge_files
 RUN chmod 0644 /etc/cron.d/purge_files
 RUN crontab /etc/cron.d/purge_files
 RUN /usr/sbin/crond
