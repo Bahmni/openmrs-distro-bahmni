@@ -110,7 +110,7 @@ RUN crontab /etc/cron.d/purge_files
 RUN /usr/sbin/crond
 
 # copy anonymous config json to container
-COPY package/resources/anonymous-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
+COPY package/resources/fhir-export-anonymise-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
 
 RUN rm -rf /tmp/artifacts
 
