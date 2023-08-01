@@ -34,7 +34,7 @@
         <mailappenderVersion>0.94.3</mailappenderVersion>
         <metadataMappingVersion>1.5.0</metadataMappingVersion>
         <metadataSharingVersion>1.8.0</metadataSharingVersion>
-        <openMRSVersion>2.5.10</openMRSVersion>
+        <openMRSVersion>2.5.12</openMRSVersion>
         <operationTheaterVersion>1.7.0</operationTheaterVersion>
         <providerManagementVersion>2.13.0</providerManagementVersion>
         <rulesEngineVersion>1.0.0</rulesEngineVersion>
@@ -48,7 +48,7 @@
         <bahmniIEOmodVersion>1.3.0</bahmniIEOmodVersion>
         <appointmentsVersion>1.7.0</appointmentsVersion>
         <pacsQueryVersion>1.4.0</pacsQueryVersion>
-        <fhir2ModuleVersion>1.10.0-SNAPSHOT</fhir2ModuleVersion>
+        <fhir2ModuleVersion>1.10.0</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>1.3.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>1.3.0</openConceptLabVersion>
         <initializerModuleVersion>2.5.0</initializerModuleVersion>
@@ -270,7 +270,7 @@
 
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>fhir2Extension-omod</artifactId>
+            <artifactId>fhir2Extension-fhir-omod</artifactId>
             <version>${fhir2ExtensionModuleVersion}</version>
         </dependency>
 
