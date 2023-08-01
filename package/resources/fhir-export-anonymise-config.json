@@ -16,6 +16,14 @@
       {
         "fieldName": "telecom",
         "method": "redact"
+      },
+      {
+        "fieldName": "birthDate",
+        "method": "random"
+      },
+      {
+        "fieldName": "deceasedDateTime",
+        "method": "random"
       }
     ],
     "condition": [
