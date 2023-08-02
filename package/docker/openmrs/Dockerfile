@@ -60,8 +60,6 @@ COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/b
 COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/appointment.properties.template /etc/bahmni-emr/templates/
 
-
-
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
 RUN ln -s /etc/bahmni_config/openmrs/obscalculator ${OPENMRS_APPLICATION_DATA_DIRECTORY}/obscalculator
 RUN ln -s /etc/bahmni_config/openmrs/ordertemplates ${OPENMRS_APPLICATION_DATA_DIRECTORY}/ordertemplates
