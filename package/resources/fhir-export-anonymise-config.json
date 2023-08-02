@@ -19,11 +19,11 @@
       },
       {
         "fieldName": "birthDate",
-        "method": "random"
+        "method": "firstOfMonth"
       },
       {
         "fieldName": "deceasedDateTime",
-        "method": "random"
+        "method": "firstOfMonth"
       }
     ],
     "condition": [
