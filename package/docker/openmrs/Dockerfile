@@ -60,6 +60,8 @@ COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/b
 COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/appointment.properties.template /etc/bahmni-emr/templates/
 
+
+
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
 RUN ln -s /etc/bahmni_config/openmrs/obscalculator ${OPENMRS_APPLICATION_DATA_DIRECTORY}/obscalculator
 RUN ln -s /etc/bahmni_config/openmrs/ordertemplates ${OPENMRS_APPLICATION_DATA_DIRECTORY}/ordertemplates
@@ -106,6 +108,9 @@ RUN echo "0 * * * * /openmrs/purge_files.sh" > /etc/cron.d/purge_files
 RUN chmod 0644 /etc/cron.d/purge_files
 RUN crontab /etc/cron.d/purge_files
 RUN /usr/sbin/crond
+
+# copy anonymous config json to container
+COPY package/resources/fhir-export-anonymise-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
 
 RUN rm -rf /tmp/artifacts
 
