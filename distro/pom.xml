@@ -38,7 +38,7 @@
         <operationTheaterVersion>1.7.0</operationTheaterVersion>
         <providerManagementVersion>2.13.0</providerManagementVersion>
         <rulesEngineVersion>1.0.0</rulesEngineVersion>
-        <reportingVersion>1.23.0</reportingVersion>
+        <reportingVersion>1.24.0</reportingVersion>
         <serializationVersion>0.2.15</serializationVersion>
         <uicommonsModuleVersion>2.19.0</uicommonsModuleVersion>
         <uiframeworkModuleVersion>3.22.0</uiframeworkModuleVersion>
