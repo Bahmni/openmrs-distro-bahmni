@@ -1,2 +1,2 @@
-sms-service.token= ${SMS_SERVICE_TOKEN}
+sms.token.path= ${SMS_TOKEN_PATH}
 sms.uri=${SMS_URL}
