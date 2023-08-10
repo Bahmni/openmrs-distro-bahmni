@@ -17,7 +17,7 @@
       {
         "fieldName": "telecom",
         "method": "fixed",
-        "value": "fixedValue"
+        "value": "9876543210"
       },
       {
         "fieldName": "birthDate",
