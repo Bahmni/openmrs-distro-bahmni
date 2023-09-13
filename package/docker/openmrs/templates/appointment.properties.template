@@ -1,2 +1,1 @@
-sms.token.path= ${SMS_TOKEN_PATH}
-sms.uri=${SMS_URL}
+openmrs.root.uri=http://${OPENMRS_HOST}:${OPENMRS_PORT}/openmrs/ws/rest/v1
