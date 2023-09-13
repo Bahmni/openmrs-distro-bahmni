@@ -11,9 +11,7 @@ openelis.uri=http://${OPENELIS_HOST}:${OPENELIS_PORT}/
 openelis.user=${OPENELIS_ATOMFEED_USER}
 openelis.password=${OPENELIS_ATOMFEED_PASSWORD}
 patient.feed.uri=http://${OPENELIS_HOST}:${OPENELIS_PORT}/openelis/ws/feed/patient/recent
-sms.uri=${SMS_URL}
 
-sms.token.path= ${SMS_TOKEN_PATH}
 
 feed.maxFailedEvents=10000
 feed.connectionTimeoutInMilliseconds=10000
