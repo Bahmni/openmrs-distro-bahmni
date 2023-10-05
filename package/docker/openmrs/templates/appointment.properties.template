@@ -1,1 +1,1 @@
-openmrs.root.uri=http://${OPENMRS_HOST}:${OPENMRS_PORT}/openmrs/ws/rest/v1
+
