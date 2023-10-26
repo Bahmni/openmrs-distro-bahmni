@@ -54,7 +54,7 @@
         <initializerModuleVersion>2.4.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.1.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>2.0.0-SNAPSHOT</teleconsultationVersion>
-        <communicationVersion>1.1.0</communicationVersion>
+        <communicationVersion>1.2.0-SNAPSHOT</communicationVersion>
 
     </properties>
 
