@@ -84,5 +84,8 @@
         "method": "redact"
       }
     ]
+  },
+  "parameters": {
+    "oneWayHashSalt": "Bahmni123"
   }
 }
