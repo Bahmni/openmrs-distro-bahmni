@@ -51,6 +51,8 @@ COPY distro/target/distro/uiframework*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTOR
 COPY distro/target/distro/uilibrary*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/fhir-ts-services-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/fhir-cdss-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
@@ -95,6 +97,8 @@ COPY package/resources/add_hibernate_properties.sh add_hibernate_properties.sh
 RUN chmod +x add_hibernate_properties.sh 
 RUN ./add_hibernate_properties.sh
 RUN rm -rf add_hibernate_properties.sh
+
+COPY package/resources/fhir-export-anonymise-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
 
 RUN rm -rf /tmp/artifacts
 

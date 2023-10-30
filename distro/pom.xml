@@ -51,11 +51,12 @@
         <fhir2ModuleVersion>1.10.0-SNAPSHOT</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>1.3.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>2.1.0</openConceptLabVersion>
-        <initializerModuleVersion>2.4.0</initializerModuleVersion>
+        <initializerModuleVersion>2.5.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.1.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>2.0.0-SNAPSHOT</teleconsultationVersion>
         <communicationVersion>1.2.0-SNAPSHOT</communicationVersion>
-
+        <terminologyServicesVersion>1.0.0-SNAPSHOT</terminologyServicesVersion>
+        <cdssVersion>1.0.0-SNAPSHOT</cdssVersion>
     </properties>
 
     <dependencies>
@@ -98,6 +99,16 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>bahmni.ie.apps-omod</artifactId>
             <version>${bahmniIEOmodVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>fhir-ts-services-int-omod</artifactId>
+            <version>${terminologyServicesVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>fhir-cdss-int-omod</artifactId>
+            <version>${cdssVersion}</version>
         </dependency>
         <!-- end -->
 
