@@ -2,6 +2,10 @@
   "resources": {
     "patient": [
       {
+        "fieldName": "id",
+        "method": "correlate"
+      },
+      {
         "fieldName": "identifier",
         "method": "redact"
       },
@@ -28,6 +32,10 @@
     ],
     "condition": [
       {
+        "fieldName": "subject",
+        "method": "correlate"
+      },
+      {
         "fieldName": "encounter",
         "method": "redact"
       },
@@ -41,6 +49,10 @@
       }
     ],
     "medicationRequest": [
+      {
+        "fieldName": "subject",
+        "method": "correlate"
+      },
       {
         "fieldName": "priority",
         "method": "redact"
@@ -63,6 +75,10 @@
       }
     ],
     "serviceRequest": [
+      {
+        "fieldName": "subject",
+        "method": "correlate"
+      },
       {
         "fieldName": "encounter",
         "method": "redact"
