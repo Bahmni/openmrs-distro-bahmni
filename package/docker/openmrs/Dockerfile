@@ -109,9 +109,6 @@ RUN /usr/sbin/crond
 
 # copy anonymous config json to container
 COPY package/resources/fhir-export-anonymise-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
-COPY package/resources/fhir-export-anonymise-random-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
-COPY package/resources/fhir-export-anonymise-fixed-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
-COPY package/resources/fhir-export-anonymise-correlate-config.json ${OPENMRS_APPLICATION_DATA_DIRECTORY}
 
 RUN rm -rf /tmp/artifacts
 
