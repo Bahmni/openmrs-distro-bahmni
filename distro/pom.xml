@@ -56,6 +56,7 @@
         <teleconsultationVersion>1.1.0</teleconsultationVersion>
         <communicationVersion>1.1.0</communicationVersion>
         <bahmniEventsVersion>1.0.0-SNAPSHOT</bahmniEventsVersion>
+        <reportingcompatibilityVersion>2.0.9</reportingcompatibilityVersion>
 
     </properties>
 
@@ -181,7 +182,6 @@
             <artifactId>owa-omod</artifactId>
             <version>${owaVersion}</version>
         </dependency>
-
          <dependency>
             <groupId>org.openmrs</groupId>
             <artifactId>event-omod</artifactId>
@@ -304,6 +304,11 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>initializer-omod</artifactId>
             <version>${initializerModuleVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>reportingcompatibility-omod</artifactId>
+            <version>${reportingcompatibilityVersion}</version>
         </dependency>
         <!-- end -->
     </dependencies>
