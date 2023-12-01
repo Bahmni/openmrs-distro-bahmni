@@ -88,6 +88,9 @@ RUN setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
 COPY package/docker/openmrs/bahmni_startup.sh /openmrs/
 RUN chmod +x /openmrs/bahmni_startup.sh
 
+COPY package/docker/openmrs/update_elis_host_port.sh /openmrs/
+RUN chmod +x /openmrs/update_elis_host_port.sh
+
 RUN cp /tmp/artifacts/jmx_prometheus_javaagent-*.jar /etc/jvm_metrics/jmx_prometheus_javaagent.jar
 COPY package/docker/openmrs/config.yml /etc/jvm_metrics/
 RUN chmod +x /etc/jvm_metrics/config.yml
