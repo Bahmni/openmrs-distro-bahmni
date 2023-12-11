@@ -57,6 +57,7 @@
         <communicationVersion>1.1.0</communicationVersion>
         <bahmniEventsVersion>1.0.0-SNAPSHOT</bahmniEventsVersion>
         <reportingcompatibilityVersion>2.0.9</reportingcompatibilityVersion>
+        <bahmniIpdVersion>1.0.0-SNAPSHOT</bahmniIpdVersion>
 
     </properties>
 
@@ -309,6 +310,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>reportingcompatibility-omod</artifactId>
             <version>${reportingcompatibilityVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>bahmni-ipd-omod</artifactId>
+            <version>${bahmniIpdVersion}</version>
         </dependency>
         <!-- end -->
     </dependencies>
