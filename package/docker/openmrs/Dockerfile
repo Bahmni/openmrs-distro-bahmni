@@ -57,10 +57,6 @@ COPY distro/target/distro/bahmni-events*.omod ${OPENMRS_APPLICATION_DATA_DIRECTO
 RUN rm -rf ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules/operationtheater-*.omod
 COPY package/resources/operationtheater-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
-# Copy custom omod for bahmni-ipd and remove existing. This is done for temporary purpose. Once the PR in bahmni-ipd is merged, this can be removed.
-RUN rm -rf ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules/bahmni-ipd-*.omod
-COPY package/resources/bahmni-ipd-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
