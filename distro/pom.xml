@@ -57,6 +57,7 @@
         <communicationVersion>1.1.0</communicationVersion>
         <bahmniEventsVersion>1.0.0-SNAPSHOT</bahmniEventsVersion>
         <reportingcompatibilityVersion>2.0.9</reportingcompatibilityVersion>
+        <medicationAdministrationVersion>1.0.0-SNAPSHOT</medicationAdministrationVersion>
         <bahmniIpdVersion>1.0.0-SNAPSHOT</bahmniIpdVersion>
 
     </properties>
@@ -310,6 +311,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>reportingcompatibility-omod</artifactId>
             <version>${reportingcompatibilityVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>medication-administration-api</artifactId>
+            <version>${medicationAdministrationVersion}</version>
         </dependency>
 
         <dependency>
