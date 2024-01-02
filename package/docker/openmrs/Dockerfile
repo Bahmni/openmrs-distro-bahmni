@@ -53,6 +53,7 @@ COPY distro/target/distro/uilibrary*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}
 COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmni-events*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/medication-administration*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy custom omod for operationtheater and remove existing. This is done for temporary purpose. Once the PR in operationtheater is merged, this can be removed.
 RUN rm -rf ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules/operationtheater-*.omod
