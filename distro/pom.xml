@@ -315,7 +315,7 @@
 
         <dependency>
             <groupId>org.bahmni.module</groupId>
-            <artifactId>medication-administration-api</artifactId>
+            <artifactId>medication-administration-omod</artifactId>
             <version>${medicationAdministrationVersion}</version>
         </dependency>
 
