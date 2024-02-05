@@ -76,6 +76,8 @@ volumes:
     capacity: "1Gi"
   uploadedResults:
     capacity: "2Gi"
+  uploadedFiles:
+    capacity: "2Gi"
 nodeSelector: {}
 affinity: {}
 tolerations: {}
