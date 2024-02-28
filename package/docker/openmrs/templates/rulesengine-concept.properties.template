@@ -1,0 +1,2 @@
+concept.weight.uuid=${WEIGHT_CONCEPT_UUID}
+concept.height.uuid=${HEIGHT_CONCEPT_UUID}
