@@ -27,7 +27,7 @@ COPY distro/target/distro/calculation-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTO
 COPY distro/target/distro/emrapi-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/episodes-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/event*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/fhir2*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# COPY distro/target/distro/fhir2*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules  :To be reverted after fhir2 changes are pushed to OpenMRS
 COPY distro/target/distro/htmlwidgets*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/idgen*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/initializer*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
