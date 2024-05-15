@@ -57,6 +57,7 @@
         <communicationVersion>1.2.0-SNAPSHOT</communicationVersion>
         <terminologyServicesVersion>1.0.0-SNAPSHOT</terminologyServicesVersion>
         <cdssVersion>1.0.0-SNAPSHOT</cdssVersion>
+        <reportingCompatibilityVersion>2.0.9</reportingCompatibilityVersion>
     </properties>
 
     <dependencies>
@@ -304,10 +305,17 @@
           <artifactId>openconceptlab-omod</artifactId>
           <version>${openConceptLabVersion}</version>
         </dependency>
+
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>initializer-omod</artifactId>
             <version>${initializerModuleVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>reportingcompatibility-omod</artifactId>
+            <version>${reportingCompatibilityVersion}</version>
         </dependency>
         <!-- end -->
     </dependencies>
