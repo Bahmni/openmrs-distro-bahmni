@@ -43,6 +43,7 @@ COPY distro/target/distro/pacsquery*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}
 COPY distro/target/distro/providermanagement*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/reference-data*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/reporting*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/reportingcompatibility*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/reportingrest*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/rulesengine*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/serialization.xstream*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
