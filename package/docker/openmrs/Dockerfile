@@ -32,6 +32,7 @@ COPY distro/target/distro/htmlwidgets*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTOR
 COPY distro/target/distro/idgen*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/initializer*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/legacyui*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/medication-administration-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/metadatamapping*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/metadatasharing*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/openconceptlab*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
