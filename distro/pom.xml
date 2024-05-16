@@ -32,6 +32,7 @@
         <idgenWebServicesModuleVersion>1.4.0</idgenWebServicesModuleVersion>
         <legacyUiOmodVersion>1.13.0</legacyUiOmodVersion>
         <mailappenderVersion>0.94.3</mailappenderVersion>
+        <medicationAdministrationVersion>1.0.0-SNAPSHOT</medicationAdministrationVersion>
         <metadataMappingVersion>1.5.0</metadataMappingVersion>
         <metadataSharingVersion>1.8.0</metadataSharingVersion>
         <openMRSVersion>2.5.12</openMRSVersion>
@@ -174,6 +175,13 @@
             <artifactId>calculation-omod</artifactId>
             <version>${calculationVersion}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>medication-administration-omod</artifactId>
+            <version>${medicationAdministrationVersion}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>metadatamapping-omod</artifactId>
