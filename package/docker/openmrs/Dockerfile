@@ -82,11 +82,14 @@ COPY package/resources/blank-user.png /etc/bahmni/
 
 # Used by envsubst command for replacing environment values at runtime
 RUN yum install -y \
-    mysql \
-    mysql-client \
     gettext-base \
     gettext \
     acl
+
+# Install mysql client to run sql scripts
+RUN yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+RUN rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
+RUN yum install -y mysql-community-client
 
 # Modify file permissions for document_images directory
 RUN setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
