@@ -27,7 +27,7 @@ COPY distro/target/distro/calculation-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTO
 COPY distro/target/distro/emrapi-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/episodes-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/event*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/fhir2*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules  :To be reverted after fhir2 changes are pushed to OpenMRS
+COPY distro/target/distro/fhir2*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/htmlwidgets*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/idgen*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/initializer*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -54,10 +54,6 @@ COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DI
 COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmni-events*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/medication-administration*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-
-# Copy custom omod for operationtheater and remove existing. This is done for temporary purpose. Once the PR in operationtheater is merged, this can be removed.
-RUN rm -rf ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules/operationtheater-*.omod
-COPY package/resources/operationtheater-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
