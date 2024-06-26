@@ -35,7 +35,7 @@
         <metadataMappingVersion>1.5.0</metadataMappingVersion>
         <metadataSharingVersion>1.8.0</metadataSharingVersion>
         <openMRSVersion>2.5.12</openMRSVersion>
-        <operationTheaterVersion>1.7.0</operationTheaterVersion>
+        <operationTheaterVersion>1.8.0</operationTheaterVersion>
         <providerManagementVersion>2.13.0</providerManagementVersion>
         <rulesEngineVersion>1.0.0</rulesEngineVersion>
         <reportingVersion>1.24.0</reportingVersion>
@@ -45,11 +45,11 @@
         <uilibraryVersion>2.0.7</uilibraryVersion>
         <webServicesRestVersion>2.39.0</webServicesRestVersion>
         <reportingRestVersion>1.12.0</reportingRestVersion>
-        <bahmniIEOmodVersion>1.3.0</bahmniIEOmodVersion>
+        <bahmniIEOmodVersion>1.4.0-SNAPSHOT</bahmniIEOmodVersion>
         <appointmentsVersion>1.8.0-SNAPSHOT</appointmentsVersion>
         <pacsQueryVersion>1.4.0</pacsQueryVersion>
-<!--        <fhir2ModuleVersion>1.10.0-SNAPSHOT</fhir2ModuleVersion>-->
-<!--        <fhir2ExtensionModuleVersion>1.3.0-SNAPSHOT</fhir2ExtensionModuleVersion>-->
+        <fhir2ModuleVersion>2.1.0</fhir2ModuleVersion>
+        <fhir2ExtensionModuleVersion>1.3.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>2.1.0</openConceptLabVersion>
         <initializerModuleVersion>2.4.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.1.0-SNAPSHOT</bahmniCommonsVersion>
@@ -190,11 +190,11 @@
             <version>${eventModuleVersion}</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.openmrs.module</groupId>-->
-<!--            <artifactId>fhir2-omod</artifactId>-->
-<!--            <version>${fhir2ModuleVersion}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>fhir2-omod</artifactId>
+            <version>${fhir2ModuleVersion}</version>
+        </dependency>
 
         <!-- end -->
 
@@ -259,11 +259,11 @@
             <version>${pacsQueryVersion}</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.bahmni.module</groupId>-->
-<!--            <artifactId>fhir2Extension-omod</artifactId>-->
-<!--            <version>${fhir2ExtensionModuleVersion}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>fhir2Extension-omod</artifactId>
+            <version>${fhir2ExtensionModuleVersion}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.bahmni.module</groupId>
