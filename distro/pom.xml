@@ -57,7 +57,7 @@
         <bahmniCommonsVersion>1.1.0</bahmniCommonsVersion>
         <teleconsultationVersion>2.0.0</teleconsultationVersion>
         <communicationVersion>1.2.0</communicationVersion>
-        <terminologyServicesVersion>1.0.0</terminologyServicesVersion>
+        <terminologyServicesVersion>1.0.1</terminologyServicesVersion>
         <cdssVersion>1.0.0</cdssVersion>
         <reportingCompatibilityVersion>2.0.9</reportingCompatibilityVersion>
     </properties>
