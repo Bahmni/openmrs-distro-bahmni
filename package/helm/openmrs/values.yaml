@@ -7,6 +7,7 @@ global:
   nodeSelector: {}
   affinity: {}
   tolerations: {}
+  TZ: "UTC"
 
 metadata:
   labels:
@@ -42,6 +43,7 @@ config:
   MAIL_SMTP_PORT: ""
   MAIL_SMTP_HOST: ""
   OMRS_DOCKER_ENV: 'false'
+  OMRS_C3P0_MAX_SIZE: 50
 
 secrets:
   OMRS_DB_HOSTNAME: ""
@@ -73,6 +75,8 @@ volumes:
   clinicalForms:
     capacity: "1Gi"
   uploadedResults:
+    capacity: "2Gi"
+  uploadedFiles:
     capacity: "2Gi"
 nodeSelector: {}
 affinity: {}
