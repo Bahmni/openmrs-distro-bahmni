@@ -1,0 +1,91 @@
+{
+  "resources": {
+    "patient": [
+      {
+        "fieldName": "id",
+        "method": "correlate"
+      },
+      {
+        "fieldName": "identifier",
+        "method": "redact"
+      },
+      {
+        "fieldName": "address",
+        "method": "redact"
+      },
+      {
+        "fieldName": "name",
+        "method": "redact"
+      },
+      {
+        "fieldName": "telecom",
+        "method": "redact"
+      },
+      {
+        "fieldName": "birthDate",
+        "method": "firstOfMonth"
+      },
+      {
+        "fieldName": "deceasedDateTime",
+        "method": "firstOfMonth"
+      }
+    ],
+    "condition": [
+      {
+        "fieldName": "subject",
+        "method": "correlate"
+      },
+      {
+        "fieldName": "encounter",
+        "method": "redact"
+      },
+      {
+        "fieldName": "recorder",
+        "method": "redact"
+      },
+      {
+        "fieldName": "recordedDate",
+        "method": "redact"
+      }
+    ],
+    "medicationRequest": [
+      {
+        "fieldName": "subject",
+        "method": "correlate"
+      },
+      {
+        "fieldName": "priority",
+        "method": "redact"
+      },
+      {
+        "fieldName": "authoredOn",
+        "method": "redact"
+      },
+      {
+        "fieldName": "requester",
+        "method": "redact"
+      },
+      {
+        "fieldName": "dosageInstruction",
+        "method": "redact"
+      },
+      {
+        "fieldName": "encounter",
+        "method": "redact"
+      }
+    ],
+    "serviceRequest": [
+      {
+        "fieldName": "subject",
+        "method": "correlate"
+      },
+      {
+        "fieldName": "encounter",
+        "method": "redact"
+      }
+    ]
+  },
+  "parameters": {
+    "oneWayHashSalt": "Bahmni123"
+  }
+}

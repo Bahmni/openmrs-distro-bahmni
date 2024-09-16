@@ -78,6 +78,8 @@ spec:
               name: bahmni-config
             - mountPath: /home/bahmni/uploaded_results
               name: bahmni-uploaded-results
+            - mountPath: /home/bahmni/uploaded-files
+              name: bahmni-uploaded-files
       restartPolicy: Always
       volumes:
       #   - name: openmrs-data
@@ -101,3 +103,6 @@ spec:
         - name: bahmni-uploaded-results
           persistentVolumeClaim:
             claimName: bahmni-uploaded-results-pvc
+        - name: bahmni-uploaded-files
+          persistentVolumeClaim:
+            claimName: bahmni-uploaded-files-pvc
