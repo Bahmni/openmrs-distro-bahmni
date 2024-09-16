@@ -49,7 +49,7 @@
         <appointmentsVersion>1.8.0-SNAPSHOT</appointmentsVersion>
         <pacsQueryVersion>1.4.0</pacsQueryVersion>
         <fhir2ModuleVersion>2.1.0</fhir2ModuleVersion>
-        <fhir2ExtensionModuleVersion>1.3.0</fhir2ExtensionModuleVersion>
+        <fhir2ExtensionModuleVersion>1.4.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>2.1.0</openConceptLabVersion>
         <initializerModuleVersion>2.4.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.1.0-SNAPSHOT</bahmniCommonsVersion>
@@ -58,7 +58,7 @@
         <bahmniEventsVersion>1.0.0-SNAPSHOT</bahmniEventsVersion>
         <reportingcompatibilityVersion>2.0.9</reportingcompatibilityVersion>
         <medicationAdministrationVersion>1.0.0</medicationAdministrationVersion>
-        <bahmniIpdVersion>1.1.0-SNAPSHOT</bahmniIpdVersion>
+        <bahmniIpdVersion>1.2.0-SNAPSHOT</bahmniIpdVersion>
 
     </properties>
 
