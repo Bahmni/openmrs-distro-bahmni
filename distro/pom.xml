@@ -28,7 +28,7 @@
         <eventModuleVersion>2.10.0</eventModuleVersion>
         <owaVersion>1.13.0</owaVersion>
         <htmlwidgetsVersion>1.10.0</htmlwidgetsVersion>
-        <idgenModuleVersion>4.7.0</idgenModuleVersion>
+        <idgenModuleVersion>4.14.0</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.4.0</idgenWebServicesModuleVersion>
         <legacyUiOmodVersion>1.21.0</legacyUiOmodVersion>
         <mailappenderVersion>0.94.3</mailappenderVersion>
