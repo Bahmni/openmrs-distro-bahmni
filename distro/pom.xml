@@ -51,7 +51,7 @@
         <appointmentsVersion>2.0.2</appointmentsVersion>
         <pacsQueryVersion>1.4.0</pacsQueryVersion>
         <fhir2ModuleVersion>2.3.0-SNAPSHOT</fhir2ModuleVersion>
-        <fhir2ExtensionModuleVersion>1.3.1</fhir2ExtensionModuleVersion>
+        <fhir2ExtensionModuleVersion>1.4.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>2.3.0</openConceptLabVersion>
         <initializerModuleVersion>2.7.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.1.0</bahmniCommonsVersion>
