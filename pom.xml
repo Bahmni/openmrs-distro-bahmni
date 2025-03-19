@@ -78,6 +78,11 @@
 			<name>Mekom Solutions Nexus Snapshots</name>
 			<url>https://nexus.mekomsolutions.net/repository/maven-snapshots</url>
 		</repository>
+		<repository>
+			<id>www.dcm4che.org</id>
+			<name>dcm4che Repository</name>
+			<url>https://www.dcm4che.org/maven2</url>
+    	</repository>
 	</repositories>
 
 	<pluginRepositories>
