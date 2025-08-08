@@ -54,7 +54,7 @@
         <fhir2ExtensionModuleVersion>1.4.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>2.3.0</openConceptLabVersion>
         <initializerModuleVersion>2.7.0</initializerModuleVersion>
-        <bahmniCommonsVersion>1.1.0</bahmniCommonsVersion>
+        <bahmniCommonsVersion>1.2.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>2.0.0</teleconsultationVersion>
         <communicationVersion>1.2.0</communicationVersion>
         <terminologyServicesVersion>1.1.0-SNAPSHOT</terminologyServicesVersion>
