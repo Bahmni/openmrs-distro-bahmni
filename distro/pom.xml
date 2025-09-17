@@ -58,7 +58,7 @@
         <teleconsultationVersion>2.0.0</teleconsultationVersion>
         <communicationVersion>1.2.0</communicationVersion>
         <terminologyServicesVersion>1.1.0-SNAPSHOT</terminologyServicesVersion>
-        <cdssVersion>1.0.0</cdssVersion>
+        <cdssVersion>1.1.0-SNAPSHOT</cdssVersion>
         <reportingCompatibilityVersion>2.0.9</reportingCompatibilityVersion>
     </properties>
 
