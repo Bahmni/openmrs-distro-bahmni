@@ -27,7 +27,7 @@
         <emrapiModuleVersion>1.36.0</emrapiModuleVersion>
         <episodesVersion>1.1.0</episodesVersion>
         <eventModuleVersion>2.10.0</eventModuleVersion>
-        <owaVersion>1.14.0</owaVersion>
+        <owaVersion>1.15.0</owaVersion>
         <htmlwidgetsVersion>1.11.0</htmlwidgetsVersion>
         <idgenModuleVersion>4.14.0</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.4.0</idgenWebServicesModuleVersion>
@@ -38,14 +38,14 @@
         <metadataSharingVersion>1.9.0</metadataSharingVersion>
         <openMRSVersion>2.5.14</openMRSVersion>
         <operationTheaterVersion>1.8.0</operationTheaterVersion>
-        <providerManagementVersion>2.14.0</providerManagementVersion>
+        <providerManagementVersion>2.16.0</providerManagementVersion>
         <rulesEngineVersion>1.0.0</rulesEngineVersion>
         <reportingVersion>1.26.0</reportingVersion>
         <serializationVersion>0.2.16</serializationVersion>
         <uicommonsModuleVersion>2.25.0</uicommonsModuleVersion>
         <uiframeworkModuleVersion>3.24.0</uiframeworkModuleVersion>
         <uilibraryVersion>2.0.7</uilibraryVersion>
-        <webServicesRestVersion>2.44.0</webServicesRestVersion>
+        <webServicesRestVersion>2.50.0</webServicesRestVersion>
         <reportingRestVersion>1.14.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.4.0</bahmniIEOmodVersion>
         <appointmentsVersion>2.0.2</appointmentsVersion>
@@ -53,7 +53,7 @@
         <fhir2ModuleVersion>2.5.0</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>1.4.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>2.3.0</openConceptLabVersion>
-        <initializerModuleVersion>2.7.0</initializerModuleVersion>
+        <initializerModuleVersion>2.9.0</initializerModuleVersion>
         <bahmniCommonsVersion>1.2.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>2.0.0</teleconsultationVersion>
         <communicationVersion>1.2.0</communicationVersion>
