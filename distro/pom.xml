@@ -24,7 +24,7 @@
         <bahmniIpdVersion>1.1.1</bahmniIpdVersion>
         <bedManagementVersion>6.0.0</bedManagementVersion>
         <calculationVersion>1.3.0</calculationVersion>
-        <emrapiModuleVersion>1.36.0</emrapiModuleVersion>
+        <emrapiModuleVersion>2.3.0</emrapiModuleVersion>
         <episodesVersion>1.1.0</episodesVersion>
         <eventModuleVersion>2.10.0</eventModuleVersion>
         <owaVersion>1.15.0</owaVersion>
@@ -36,7 +36,7 @@
         <medicationAdministrationVersion>1.0.0</medicationAdministrationVersion>
         <metadataMappingVersion>1.6.0</metadataMappingVersion>
         <metadataSharingVersion>1.9.0</metadataSharingVersion>
-        <openMRSVersion>2.5.14</openMRSVersion>
+        <openMRSVersion>2.6.15</openMRSVersion>
         <operationTheaterVersion>1.8.0</operationTheaterVersion>
         <providerManagementVersion>2.16.0</providerManagementVersion>
         <rulesEngineVersion>1.0.0</rulesEngineVersion>
@@ -113,11 +113,11 @@
             <artifactId>fhir-ts-services-int-omod</artifactId>
             <version>${terminologyServicesVersion}</version>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>org.bahmni.module</groupId>
             <artifactId>fhir-cdss-int-omod</artifactId>
             <version>${cdssVersion}</version>
-        </dependency>
+        </dependency>  -->
         <!-- end -->
 
         <dependency>
@@ -182,11 +182,11 @@
             <version>${calculationVersion}</version>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.bahmni.module</groupId>
             <artifactId>medication-administration-omod</artifactId>
             <version>${medicationAdministrationVersion}</version>
-        </dependency>
+        </dependency> -->
 
         <dependency>
             <groupId>org.openmrs.module</groupId>
@@ -213,11 +213,11 @@
             <version>${eventModuleVersion}</version>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>fhir2-omod</artifactId>
             <version>${fhir2ModuleVersion}</version>
-        </dependency>
+        </dependency> -->
 
         <!-- end -->
 
@@ -282,11 +282,11 @@
             <version>${pacsQueryVersion}</version>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.bahmni.module</groupId>
             <artifactId>fhir2Extension-omod</artifactId>
             <version>${fhir2ExtensionModuleVersion}</version>
-        </dependency>
+        </dependency> -->
 
         <dependency>
             <groupId>org.bahmni.module</groupId>
