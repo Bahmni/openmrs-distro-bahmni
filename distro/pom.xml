@@ -5,7 +5,7 @@
     <parent>
         <artifactId>bahmni</artifactId>
         <groupId>org.openmrs.distro</groupId>
-        <version>1.2.0</version>
+        <version>1.2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -60,7 +60,7 @@
         <terminologyServicesVersion>1.1.0</terminologyServicesVersion>
         <cdssVersion>1.1.0</cdssVersion>
         <reportingCompatibilityVersion>2.0.9</reportingCompatibilityVersion>
-        <fhir2addlextenstionVersion>1.0.0</fhir2addlextenstionVersion>
+        <fhir2addlextenstionVersion>1.0.0-SNAPSHOT</fhir2addlextenstionVersion>
     </properties>
 
     <dependencies>
