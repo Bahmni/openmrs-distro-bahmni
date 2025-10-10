@@ -60,6 +60,7 @@
         <terminologyServicesVersion>1.1.0-SNAPSHOT</terminologyServicesVersion>
         <cdssVersion>1.1.0-SNAPSHOT</cdssVersion>
         <reportingCompatibilityVersion>2.0.9</reportingCompatibilityVersion>
+        <fhir2addlextenstionVersion>1.0.0-SNAPSHOT</fhir2addlextenstionVersion>
     </properties>
 
     <dependencies>
@@ -117,6 +118,11 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>fhir-cdss-int-omod</artifactId>
             <version>${cdssVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>fhir2addlextension-omod</artifactId>
+            <version>${fhir2addlextenstionVersion}</version>
         </dependency>
         <!-- end -->
 
