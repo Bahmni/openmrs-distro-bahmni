@@ -36,7 +36,7 @@
         <medicationAdministrationVersion>2.0.0-SNAPSHOT</medicationAdministrationVersion>
         <metadataMappingVersion>1.6.0</metadataMappingVersion>
         <metadataSharingVersion>1.9.0</metadataSharingVersion>
-        <openMRSVersion>2.5.14</openMRSVersion>
+        <openMRSVersion>2.6.15</openMRSVersion>
         <operationTheaterVersion>1.8.0</operationTheaterVersion>
         <providerManagementVersion>2.14.0</providerManagementVersion>
         <rulesEngineVersion>1.0.0</rulesEngineVersion>
