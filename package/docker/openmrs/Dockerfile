@@ -1,4 +1,4 @@
-FROM openmrs/openmrs-core:2.5.x-nightly
+FROM openmrs/openmrs-core:2.6.15
 
 ENV JMX_PROMETHEUS_JAVAAGENT_VERSION=0.18.0
 ENV OPENMRS_APPLICATION_DATA_DIRECTORY=/openmrs/data
@@ -22,7 +22,7 @@ COPY distro/target/distro/bacteriology-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECT
 COPY distro/target/distro/bahmni-commons-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmni.ie.apps-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmnicore-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/bahmni-ipd-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# COPY distro/target/distro/bahmni-ipd-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bedmanagement-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/calculation-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/emrapi-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -55,7 +55,7 @@ COPY distro/target/distro/uiframework*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTOR
 COPY distro/target/distro/uilibrary*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/fhir-ts-services-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# COPY distro/target/distro/fhir-ts-services-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/fhir-cdss-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/fhir2addlextension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
