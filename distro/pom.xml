@@ -188,11 +188,11 @@
             <version>${calculationVersion}</version>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.bahmni.module</groupId>
             <artifactId>medication-administration-omod</artifactId>
             <version>${medicationAdministrationVersion}</version>
-        </dependency>
+        </dependency> -->
 
         <dependency>
             <groupId>org.openmrs.module</groupId>
@@ -219,11 +219,11 @@
             <version>${eventModuleVersion}</version>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>fhir2-omod</artifactId>
             <version>${fhir2ModuleVersion}</version>
-        </dependency>
+        </dependency> -->
 
         <!-- end -->
 
