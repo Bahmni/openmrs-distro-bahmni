@@ -45,7 +45,7 @@
         <uicommonsModuleVersion>2.25.0</uicommonsModuleVersion>
         <uiframeworkModuleVersion>3.24.0</uiframeworkModuleVersion>
         <uilibraryVersion>2.0.7</uilibraryVersion>
-        <webServicesRestVersion>2.49.0</webServicesRestVersion>
+        <webServicesRestVersion>2.50.0</webServicesRestVersion>
         <reportingRestVersion>1.14.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.4.0</bahmniIEOmodVersion>
         <appointmentsVersion>2.0.2</appointmentsVersion>
