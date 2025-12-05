@@ -48,7 +48,7 @@
         <webServicesRestVersion>2.50.0</webServicesRestVersion>
         <reportingRestVersion>1.14.0</reportingRestVersion>
         <bahmniIEOmodVersion>1.4.0</bahmniIEOmodVersion>
-        <appointmentsVersion>2.0.2</appointmentsVersion>
+        <appointmentsVersion>2.1.0-SNAPSHOT</appointmentsVersion>
         <pacsQueryVersion>1.4.0</pacsQueryVersion>
         <fhir2ModuleVersion>2.5.0</fhir2ModuleVersion>
         <fhir2ExtensionModuleVersion>2.0.0-SNAPSHOT</fhir2ExtensionModuleVersion>
