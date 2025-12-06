@@ -16,7 +16,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <addressHierarchyVersion>2.21.0</addressHierarchyVersion>
-        <appframeworkModuleVersion>2.17.0</appframeworkModuleVersion>
         <atomfeedModuleVersion>2.6.3</atomfeedModuleVersion>
         <bacteriologyVersion>1.3.0</bacteriologyVersion>
         <auditLogVersion>1.3.0</auditLogVersion>
@@ -24,7 +23,7 @@
         <bahmniIpdVersion>1.1.1</bahmniIpdVersion>
         <bedManagementVersion>6.0.0</bedManagementVersion>
         <calculationVersion>1.3.0</calculationVersion>
-        <emrapiModuleVersion>2.3.0</emrapiModuleVersion>
+        <emrapiModuleVersion>2.4.0</emrapiModuleVersion>
         <episodesVersion>1.3.0-SNAPSHOT</episodesVersion>
         <eventModuleVersion>2.10.0</eventModuleVersion>
         <owaVersion>1.15.0</owaVersion>
@@ -132,11 +131,6 @@
             <version>${bedManagementVersion}</version>
         </dependency>
         <!-- Modules developed and maintained in OpenMRS -->
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appframework-omod</artifactId>
-            <version>${appframeworkModuleVersion}</version>
-        </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>legacyui-omod</artifactId>
