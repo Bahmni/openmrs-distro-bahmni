@@ -9,6 +9,9 @@ on:
     paths-ignore:
       - "**.md"
   workflow_dispatch:
+  repository_dispatch:
+    types:
+    - fhir2_extension_updated
 
 jobs:
   build-publish-docker-helm:
