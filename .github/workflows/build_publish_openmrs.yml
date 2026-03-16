@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types:
-    - fhir2_extension_updated
+    - fhir2_adittional_extension_publish
 
 jobs:
   build-publish-docker-helm:
