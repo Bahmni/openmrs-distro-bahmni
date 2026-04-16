@@ -62,6 +62,7 @@
         <cdssVersion>2.0.0-SNAPSHOT</cdssVersion>
         <reportingCompatibilityVersion>2.0.9</reportingCompatibilityVersion>
         <fhir2addlextenstionVersion>1.0.0-SNAPSHOT</fhir2addlextenstionVersion>
+        <immunizationVersion>1.0.0-SNAPSHOT</immunizationVersion>
     </properties>
 
     <dependencies>
@@ -129,6 +130,11 @@
             <groupId>org.bahmni.module</groupId>
             <artifactId>fhir2addlextension-omod</artifactId>
             <version>${fhir2addlextenstionVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bahmni.module</groupId>
+            <artifactId>immunization-omod</artifactId>
+            <version>${immunizationVersion}</version>
         </dependency>
         <!-- end -->
 
