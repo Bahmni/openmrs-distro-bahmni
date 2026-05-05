@@ -10,6 +10,7 @@ envsubst < /etc/bahmni-emr/templates/openmrs-runtime.properties.template > ${OPE
 envsubst < /etc/bahmni-emr/templates/mail-config.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/mail-config.properties
 envsubst < /etc/bahmni-emr/templates/appointment.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/appointment.properties
 envsubst < /etc/bahmni-emr/templates/rulesengine-concept.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/rulesengine-concept.properties
+envsubst < /etc/bahmni-emr/templates/odoo-config.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/odoo-config.properties
 /openmrs/wait-for-it.sh --timeout=3600 ${OMRS_DB_HOSTNAME}:3306
 
 echo "Copy Configuration Folder from bahmni_config"
