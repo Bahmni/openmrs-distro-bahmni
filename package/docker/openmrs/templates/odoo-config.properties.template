@@ -1,0 +1,4 @@
+odoo.base_url=${ODOO_HOST}
+odoo.database=${ODOO_DATABASE}
+odoo.username=${ODOO_USERNAME}
+odoo.password=${ODOO_PASSWORD}

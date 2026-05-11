@@ -24,3 +24,5 @@ data:
   OMRS_DOCKER_ENV: "{{ .Values.config.OMRS_DOCKER_ENV }}"
   TZ: "{{ .Values.global.TZ }}"
   OMRS_C3P0_MAX_SIZE: "{{ .Values.config.OMRS_C3P0_MAX_SIZE }}"
+  ODOO_HOST: "{{ .Values.config.ODOO_HOST }}"
+  ODOO_DATABASE: "{{ .Values.config.ODOO_DATABASE }}"

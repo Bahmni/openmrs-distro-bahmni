@@ -44,6 +44,8 @@ config:
   MAIL_SMTP_HOST: ""
   OMRS_DOCKER_ENV: 'false'
   OMRS_C3P0_MAX_SIZE: 50
+  ODOO_HOST: ""
+  ODOO_DATABASE: ""
 
 secrets:
   OMRS_DB_HOSTNAME: ""
@@ -53,6 +55,8 @@ secrets:
   OPENELIS_ATOMFEED_PASSWORD: ""
   MAIL_USER: ""
   MAIL_PASSWORD: ""
+  ODOO_PASSWORD: ""
+  ODOO_USERNAME: ""
 
 resources: {}
 
