@@ -6,6 +6,29 @@ ENV OMRS_DB_EXTRA_ARGS="&zeroDateTimeBehavior=convertToNull"
 
 USER root
 
+# Patch critical CVEs by overlaying upgraded JARs in openmrs.war.
+RUN set -eux \
+    && yum install -y zip unzip \
+    && mkdir -p /tmp/openmrs-war \
+    && unzip -q /openmrs/distribution/openmrs_core/openmrs.war -d /tmp/openmrs-war \
+    && rm -f /tmp/openmrs-war/WEB-INF/lib/spring-web-*.jar \
+             /tmp/openmrs-war/WEB-INF/lib/spring-webmvc-*.jar \
+             /tmp/openmrs-war/WEB-INF/lib/liquibase-core-*.jar \
+             /tmp/openmrs-war/WEB-INF/lib/postgresql-*.jar \
+    && curl -fL -o /tmp/openmrs-war/WEB-INF/lib/spring-web-5.3.39.jar \
+         https://repo1.maven.org/maven2/org/springframework/spring-web/5.3.39/spring-web-5.3.39.jar \
+    && curl -fL -o /tmp/openmrs-war/WEB-INF/lib/spring-webmvc-5.3.39.jar \
+         https://repo1.maven.org/maven2/org/springframework/spring-webmvc/5.3.39/spring-webmvc-5.3.39.jar \
+    && curl -fL -o /tmp/openmrs-war/WEB-INF/lib/liquibase-core-4.19.1.jar \
+         https://repo1.maven.org/maven2/org/liquibase/liquibase-core/4.19.1/liquibase-core-4.19.1.jar \
+    && curl -fL -o /tmp/openmrs-war/WEB-INF/lib/postgresql-42.7.5.jar \
+         https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.5/postgresql-42.7.5.jar \
+    && rm /openmrs/distribution/openmrs_core/openmrs.war \
+    && (cd /tmp/openmrs-war && zip -qr /openmrs/distribution/openmrs_core/openmrs.war .) \
+    && rm -rf /tmp/openmrs-war \
+    && yum clean all \
+    && rm -rf /var/cache/yum
+
 # Creating Config Directories
 RUN mkdir -p /tmp/artifacts/
 RUN mkdir -p /etc/jvm_metrics/
