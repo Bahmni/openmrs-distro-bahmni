@@ -46,6 +46,7 @@ config:
   OMRS_C3P0_MAX_SIZE: 50
   ODOO_HOST: ""
   ODOO_DATABASE: ""
+  TEMPLATE_SERVICE_URL: "http://template-service:8080/template-service"
 
 secrets:
   OMRS_DB_HOSTNAME: ""
