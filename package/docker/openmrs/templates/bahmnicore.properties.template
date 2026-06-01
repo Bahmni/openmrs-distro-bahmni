@@ -16,3 +16,9 @@ patient.feed.uri=http://${OPENELIS_HOST}:${OPENELIS_PORT}/openelis/ws/feed/patie
 feed.maxFailedEvents=10000
 feed.connectionTimeoutInMilliseconds=10000
 feed.replyTimeoutInMilliseconds=20000
+
+# Required: URL of the bahmni-template-service container needs to be added to the .env file used by the Docker Compose setup.
+# Example: http://template-service:8080/template-service
+template.service.url=${TEMPLATE_SERVICE_URL}
+template.service.connectTimeoutInMilliseconds=5000
+template.service.readTimeoutInMilliseconds=10000

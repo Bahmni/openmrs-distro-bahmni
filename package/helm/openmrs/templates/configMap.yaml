@@ -26,3 +26,4 @@ data:
   OMRS_C3P0_MAX_SIZE: "{{ .Values.config.OMRS_C3P0_MAX_SIZE }}"
   ODOO_HOST: "{{ .Values.config.ODOO_HOST }}"
   ODOO_DATABASE: "{{ .Values.config.ODOO_DATABASE }}"
+  TEMPLATE_SERVICE_URL: "{{ .Values.config.TEMPLATE_SERVICE_URL }}"
