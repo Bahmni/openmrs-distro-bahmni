@@ -2,4 +2,4 @@ apiVersion: v2
 name: openmrs
 description: Helm Chart for Bahmni OpenMRS
 type: application
-version: 1.0.0
+version: 1.2.0
