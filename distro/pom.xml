@@ -40,7 +40,7 @@
         <openMRSVersion>2.6.15</openMRSVersion>
         <operationTheaterVersion>1.8.0</operationTheaterVersion>
         <providerManagementVersion>2.16.0</providerManagementVersion>
-        <rulesEngineVersion>1.0.0</rulesEngineVersion>
+        <rulesEngineVersion>2.0.0-SNAPSHOT</rulesEngineVersion>
         <reportingVersion>1.26.0</reportingVersion>
         <serializationVersion>0.2.16</serializationVersion>
         <uicommonsModuleVersion>2.25.0</uicommonsModuleVersion>
