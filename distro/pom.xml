@@ -58,7 +58,7 @@
         <bahmniCommonsVersion>2.0.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>2.0.0</teleconsultationVersion>
         <communicationVersion>1.2.0</communicationVersion>
-        <terminologyServicesVersion>2.0.0-SNAPSHOT</terminologyServicesVersion>
+        <terminologyServicesVersion>3.0.0-SNAPSHOT</terminologyServicesVersion>
         <cdssVersion>2.0.0-SNAPSHOT</cdssVersion>
         <reportingCompatibilityVersion>2.0.9</reportingCompatibilityVersion>
         <fhir2addlextenstionVersion>1.0.0-SNAPSHOT</fhir2addlextenstionVersion>
