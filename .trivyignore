@@ -1,0 +1,16 @@
+# Tomcat CVEs - bundled with openmrs-core base image; standalone upgrade not supported
+CVE-2024-52316
+CVE-2025-24813
+CVE-2026-41293
+CVE-2026-43512
+CVE-2026-43515
+
+# Liquibase CVE - bundled with openmrs-core; requires OpenMRS upstream upgrade
+CVE-2022-0839
+
+# PostgreSQL JDBC driver CVE - bundled with openmrs-core; requires OpenMRS upstream upgrade
+CVE-2024-1597
+
+# Spring Framework CVEs - Spring 5.x → 6.x upgrade requires OpenMRS core migration
+CVE-2016-1000027
+CVE-2023-20860
