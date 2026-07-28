@@ -1,3 +1,6 @@
+# OpenMRS CVE - upgrading to 2.7.9 breaks Bahmni modules; needs compatibility testing
+CVE-2026-40076
+
 # Tomcat CVEs - bundled with openmrs-core base image; standalone upgrade not supported
 CVE-2024-52316
 CVE-2025-24813
