@@ -23,12 +23,12 @@ COPY distro/target/distro/appframework-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECT
 # COPY distro/target/distro/bahmni.ie.apps-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/bahmnicore-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/bahmni-ipd-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/bedmanagement-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bedmanagement-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/calculation-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/emrapi-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/episodes-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/event*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/fhir2*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/fhir2-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/htmlwidgets*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/idgen*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/initializer*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -43,12 +43,12 @@ COPY distro/target/distro/openconceptlab*.omod  ${OPENMRS_APPLICATION_DATA_DIREC
 # COPY distro/target/distro/operationtheater*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/owa*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/pacsquery*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/providermanagement*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+#COPY distro/target/distro/providermanagement*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/reference-data*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/reporting*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/reportingcompatibility*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/reportingrest*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/rulesengine*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+#COPY distro/target/distro/rulesengine*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/serialization.xstream*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/teleconsultation*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/uicommons*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -58,6 +58,7 @@ COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DI
 # COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/fhir-ts-services-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/fhir-cdss-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# COPY distro/target/distro/fhir2Extension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/fhir2addlextension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
