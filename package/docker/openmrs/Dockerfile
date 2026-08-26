@@ -62,6 +62,15 @@ COPY distro/target/distro/fhir2Extension*.omod  ${OPENMRS_APPLICATION_DATA_DIREC
 # (PATCHED) COPY distro/target/distro/fhir2addlextension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
+# Copy Patched OMODS
+COPY package/resources/patched-omods/appointments-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/operationtheater-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/bahmni-commons-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/bahmnicore-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/openelis-atomfeed-client*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/fhir2addlextension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+
+
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
