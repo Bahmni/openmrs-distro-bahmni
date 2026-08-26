@@ -18,7 +18,7 @@ COPY distro/target/distro/addresshierarchy-*.omod  ${OPENMRS_APPLICATION_DATA_DI
 COPY distro/target/distro/appframework-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/appointments-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/auditlog-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/bacteriology-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bacteriology-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/bahmni-commons-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/bahmni.ie.apps-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/bahmnicore-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
