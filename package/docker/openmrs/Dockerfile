@@ -22,7 +22,7 @@ COPY distro/target/distro/bacteriology-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECT
 # (PATCHED) COPY distro/target/distro/bahmni-commons-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmni.ie.apps-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/bahmnicore-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/bahmni-ipd-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bahmni-ipd-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bedmanagement-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/calculation-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/emrapi-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -33,12 +33,12 @@ COPY distro/target/distro/htmlwidgets*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTOR
 COPY distro/target/distro/idgen*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/initializer*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/legacyui*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/medication-administration-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/medication-administration-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/metadatamapping*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/metadatasharing*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/openconceptlab*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/openelis-atomfeed-client*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/elis-fhir-result-support-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/elis-fhir-result-support-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/operationtheater*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/owa*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -58,9 +58,9 @@ COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DI
 COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/fhir-ts-services-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/fhir-cdss-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/fhir2Extension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/fhir2addlextension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/fhir2Extension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# (PATCHED) COPY distro/target/distro/fhir2addlextension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
