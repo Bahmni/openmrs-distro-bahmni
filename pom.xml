@@ -13,6 +13,13 @@
     <packaging>pom</packaging>
 	<name>Bahmni Distribution Parent</name>
 
+	 <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
 	<developers>
 		<developer>
 			<name>mario-areias</name>
