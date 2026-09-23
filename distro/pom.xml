@@ -13,6 +13,13 @@
     <name>Bahmni Distribution</name>
     <description>Scripts for building the Bahmni distribution</description>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <addressHierarchyVersion>2.21.0</addressHierarchyVersion>
