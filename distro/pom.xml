@@ -63,7 +63,7 @@
         <openConceptLabVersion>2.3.0</openConceptLabVersion>
         <initializerModuleVersion>2.9.0</initializerModuleVersion>
         <bahmniCommonsVersion>2.2.0-SNAPSHOT</bahmniCommonsVersion>
-        <teleconsultationVersion>2.1.0-SNAPSHOT</teleconsultationVersion>
+        <teleconsultationVersion>2.0.0</teleconsultationVersion>
         <communicationVersion>1.2.0</communicationVersion>
         <terminologyServicesVersion>3.1.0-SNAPSHOT</terminologyServicesVersion>
         <cdssVersion>2.1.0-SNAPSHOT</cdssVersion>
