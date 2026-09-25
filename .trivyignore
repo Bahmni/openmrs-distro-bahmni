@@ -1,0 +1,19 @@
+# OpenMRS CVE - upgrading to 2.7.9 breaks Bahmni modules; needs compatibility testing
+CVE-2026-40076
+
+# Tomcat CVEs - bundled with openmrs-core; cannot upgrade independently
+CVE-2024-52316
+CVE-2025-24813
+CVE-2026-41293
+CVE-2026-43512
+CVE-2026-43515
+
+# Liquibase CVE - bundled with openmrs-core
+CVE-2022-0839
+
+# PostgreSQL JDBC CVE - bundled with openmrs-core
+CVE-2024-1597
+
+# Spring Framework CVEs - requires Spring 6.x migration in OpenMRS upstream
+CVE-2016-1000027
+CVE-2023-20860

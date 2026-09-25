@@ -5,13 +5,20 @@
 
 	<groupId>org.openmrs.distro</groupId>
 	<artifactId>bahmni</artifactId>
-	<version>1.2.0</version>
+	<version>2.1.0-SNAPSHOT</version>
     <modules>
         <module>openmrs-module-bahmni.configuration</module>
         <module>distro</module>
     </modules>
     <packaging>pom</packaging>
 	<name>Bahmni Distribution Parent</name>
+
+	 <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
 
 	<developers>
 		<developer>
