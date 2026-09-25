@@ -26,28 +26,28 @@
         <appframeworkModuleVersion>2.20.0-SNAPSHOT</appframeworkModuleVersion>
         <atomfeedModuleVersion>2.7.0-SNAPSHOT</atomfeedModuleVersion>
         <bacteriologyVersion>1.3.0</bacteriologyVersion>
-        <auditLogVersion>1.3.0</auditLogVersion>
-        <bahmniCoreVersion>2.1.0-SNAPSHOT</bahmniCoreVersion>
-        <bahmniIpdVersion>1.2.0-SNAPSHOT</bahmniIpdVersion>
+        <auditLogVersion>2.0.0</auditLogVersion>
+        <bahmniCoreVersion>3.1.0-SNAPSHOT</bahmniCoreVersion>
+        <bahmniIpdVersion>1.3.0-SNAPSHOT</bahmniIpdVersion>
         <bedManagementVersion>7.3.0-SNAPSHOT</bedManagementVersion>
         <calculationVersion>2.1.0-SNAPSHOT</calculationVersion>
-        <elisFhirSupportVersion>1.0.0-SNAPSHOT</elisFhirSupportVersion>
+        <elisFhirSupportVersion>1.1.0-SNAPSHOT</elisFhirSupportVersion>
         <emrapiModuleVersion>3.5.0-SNAPSHOT</emrapiModuleVersion>
-        <episodesVersion>1.3.0-SNAPSHOT</episodesVersion>
+        <episodesVersion>2.1.0-SNAPSHOT</episodesVersion>
         <eventModuleVersion>4.1.0-SNAPSHOT</eventModuleVersion>
         <owaVersion>1.16.0-SNAPSHOT</owaVersion>
         <htmlwidgetsVersion>2.1.0-SNAPSHOT</htmlwidgetsVersion>
         <idgenModuleVersion>6.0.0-SNAPSHOT</idgenModuleVersion>
         <idgenWebServicesModuleVersion>1.5.0</idgenWebServicesModuleVersion>
         <legacyUiOmodVersion>2.3.0-SNAPSHOT</legacyUiOmodVersion>
-        <mailappenderVersion>1.0.0</mailappenderVersion>
-        <medicationAdministrationVersion>2.0.0-SNAPSHOT</medicationAdministrationVersion>
+        <mailappenderVersion>2.1.0-SNAPSHOT</mailappenderVersion>
+        <medicationAdministrationVersion>2.1.0-SNAPSHOT</medicationAdministrationVersion>
         <metadataMappingVersion>2.1.0-SNAPSHOT</metadataMappingVersion>
         <metadataSharingVersion>1.11.0-SNAPSHOT</metadataSharingVersion>
         <openMRSVersion>2.8.9</openMRSVersion>
         <operationTheaterVersion>1.9.0-SNAPSHOT</operationTheaterVersion>
         <providerManagementVersion>3.0.0-SNAPSHOT</providerManagementVersion>
-        <rulesEngineVersion>1.0.0</rulesEngineVersion>
+        <rulesEngineVersion>2.0.0-SNAPSHOT</rulesEngineVersion>
         <reportingVersion>2.2.0-SNAPSHOT</reportingVersion>
         <serializationVersion>0.4.0-SNAPSHOT</serializationVersion>
         <uicommonsModuleVersion>3.2.0-SNAPSHOT</uicommonsModuleVersion>
@@ -55,21 +55,21 @@
         <uilibraryVersion>3.0.0-SNAPSHOT</uilibraryVersion>
         <webServicesRestVersion>3.6.0-SNAPSHOT</webServicesRestVersion>
         <reportingRestVersion>2.1.0-SNAPSHOT</reportingRestVersion>
-        <bahmniIEOmodVersion>1.5.0-SNAPSHOT</bahmniIEOmodVersion>
-        <appointmentsVersion>2.2.0-SNAPSHOT</appointmentsVersion>
+        <bahmniIEOmodVersion>1.6.0-SNAPSHOT</bahmniIEOmodVersion>
+        <appointmentsVersion>2.3.0-SNAPSHOT</appointmentsVersion>
         <pacsQueryVersion>1.4.0</pacsQueryVersion>
         <fhir2ModuleVersion>2.8.0</fhir2ModuleVersion>
-        <fhir2ExtensionModuleVersion>2.0.0-SNAPSHOT</fhir2ExtensionModuleVersion>
+        <fhir2ExtensionModuleVersion>2.2.0-SNAPSHOT</fhir2ExtensionModuleVersion>
         <openConceptLabVersion>3.3.0-SNAPSHOT</openConceptLabVersion>
         <initializerModuleVersion>2.13.0-SNAPSHOT</initializerModuleVersion>
-        <bahmniCommonsVersion>2.0.0-SNAPSHOT</bahmniCommonsVersion>
+        <bahmniCommonsVersion>2.2.0-SNAPSHOT</bahmniCommonsVersion>
         <teleconsultationVersion>2.0.0</teleconsultationVersion>
         <communicationVersion>1.2.0</communicationVersion>
-        <terminologyServicesVersion>2.0.0-SNAPSHOT</terminologyServicesVersion>
-        <cdssVersion>2.0.0-SNAPSHOT</cdssVersion>
+        <terminologyServicesVersion>3.1.0-SNAPSHOT</terminologyServicesVersion>
+        <cdssVersion>2.1.0-SNAPSHOT</cdssVersion>
         <reportingCompatibilityVersion>3.0.0-SNAPSHOT</reportingCompatibilityVersion>
-        <fhir2addlextenstionVersion>1.0.0-SNAPSHOT</fhir2addlextenstionVersion>
-        <immunizationVersion>1.0.0-SNAPSHOT</immunizationVersion>
+        <fhir2addlextenstionVersion>1.1.0-SNAPSHOT</fhir2addlextenstionVersion>
+        <immunizationVersion>1.1.0-SNAPSHOT</immunizationVersion>
     </properties>
 
     <dependencies>
