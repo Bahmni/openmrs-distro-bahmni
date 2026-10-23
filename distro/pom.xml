@@ -34,7 +34,7 @@
         <elisFhirSupportVersion>1.1.0-SNAPSHOT</elisFhirSupportVersion>
         <emrapiModuleVersion>3.5.0-SNAPSHOT</emrapiModuleVersion>
         <episodesVersion>2.1.0-SNAPSHOT</episodesVersion>
-        <eventModuleVersion>4.1.0-SNAPSHOT</eventModuleVersion>
+        <eventModuleVersion>4.0.0</eventModuleVersion>
         <owaVersion>1.16.0-SNAPSHOT</owaVersion>
         <htmlwidgetsVersion>2.1.0-SNAPSHOT</htmlwidgetsVersion>
         <idgenModuleVersion>6.0.0-SNAPSHOT</idgenModuleVersion>
