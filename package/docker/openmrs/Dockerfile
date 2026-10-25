@@ -13,6 +13,19 @@ RUN mkdir -p /etc/jvm_metrics/
 # Download JMX Prometheus Java agent
 RUN curl -L -o /tmp/artifacts/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar "https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_PROMETHEUS_JAVAAGENT_VERSION}/jmx_prometheus_javaagent-${JMX_PROMETHEUS_JAVAAGENT_VERSION}.jar"
 
+# Used by envsubst command for replacing environment values at runtime
+RUN yum install -y \
+    gettext-base \
+    gettext \
+    acl
+
+# Install mysql client to run sql scripts
+RUN yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm \ 
+    && rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023 \ 
+    && yum install -y mysql-community-client \
+    && yum clean all \ 
+    && rm -rf /var/cache/yum
+
 # Copy omods to OpenMRS Application Data Directory
 COPY distro/target/distro/addresshierarchy-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/appframework-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -94,18 +107,6 @@ RUN mkdir -p /home/bahmni/uploaded_results
 RUN mkdir -p /home/bahmni/uploaded-files
 COPY package/resources/blank-user.png /etc/bahmni/
 
-# Used by envsubst command for replacing environment values at runtime
-RUN yum install -y \
-    gettext-base \
-    gettext \
-    acl
-
-# Install mysql client to run sql scripts
-RUN yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm \ 
-    && rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023 \ 
-    && yum install -y mysql-community-client \
-    && yum clean all \ 
-    && rm -rf /var/cache/yum
 
 # Modify file permissions for document_images directory
 RUN setfacl -d -m o::rx -m g::rx /home/bahmni/document_images/
