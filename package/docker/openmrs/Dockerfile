@@ -52,7 +52,7 @@ COPY distro/target/distro/metadatasharing*.omod  ${OPENMRS_APPLICATION_DATA_DIRE
 COPY distro/target/distro/openconceptlab*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/openelis-atomfeed-client*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/elis-fhir-result-support-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+# (PATCHED) COPY distro/target/distro/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/operationtheater*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/owa*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/pacsquery*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -85,6 +85,7 @@ COPY package/resources/patched-omods/fhir2addlextension*.omod ${OPENMRS_APPLICAT
 COPY package/resources/patched-omods/fhir2Extension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/elis-fhir-result-support-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 
 # Copy Configuration Files
