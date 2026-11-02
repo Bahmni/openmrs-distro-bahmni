@@ -84,8 +84,8 @@ COPY package/resources/patched-omods/openelis-atomfeed-client*.omod ${OPENMRS_AP
 COPY package/resources/patched-omods/fhir2addlextension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/fhir2Extension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/elis-fhir-result-support-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY distro/target/distro/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 
 # Copy Configuration Files
