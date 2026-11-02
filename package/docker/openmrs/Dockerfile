@@ -60,6 +60,7 @@ COPY distro/target/distro/fhir-ts-services-int-*.omod  ${OPENMRS_APPLICATION_DAT
 COPY distro/target/distro/fhir-cdss-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/fhir2addlextension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/oauth2login*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
@@ -68,6 +69,7 @@ COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmn
 COPY package/docker/openmrs/templates/appointment.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/rulesengine-concept.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/odoo-config.properties.template /etc/bahmni-emr/templates/
+COPY package/docker/openmrs/templates/oauth2.properties.template /etc/bahmni-emr/templates/
 
 # Setting Soft Links from bahmni_config (Moved from bahmni-web postinstall)
 RUN ln -s /etc/bahmni_config/openmrs/obscalculator ${OPENMRS_APPLICATION_DATA_DIRECTORY}/obscalculator
