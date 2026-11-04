@@ -1,5 +1,5 @@
-connection.url=jdbc\:mysql\://${DB_HOST}\:3306/${DB_DATABASE}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8&zeroDateTimeBehavior\=convertToNull
-module.allow_web_admin=${MODULE_WEB_ADMIN}
-connection.username=${DB_USERNAME}
-auto_update_database=${DB_AUTO_UPDATE}
-connection.password=${DB_PASSWORD}
+connection.url=jdbc\:mysql\://${OMRS_DB_HOSTNAME}\:3306/${OMRS_DB_NAME}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8&zeroDateTimeBehavior\=convertToNull
+module.allow_web_admin=${OMRS_MODULE_WEB_ADMIN}
+connection.username=${OMRS_DB_USERNAME}
+auto_update_database=${OMRS_AUTO_UPDATE_DATABASE}
+connection.password=${OMRS_DB_PASSWORD}

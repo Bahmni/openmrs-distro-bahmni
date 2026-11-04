@@ -29,11 +29,6 @@ config:
   OMRS_DB_NAME: openmrs
   OMRS_DEV_DEBUG_PORT: ""
   OMRS_MODULE_WEB_ADMIN: false
-  # Optional overrides for the names read by openmrs-runtime.properties.template.
-  # When empty, they fall back to the matching OMRS_* values.
-  DB_DATABASE: ""
-  DB_AUTO_UPDATE: ""
-  MODULE_WEB_ADMIN: ""
   OMRS_JAVA_SERVER_OPTS: ""
   OMRS_JAVA_MEMORY_OPTS: ""
   OPENELIS_HOST: openelis
@@ -63,10 +58,6 @@ secrets:
   OMRS_DB_HOSTNAME: ""
   OMRS_DB_USERNAME: ""
   OMRS_DB_PASSWORD: ""
-  # Optional overrides; when empty, they fall back to the matching OMRS_DB_* secrets.
-  DB_HOST: ""
-  DB_USERNAME: ""
-  DB_PASSWORD: ""
   OPENELIS_ATOMFEED_USER: ""
   OPENELIS_ATOMFEED_PASSWORD: ""
   MAIL_USER: ""
