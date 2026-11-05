@@ -32,7 +32,7 @@ COPY distro/target/distro/appframework-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECT
 # (PATCHED) COPY distro/target/distro/appointments-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/auditlog-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bacteriology-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# (PATCHED) COPY distro/target/distro/bahmni-commons-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/bahmni-commons-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmni.ie.apps-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/bahmnicore-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmni-ipd-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -78,7 +78,6 @@ COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECT
 # Copy Patched OMODS
 COPY package/resources/patched-omods/appointments-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/operationtheater-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY package/resources/patched-omods/bahmni-commons-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/bahmnicore-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/openelis-atomfeed-client*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/fhir2addlextension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
