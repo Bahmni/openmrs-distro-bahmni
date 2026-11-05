@@ -21,6 +21,9 @@ then
 fi
 mysql --host="${OMRS_DB_HOSTNAME}" --user="${OMRS_DB_USERNAME}" --password="${OMRS_DB_PASSWORD}" "${OMRS_DB_NAME}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
 
+# TODO: Delete this manual override of oauth2login.started once the OpenMRS OAuth2 module reads OAUTH2_ENABLED itself.
+#  Until then, this block copies the env setting into the database on every container start.
+
 echo "Reconciling OAuth2 module state (OAUTH2_ENABLED=${OAUTH2_ENABLED})..."
 if [ "${OAUTH2_ENABLED}" = "true" ]; then
   OAUTH2_STARTED_FLAG=true
