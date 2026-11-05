@@ -11,6 +11,7 @@ envsubst < /etc/bahmni-emr/templates/mail-config.properties.template > ${OPENMRS
 envsubst < /etc/bahmni-emr/templates/appointment.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/appointment.properties
 envsubst < /etc/bahmni-emr/templates/rulesengine-concept.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/rulesengine-concept.properties
 envsubst < /etc/bahmni-emr/templates/odoo-config.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/odoo-config.properties
+envsubst < /etc/bahmni-emr/templates/oauth2.properties.template > ${OPENMRS_APPLICATION_DATA_DIRECTORY}/oauth2.properties
 /openmrs/wait-for-it.sh --timeout=3600 ${OMRS_DB_HOSTNAME}:3306
 
 echo "Copy Configuration Folder from bahmni_config"
@@ -19,6 +20,17 @@ then
   cp -r /etc/bahmni_config/masterdata/configuration/ ${OPENMRS_APPLICATION_DATA_DIRECTORY}/
 fi
 mysql --host="${OMRS_DB_HOSTNAME}" --user="${OMRS_DB_USERNAME}" --password="${OMRS_DB_PASSWORD}" "${OMRS_DB_NAME}" -e "UPDATE global_property SET global_property.property_value = '' WHERE  global_property.property = 'search.indexVersion';" || true
+
+# TODO: Delete this manual override of oauth2login.started once the OpenMRS OAuth2 module reads OAUTH2_ENABLED itself.
+#  Until then, this block copies the env setting into the database on every container start.
+
+echo "Reconciling OAuth2 module state (OAUTH2_ENABLED=${OAUTH2_ENABLED})..."
+if [ "${OAUTH2_ENABLED}" = "true" ]; then
+  OAUTH2_STARTED_FLAG=true
+else
+  OAUTH2_STARTED_FLAG=false
+fi
+mysql --host="${OMRS_DB_HOSTNAME}" --user="${OMRS_DB_USERNAME}" --password="${OMRS_DB_PASSWORD}" "${OMRS_DB_NAME}" -e "UPDATE global_property SET property_value = '${OAUTH2_STARTED_FLAG}' WHERE property = 'oauth2login.started';" || true
 
 ./update_elis_host_port.sh
 
