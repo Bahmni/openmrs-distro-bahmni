@@ -71,18 +71,16 @@ COPY distro/target/distro/webservices.rest-*.omod  ${OPENMRS_APPLICATION_DATA_DI
 COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/fhir-ts-services-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # COPY distro/target/distro/fhir-cdss-int-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# (PATCHED) COPY distro/target/distro/fhir2Extension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/fhir2Extension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 # (PATCHED) COPY distro/target/distro/fhir2addlextension*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# (PATCHED) COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy Patched OMODS
 COPY package/resources/patched-omods/operationtheater-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/bahmnicore-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/openelis-atomfeed-client*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/fhir2addlextension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY package/resources/patched-omods/fhir2Extension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/elis-fhir-result-support-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY package/resources/patched-omods/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 
