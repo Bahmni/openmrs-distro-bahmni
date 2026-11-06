@@ -1,0 +1,15 @@
+oauth2.enabled=${OAUTH2_ENABLED}
+clientId=${OAUTH2_CLIENT_ID}
+clientSecret=${OAUTH2_CLIENT_SECRET}
+scope=${OAUTH2_SCOPE}
+userAuthorizationUri=${OAUTH2_BROWSER_URL}/realms/${OAUTH2_REALM}/protocol/openid-connect/auth
+logoutUri=${OAUTH2_BROWSER_URL}/realms/${OAUTH2_REALM}/protocol/openid-connect/logout?id_token_hint=[token]
+accessTokenUri=${OAUTH2_BASE_URL}/realms/${OAUTH2_REALM}/protocol/openid-connect/token
+userInfoUri=${OAUTH2_BASE_URL}/realms/${OAUTH2_REALM}/protocol/openid-connect/userinfo
+keysUrl=${OAUTH2_BASE_URL}/realms/${OAUTH2_REALM}/protocol/openid-connect/certs
+openmrs.mapping.user.username=preferred_username
+openmrs.mapping.user.systemId=sub
+openmrs.mapping.person.givenName=given_name
+openmrs.mapping.person.familyName=family_name
+openmrs.mapping.user.email=email
+openmrs.mapping.user.roles=roles

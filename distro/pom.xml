@@ -70,6 +70,7 @@
         <reportingCompatibilityVersion>3.0.0-SNAPSHOT</reportingCompatibilityVersion>
         <fhir2addlextenstionVersion>1.1.0-SNAPSHOT</fhir2addlextenstionVersion>
         <immunizationVersion>1.1.0-SNAPSHOT</immunizationVersion>
+        <oauth2LoginVersion>1.5.0</oauth2LoginVersion>
     </properties>
 
     <dependencies>
@@ -355,6 +356,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>reportingcompatibility-omod</artifactId>
             <version>${reportingCompatibilityVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>oauth2login-omod</artifactId>
+            <version>${oauth2LoginVersion}</version>
         </dependency>
         <!-- end -->
     </dependencies>

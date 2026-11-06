@@ -47,6 +47,12 @@ config:
   ODOO_HOST: ""
   ODOO_DATABASE: ""
   TEMPLATE_SERVICE_URL: "http://template-service:8080/template-service"
+  OAUTH2_ENABLED: "false"
+  OAUTH2_CLIENT_ID: ""
+  OAUTH2_BASE_URL: ""
+  OAUTH2_BROWSER_URL: ""
+  OAUTH2_REALM: ""
+  OAUTH2_SCOPE: "openid profile email"
 
 secrets:
   OMRS_DB_HOSTNAME: ""
@@ -58,6 +64,7 @@ secrets:
   MAIL_PASSWORD: ""
   ODOO_PASSWORD: ""
   ODOO_USERNAME: ""
+  OAUTH2_CLIENT_SECRET: ""
 
 resources: {}
 
