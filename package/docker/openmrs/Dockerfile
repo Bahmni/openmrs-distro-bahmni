@@ -79,9 +79,9 @@ COPY distro/target/distro/oauth2login*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTOR
 # Copy Patched OMODS
 COPY package/resources/patched-omods/operationtheater-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/bahmnicore-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY package/resources/patched-omods/openelis-atomfeed-client*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/fhir2addlextension*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/elis-fhir-result-support-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-COPY package/resources/patched-omods/openmrs-atomfeed*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 
 # Copy Configuration Files
