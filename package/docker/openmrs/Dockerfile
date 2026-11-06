@@ -29,7 +29,7 @@ RUN yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-3.noa
 # Copy omods to OpenMRS Application Data Directory
 COPY distro/target/distro/addresshierarchy-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/appframework-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
-# (PATCHED) COPY distro/target/distro/appointments-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
+COPY distro/target/distro/appointments-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/auditlog-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bacteriology-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY distro/target/distro/bahmni-commons-*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
@@ -76,7 +76,6 @@ COPY distro/target/distro/communication*.omod  ${OPENMRS_APPLICATION_DATA_DIRECT
 # (PATCHED) COPY distro/target/distro/immunization*.omod  ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 
 # Copy Patched OMODS
-COPY package/resources/patched-omods/appointments-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/operationtheater-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/bahmnicore-*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
 COPY package/resources/patched-omods/openelis-atomfeed-client*.omod ${OPENMRS_APPLICATION_DATA_DIRECTORY}/modules
