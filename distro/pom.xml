@@ -38,7 +38,7 @@
         <owaVersion>1.16.0-SNAPSHOT</owaVersion>
         <htmlwidgetsVersion>2.1.0-SNAPSHOT</htmlwidgetsVersion>
         <idgenModuleVersion>6.0.0-SNAPSHOT</idgenModuleVersion>
-        <idgenWebServicesModuleVersion>1.5.0</idgenWebServicesModuleVersion>
+        <idgenWebServicesModuleVersion>3.0.0-SNAPSHOT</idgenWebServicesModuleVersion>
         <legacyUiOmodVersion>2.3.0-SNAPSHOT</legacyUiOmodVersion>
         <mailappenderVersion>2.1.0-SNAPSHOT</mailappenderVersion>
         <medicationAdministrationVersion>3.0.0-SNAPSHOT</medicationAdministrationVersion>
