@@ -84,7 +84,6 @@ COPY package/resources/patched-omods/openelis-atomfeed-client*.omod ${OPENMRS_AP
 
 # Copy Configuration Files
 COPY package/docker/openmrs/templates/bahmnicore.properties.template /etc/bahmni-emr/templates/
-COPY package/docker/openmrs/templates/openmrs-runtime.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/mail-config.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/appointment.properties.template /etc/bahmni-emr/templates/
 COPY package/docker/openmrs/templates/rulesengine-concept.properties.template /etc/bahmni-emr/templates/
