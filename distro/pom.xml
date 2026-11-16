@@ -31,7 +31,7 @@
         <bahmniIpdVersion>2.0.0-SNAPSHOT</bahmniIpdVersion>
         <bedManagementVersion>7.3.0-SNAPSHOT</bedManagementVersion>
         <calculationVersion>2.1.0-SNAPSHOT</calculationVersion>
-        <elisFhirSupportVersion>1.1.0-SNAPSHOT</elisFhirSupportVersion>
+        <elisFhirSupportVersion>2.0.0-SNAPSHOT</elisFhirSupportVersion>
         <emrapiModuleVersion>3.5.0-SNAPSHOT</emrapiModuleVersion>
         <episodesVersion>3.0.0-SNAPSHOT</episodesVersion>
         <eventModuleVersion>4.0.0</eventModuleVersion>
@@ -68,7 +68,7 @@
         <terminologyServicesVersion>3.1.0-SNAPSHOT</terminologyServicesVersion>
         <cdssVersion>2.1.0-SNAPSHOT</cdssVersion>
         <reportingCompatibilityVersion>3.0.0-SNAPSHOT</reportingCompatibilityVersion>
-        <fhir2addlextenstionVersion>1.1.0-SNAPSHOT</fhir2addlextenstionVersion>
+        <fhir2addlextenstionVersion>2.0.0-SNAPSHOT</fhir2addlextenstionVersion>
         <immunizationVersion>1.1.0-SNAPSHOT</immunizationVersion>
         <oauth2LoginVersion>1.5.0</oauth2LoginVersion>
     </properties>
