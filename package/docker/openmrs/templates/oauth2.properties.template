@@ -13,3 +13,4 @@ openmrs.mapping.person.givenName=given_name
 openmrs.mapping.person.familyName=family_name
 openmrs.mapping.user.email=email
 openmrs.mapping.user.roles=roles
+openmrs.mapping.user.username.serviceAccount=preferred_username
